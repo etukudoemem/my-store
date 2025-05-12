@@ -15,10 +15,12 @@ export default function Cart() {
         for (let index = 0; index < products.length; index++) {
             if (products[index].id === item.id) {
                 return <CartItem 
-                    key={id}
-                    productData={products[index]}
-                    cartData={item}
-                     />
+                            key={id}
+                            productData={products[index]}
+                            cartData={item}
+                        />
+                
+                
             }   
         }
     })

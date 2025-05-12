@@ -11,7 +11,7 @@ export default function CartContextProvider ({ children }) {
 
     const [search, setSearch] = useState("")
 
-    // console.log(cartProduct)
+    console.log(cartProduct)
 
     function getProductToCart(productId, selectedSize) { 
 
@@ -45,11 +45,27 @@ export default function CartContextProvider ({ children }) {
             ))   
     }
 
+    function updateProductQuantity (e, productId, selectedSize) {
+        if (e.target.value < 1) {
+            removeProductFromCart(productId, selectedSize) 
+
+        } else {
+            setCartProduct (
+                cartProduct.map((item) => 
+                  item.id === productId && item.size === selectedSize ? 
+                    {...item, quantity: e.target.value } : item 
+               )
+            )
+        }
+        
+        
+    }
+
     function getCartQuantity () {
 
         let cartTotalQuantity = 0
         for (let index = 0; index < cartProduct.length; index++) {
-            cartTotalQuantity = cartTotalQuantity + cartProduct[index].quantity
+            cartTotalQuantity = cartTotalQuantity + parseInt(cartProduct[index].quantity)
         }
         return cartTotalQuantity
     }
@@ -74,6 +90,7 @@ export default function CartContextProvider ({ children }) {
     products, 
     getCartTotal, 
     removeProductFromCart,
+    updateProductQuantity,
     getCartQuantity,
     search,
     setSearch

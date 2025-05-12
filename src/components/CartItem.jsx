@@ -6,7 +6,8 @@ import { useContext } from "react"
 
 export default function CartItem({ productData, cartData }) {
     
-const { removeProductFromCart } = useContext(cartContext)
+const { removeProductFromCart, updateProductQuantity } = useContext(cartContext)
+
 
     return (
         <>
@@ -29,11 +30,12 @@ const { removeProductFromCart } = useContext(cartContext)
                         </div>
                     </div>
                 </div>
-                <div className="pl-50">
-                    <input className="max-w-[80px] min-h-[40px] border-1 border-gray-300
+                <div className="pl-40">
+                    <input onChange={(e) => {updateProductQuantity(e, cartData.id, cartData.size, cartData.quantity)}}
+                        className="max-w-[80px] min-h-[40px] border-1 border-gray-300
                         border-solid py-1 px-2 outline-none font-semibold" 
                         type="number"
-                        placeholder={cartData.quantity}
+                        value={cartData.quantity}
                     />
                 </div>
                 <div className="pl-80">
