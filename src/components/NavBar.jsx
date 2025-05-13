@@ -4,19 +4,17 @@ import searchIcon from "../assets/search-icon.png"
 import profileIcon from "../assets/profile-icon.png"
 import shoppingBagIcon from "../assets/shopping-bag-icon.png"
 import { cartContext } from "../contexts/cartContext"
-import { useContext, useState, useEffect } from "react"
+import { useContext, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 
 
 
 export default function NavBar() {
 
-    const [isSearch, setIsSearch] = useState(false)
-
     const navigate = useNavigate()
     
 
-    const { getCartQuantity, search, setSearch } = useContext(cartContext)
+    const { getCartQuantity, isSearch, setIsSearch } = useContext(cartContext)
     const cartQuantity = getCartQuantity()
 
     function handleSearch () {
@@ -32,17 +30,8 @@ export default function NavBar() {
 
     return (
         <>
-            <div className="flex justify-between items-center h-14 w-full relative">
-                {isSearch && (
-                <div className="w-[420px] h-[50px] bg-[#DCDCDC] z-10 absolute 
-                    right-[240px] top-[100px] flex justify-center items-center
-                    rounded">   
-                    <input onChange={(e) => {setSearch(e.target.value)}}
-                        className="w-[400px] h-[40px] border-2 border-solid border-gray-400 
-                        rounded-4xl px-6 py-1 outline-none"
-                        placeholder="Search"
-                     />
-                </div> )}
+            <div className="flex justify-between items-center h-14 w-full">
+                
                 <Logo />
                 <nav className="flex items-center" >
                     <ul className="flex justify-between items-center w-[450px] 
@@ -68,7 +57,7 @@ export default function NavBar() {
                     
                  <div className="flex justify-between w-30" >
                     <div className="w-[30px] cursor-pointer">
-                        <img onClick={() => {handleSearch()}} src={searchIcon} alt="" />
+                        <img onClick={() => {handleSearch()}} src={searchIcon} alt="search" />
                     </div>
                     <div className="w-[30px]">
                         <Link to={"/profile"}>

@@ -11,6 +11,8 @@ export default function CartContextProvider ({ children }) {
 
     const [search, setSearch] = useState("")
 
+    const [isSearch, setIsSearch] = useState(false)
+
     console.log(cartProduct)
 
     function getProductToCart(productId, selectedSize) { 
@@ -93,7 +95,9 @@ export default function CartContextProvider ({ children }) {
     updateProductQuantity,
     getCartQuantity,
     search,
-    setSearch
+    setSearch,
+    setIsSearch,
+    isSearch
 }
 
 
