@@ -30,12 +30,11 @@ export default function Collection() {
     
     return (
         <>
-            
-            {isSearch &&  (
-            <div>
+            {isSearch ? 
+            (<div className="bg-gray-50 mb-8">
                 <Line />
-                <div className="w-[100%] h-60px] flex justify-center items-center 
-                    rounded my-4 relative">   
+                <div className="w-[100%] h-[45px] flex justify-center items-center 
+                    rounded relative ">   
                     <input onChange={(e) => {setSearch(e.target.value)}}
                         className="w-[50%] h-[40px] border-[1.5px] border-solid border-gray-400 
                         rounded-4xl px-4 py-1 outline-none font-semibold text-gray-600
@@ -45,11 +44,12 @@ export default function Collection() {
                     />
                     <img src={searchIcon} alt="search" className="absolute w-[25px] right-[332px] " />
                     <img onClick={() => {setIsSearch(false)}}
-                        src={closeIcon} alt="search" className="absolute w-[25px] right-[280px]
+                        src={closeIcon} alt="close" className="absolute w-[25px] right-[280px]
                         cursor-pointer " />
-                </div> 
-            </div>)}
-            <Line />
+                </div>
+                <Line /> 
+            </div>) : <Line />}
+            
             <section className="flex gap-12 w-full mt-8">
                 <div className="w-[20%] ">
                     <SideBar 

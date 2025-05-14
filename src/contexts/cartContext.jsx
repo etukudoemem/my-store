@@ -77,7 +77,7 @@ export default function CartContextProvider ({ children }) {
         cartProduct.map((item) => {
             for (let index = 0; index < products.length; index++) {
                 if (products[index].id === item.id) {
-                    cartSubTotal = cartSubTotal + products[index].price * item.quantity
+                    cartSubTotal = cartSubTotal + (products[index].price * item.quantity)
                 }   
             }
         })
@@ -96,8 +96,8 @@ export default function CartContextProvider ({ children }) {
     getCartQuantity,
     search,
     setSearch,
+    isSearch,
     setIsSearch,
-    isSearch
 }
 
 

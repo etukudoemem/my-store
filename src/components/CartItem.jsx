@@ -33,7 +33,8 @@ const { removeProductFromCart, updateProductQuantity } = useContext(cartContext)
                 <div className="pl-40">
                     <input onChange={(e) => {updateProductQuantity(e, cartData.id, cartData.size, cartData.quantity)}}
                         className="max-w-[80px] min-h-[40px] border-1 border-gray-300
-                        border-solid py-1 px-2 outline-none font-semibold" 
+                        border-solid py-1 px-2 outline-none font-semibold text-gray-500
+                        text-md" 
                         type="number"
                         value={cartData.quantity}
                     />
