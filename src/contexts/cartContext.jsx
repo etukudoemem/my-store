@@ -13,7 +13,11 @@ export default function CartContextProvider ({ children }) {
 
     const [isSearch, setIsSearch] = useState(false)
 
-    console.log(cartProduct)
+    const [hasAccount, setHasAccount] = useState(true)
+
+    const [isLogged, setIsLogged] = useState(false)
+
+    // console.log(cartProduct)
 
     function getProductToCart(productId, selectedSize) { 
 
@@ -98,6 +102,8 @@ export default function CartContextProvider ({ children }) {
     setSearch,
     isSearch,
     setIsSearch,
+    hasAccount,
+    isLogged
 }
 
 
