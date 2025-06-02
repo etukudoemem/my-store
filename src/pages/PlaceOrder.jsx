@@ -1,12 +1,17 @@
 import CartTotal from "../components/CartTotal";
 import Line from "../components/Line";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { cartContext } from "../contexts/cartContext";
 import { useNavigate } from "react-router-dom";
 
+
 export default function PlaceOrder() {
 
-    const { getCartTotal } = useContext(cartContext)
+    
+
+    const navigate = useNavigate()
+
+    const { getCartTotal, orderedProduct, getProductToOrder } = useContext(cartContext)
 
     const shippingCost = 10.00
 
@@ -14,7 +19,9 @@ export default function PlaceOrder() {
 
     const total = (parseInt(getTotal) + shippingCost)
 
-    const navigate = useNavigate()
+    useEffect(() => {
+        console.log(orderedProduct)
+    }, [orderedProduct])
 
 
     return (
@@ -150,7 +157,7 @@ export default function PlaceOrder() {
                                     </div>
                                 </div>
                             </div>
-                            <button onClick={() => {navigate("place-order")}}
+                            <button onClick={() => {getProductToOrder()}}
                                 className="min-w-58 min-h-11 bg-black text-white text-base
                                     mt-8 mb-8 text-sm font-semibold cursor-pointer self-end">
                                 PLACE ORDER

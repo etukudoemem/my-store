@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { products } from "../assets/frontend_assets/assets.js"
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -9,6 +10,8 @@ export default function CartContextProvider ({ children }) {
     
     const [cartProduct, setCartProduct] = useState([])
 
+    const [orderedProduct, setOrderedProduct] = useState([])
+
     const [search, setSearch] = useState("")
 
     const [isSearch, setIsSearch] = useState(false)
@@ -16,6 +19,8 @@ export default function CartContextProvider ({ children }) {
     const [hasAccount, setHasAccount] = useState(true)
 
     const [isLogged, setIsLogged] = useState(false)
+
+    const navigate = useNavigate()
 
     // console.log(cartProduct)
 
@@ -36,8 +41,8 @@ export default function CartContextProvider ({ children }) {
              )
           )
           } else {
-              setCartProduct([...cartProduct, 
-                {id: productId, size: selectedSize, quantity: 1}]
+              setCartProduct([ 
+                {id: productId, size: selectedSize, quantity: 1}, ...cartProduct]
               )
           }
               
@@ -59,12 +64,10 @@ export default function CartContextProvider ({ children }) {
             setCartProduct (
                 cartProduct.map((item) => 
                   item.id === productId && item.size === selectedSize ? 
-                    {...item, quantity: e.target.value } : item 
+                    {...item, quantity: parseInt(e.target.value) } : item 
                )
             )
-        }
-        
-        
+        }   
     }
 
     function getCartQuantity () {
@@ -87,7 +90,13 @@ export default function CartContextProvider ({ children }) {
         })
         return cartSubTotal.toFixed(2)
     }
-      
+
+    function getProductToOrder () {
+            setOrderedProduct([...cartProduct, ...orderedProduct])
+            setCartProduct([])
+            navigate("cart/cart/place-order/order")            
+        }
+            
     
   const contextValues = {
     getProductToCart, 
@@ -103,7 +112,10 @@ export default function CartContextProvider ({ children }) {
     isSearch,
     setIsSearch,
     hasAccount,
-    isLogged
+    isLogged,
+    orderedProduct,
+    setOrderedProduct,
+    getProductToOrder
 }
 
 

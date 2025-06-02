@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
 
-    const { cartProduct, products, getCartTotal } = useContext(cartContext)
+    const { cartProduct, products, getCartTotal, getProductToOrder } = useContext(cartContext)
 
     const shippingCost = 10.00
 

@@ -13,6 +13,7 @@ import SignUp from './pages/SignUp'
 import Login from './pages/Login'
 import Product from './pages/Product'
 import PlaceOrder from './pages/PlaceOrder'
+import Order from './pages/Order'
 
 
 
@@ -36,6 +37,7 @@ function App() {
             <Route path="profile/login" element={<Login />}/>
             <Route path="product/:productId" element={<Product />}/>
             <Route path="cart/cart/place-order" element={<PlaceOrder />}/>
+            <Route path="cart/cart/place-order/order" element={<Order />}/>
           
         </Routes>
         <Footer />
