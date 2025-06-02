@@ -7,7 +7,9 @@ import Accordion from "../components/Accordion"
 
 export default function Order() {
 
-    const { orderedProduct, products, cartProduct } = useContext(cartContext)
+    const { orderedProduct, products } = useContext(cartContext)
+
+    const isOrders = orderedProduct.length > 0
 
     const orderedItems = orderedProduct.map((item, id) => {
             for (let index = 0; index < products.length; index++) {
@@ -24,7 +26,7 @@ export default function Order() {
     return (
         <>
             <Line />
-            <main className="mt-16">
+            {isOrders ? (<main className="mt-16">
                 <h2 className="flex items-center text-2xl font-medium mb-4 mt-8 gap-2">
                     <span className="text-gray-500 text-left">
                         MY
@@ -36,7 +38,14 @@ export default function Order() {
                 <section>
                     {orderedItems}
                 </section>
-            </main>
+            </main> )
+            : (<div className="flex items-center justify-center">
+                <h2 className="flex items-center justify-center text-3xl font-medium mb-10 mt-8 gap-2">
+                    <span className="text-gray-500 text-left">
+                            YOU HAVE NO ORDERS
+                    </span> 
+                </h2>
+             </div>)}
         </>
     )
 }
