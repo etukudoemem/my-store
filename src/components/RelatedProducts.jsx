@@ -8,8 +8,6 @@ export default function RelatedProducts({ category, subCategory }) {
 
     const { productId } = useParams()
 
-    
-
     let relatedProducts = products.filter((product) => product.category === category)
     relatedProducts = relatedProducts.filter((product) => product.subCategory === subCategory)
     relatedProducts = relatedProducts.splice(0, 6).filter((product) => product.id !== productId)
@@ -30,7 +28,7 @@ export default function RelatedProducts({ category, subCategory }) {
         <>
             <section >
                 <h2 className="text-center text-xl font-medium mb-12 mt-8
-                    flex items-center justify-center gap-2">
+                    flex items-center justify-center gap-2 scroll">
                         <span className="text-gray-500">
                             RELATED
                         </span> 

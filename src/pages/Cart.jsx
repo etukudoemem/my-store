@@ -2,13 +2,13 @@ import Line from "../components/Line";
 import CartItem from "../components/CartItem";
 import CartTotal from "../components/CartTotal";
 import { useContext } from "react";
-import { cartContext } from "../contexts/cartContext";
-import { useNavigate } from "react-router-dom";
+import { storeContext } from "../contexts/storeContext";
+import { useNavigate, Link } from "react-router-dom";
 
 
 export default function Cart() {
 
-    const { cartProduct, products, getCartTotal, getProductToOrder } = useContext(cartContext)
+    const { cartProduct, products, getCartTotal, setStorage, getStorage } = useContext(storeContext)
 
     const shippingCost = 10.00
 
@@ -35,7 +35,6 @@ export default function Cart() {
 
     return (
         <>
-            <Line />
             {isCartProduct ? (<main className="mt-16">
                 <h2 className="flex items-center text-xl font-medium mb-10 mt-8 gap-2">
                     <span className="text-gray-500 text-left">
@@ -45,10 +44,10 @@ export default function Cart() {
                     <div className="w-12 h-[2.5px] bg-black"></div>
                 </h2>
                 
-                <section>
+                <section className="">
                     {cartItems}
-                </section>
-            <Line />  
+                </section> 
+                <Line /> 
                 <CartTotal>
                     <section className="w-full mt-12 flex flex-col">
                         <div className="min-w-[40%] self-end">
@@ -82,21 +81,27 @@ export default function Cart() {
                                 </div>
                             </div>
                         </div>
-                        <button onClick={() => {navigate("cart/place-order")}}
-                            className="min-w-58 min-h-11 bg-black text-white text-base
-                                mt-8 mb-8 text-sm font-semibold cursor-pointer self-end">
-                            PROCEED TO CHECKOUT
-                        </button>
+                        <Link to={"place-order"} className="self-end">
+                            <button 
+                                className="min-w-58 min-h-11 bg-gray-100 text-gray-600 text-base
+                                mt-8 mb-8 text-sm font-semibold cursor-pointer border-1 border-gray-400
+                                active:scale-95 transition-all duration-200 ease-in-out shadow-md
+                                hover:scale-103">
+                            PROCEED TO PLACE ORDER
+                            </button>
+                        </Link>
                     </section>
                 </CartTotal>
             </main>) : 
-             (<div className="flex items-center justify-center">
+             (<div className="flex items-center justify-center collections w-full h-[50vh] ">
                 <h2 className="flex items-center justify-center text-3xl font-medium mb-10 mt-8 gap-2">
                     <span className="text-gray-500 text-left">
                             YOUR CART IS EMPTY
                     </span> 
                 </h2>
              </div>)}
+            
+            
         </>
     )
 }

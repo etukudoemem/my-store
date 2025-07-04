@@ -4,10 +4,12 @@ export default function Logo() {
 
     return (
         <>
-            <div className="text-4xl font-medium tracking-[-0.35rem]
-                text-gray-400" >
-                <Link to="/">MY STORE</Link>
-            </div>
+            <Link to="/">
+                <div className="text-xl font-semibold tracking-[-0.25rem]
+                    text-gray-400 " >
+                    MY STORE
+                </div>
+            </Link>
         </>
     )
 }

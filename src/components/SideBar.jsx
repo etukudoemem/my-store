@@ -1,6 +1,5 @@
 import { useState, useEffect, useContext } from "react"
-import { products } from "../assets/frontend_assets/assets"
-import { cartContext } from "../contexts/cartContext"
+import { storeContext } from "../contexts/storeContext"
 
 export default function SideBar({ setCollection, sorted }) {
 
@@ -9,7 +8,7 @@ export default function SideBar({ setCollection, sorted }) {
         type: []
     })
 
-    const { search } = useContext(cartContext)
+    const { products, search } = useContext(storeContext)
     
     const handleCategory = (e) => {
         const { id } = e.target
@@ -64,11 +63,11 @@ export default function SideBar({ setCollection, sorted }) {
 
     return (
         <>
-            <section className="mt-8">
+            <section className="mt-8 leftHeader">
                 <h2 className="text-xl font-medium mb-8">
                     FILTERS
                 </h2>
-                <div className="border-solid border-gray-300 border-1
+                <div className="border-gray-300 border-1 
                     min-h-[145px] max-w-[250px] mb-4 py-4 px-4 text-sm">
                     <h3 className="text-sm font-medium mb-3">
                         CATEGORIES

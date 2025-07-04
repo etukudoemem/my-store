@@ -32,7 +32,6 @@ export default function Product() {
 
     return (
         <>
-            <Line />
             <section className="mt-10">
                 <ProductDetails 
                     key={productInfo.id}

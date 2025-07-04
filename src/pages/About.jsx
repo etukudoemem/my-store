@@ -1,12 +1,11 @@
 import aboutPhoto from "../assets/about-photo2.jpg"
-import Line from "../components/Line"
+import { Accordion } from "../components/Accordion"
 import Subscribe from "../components/Subscribe"
 
 export default function About() {
 
     return (
         <>
-            <Line />
             <h1 className="text-center text-2xl font-medium mb-10 mt-8
                 flex items-center justify-center gap-2">
                 <span className="text-gray-500">
@@ -16,10 +15,10 @@ export default function About() {
                 <div className="w-12 h-[2.5px] bg-black"></div>
             </h1> 
             <section className="flex min-w-full min-h-[450px] mb-16 gap-0 justify-center">
-                <div className="w-[500px] max-h-[inherit]">
+                <div className="w-[500px] max-h-[inherit] leftHeader">
                     <img className="w-[inherit] h-full " src={aboutPhoto} alt="clothes and shoes" />
                 </div>
-                <div className="w-1/2 max-h-[inherit] flex flex-col 
+                <div className="w-1/2 max-h-[inherit] flex flex-col rightHeader
                     justify-center text-gray-700 px-10">
                     <p> 
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
@@ -46,14 +45,14 @@ export default function About() {
             </section>
 
             <section className="flex flex-col min-w-full">
-                <h2 className="flex items-center text-xl font-medium mb-10 mt-8 gap-2">
+                <h2 className="flex items-center text-xl font-medium mb-10 mt-8 gap-2 scroll">
                     <span className="text-gray-500">
                             WHY
                     </span> 
                     <p>CHOOSE US</p> 
                     <div className="w-12 h-[2.5px] bg-black"></div>
                 </h2>  
-                <div className="flex">
+                <div className="flex scroll">
                     <div className="flex flex-col justify-center border-solid 
                         border-1 border-gray-300 max-w-[420px] min-h-[250px] px-16
                         ">
@@ -81,10 +80,58 @@ export default function About() {
                             ensuring your satisfaction is our top priority.
                         </p>
                     </div>
-                    
                 </div>  
             </section>
-            <Subscribe />
+            <section className="mt-20 w-full flex flex-col">
+                <h2 className="flex items-center text-xl font-medium mb-10 mt-8 gap-2 scroll">
+                    <span className="text-gray-500">
+                            FREQUENTLY
+                    </span> 
+                    <p>ASKED QUESTIONS</p> 
+                    <div className="w-12 h-[2.5px] bg-black"></div>
+                </h2>  
+                
+                {/* <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis sequi deleniti, doloremque rem itaque modi accusamus animi rerum ea inventore molestias harum sint, vel quae obcaecati neque nisi facilis.
+                    At sint aut ea officiis alias est illum atque temporibus sapiente, aliquid velit quam facere doloribus iure reprehenderit ab assumenda sed modi in nihil explicabo tempora culpa amet ipsa. Laborum?
+                    Tempore accusamus deleniti excepturi voluptatem neque aliquid, nisi natus molestias pariatur nam aut sed! Error voluptatum, impedit necessitatibus itaque quae explicabo, aspernatur, nemo obcaecati sequi quidem eligendi mollitia assumenda. Alias.
+                </p> */}
+                <Accordion 
+                    title= {"What would you like to know?"}
+                    content={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis sequi deleniti, doloremque rem itaque modi accusamus animi rerum ea inventore molestias harum sint, vel quae obcaecati neque nisi facilis.
+                            At sint aut ea officiis alias est illum atque temporibus sapiente, aliquid velit quam facere doloribus iure reprehenderit ab assumenda sed modi in nihil explicabo tempora culpa amet ipsa. Laborum?
+                            Tempore accusamus deleniti excepturi voluptatem neque aliquid, nisi natus molestias pariatur nam aut sed! Error voluptatum, impedit necessitatibus itaque quae explicabo, aspernatur, nemo obcaecati sequi quidem eligendi mollitia assumenda. Alias.`} 
+                />
+                <Accordion 
+                    title= {"What would you like to know?"}
+                    content={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis sequi deleniti, doloremque rem itaque modi accusamus animi rerum ea inventore molestias harum sint, vel quae obcaecati neque nisi facilis.
+                            At sint aut ea officiis alias est illum atque temporibus sapiente, aliquid velit quam facere doloribus iure reprehenderit ab assumenda sed modi in nihil explicabo tempora culpa amet ipsa. Laborum?
+                            Tempore accusamus deleniti excepturi voluptatem neque aliquid, nisi natus molestias pariatur nam aut sed! Error voluptatum, impedit necessitatibus itaque quae explicabo, aspernatur, nemo obcaecati sequi quidem eligendi mollitia assumenda. Alias.`} 
+                />
+                <Accordion 
+                    title= {"What would you like to know?"}
+                    content={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis sequi deleniti, doloremque rem itaque modi accusamus animi rerum ea inventore molestias harum sint, vel quae obcaecati neque nisi facilis.
+                            At sint aut ea officiis alias est illum atque temporibus sapiente, aliquid velit quam facere doloribus iure reprehenderit ab assumenda sed modi in nihil explicabo tempora culpa amet ipsa. Laborum?
+                            Tempore accusamus deleniti excepturi voluptatem neque aliquid, nisi natus molestias pariatur nam aut sed! Error voluptatum, impedit necessitatibus itaque quae explicabo, aspernatur, nemo obcaecati sequi quidem eligendi mollitia assumenda. Alias.`} 
+                />
+                <Accordion 
+                    title= {"What would you like to know?"}
+                    content={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis sequi deleniti, doloremque rem itaque modi accusamus animi rerum ea inventore molestias harum sint, vel quae obcaecati neque nisi facilis.
+                            At sint aut ea officiis alias est illum atque temporibus sapiente, aliquid velit quam facere doloribus iure reprehenderit ab assumenda sed modi in nihil explicabo tempora culpa amet ipsa. Laborum?
+                            Tempore accusamus deleniti excepturi voluptatem neque aliquid, nisi natus molestias pariatur nam aut sed! Error voluptatum, impedit necessitatibus itaque quae explicabo, aspernatur, nemo obcaecati sequi quidem eligendi mollitia assumenda. Alias.`} 
+                />
+                <Accordion 
+                    title= {"What would you like to know?"}
+                    content={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis sequi deleniti, doloremque rem itaque modi accusamus animi rerum ea inventore molestias harum sint, vel quae obcaecati neque nisi facilis.
+                            At sint aut ea officiis alias est illum atque temporibus sapiente, aliquid velit quam facere doloribus iure reprehenderit ab assumenda sed modi in nihil explicabo tempora culpa amet ipsa. Laborum?
+                            Tempore accusamus deleniti excepturi voluptatem neque aliquid, nisi natus molestias pariatur nam aut sed! Error voluptatum, impedit necessitatibus itaque quae explicabo, aspernatur, nemo obcaecati sequi quidem eligendi mollitia assumenda. Alias.`} 
+                />
+                
+            </section>
+            <section className="">
+                <Subscribe />
+            </section>
+
         </>
     )
 }

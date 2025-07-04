@@ -1,17 +1,22 @@
+import { useContext } from "react";
 import Line from "./Line";
+import { storeContext } from "../contexts/storeContext";
+
 
 export default function OrderItem({ productData, orderData}) {
 
+    const { paymentMethod, orderDate } = useContext(storeContext);
+
     return (
         <>
-            <section>
+            <section className="collections">
                 <div className="flex items-center mb-2">
                     <div className="flex gap-7 pr-40">
-                        <div className=" min-w-[70px] max-h-[90px] bg-gray-200">
-                            <img className="justify-self-start max-w-[85px] h-[90px]" src={productData.image[0]} alt="" />
+                        <div className=" max-w-[95px] min-h-[auto] bg-gray-200">
+                            <img className="justify-self-start min-w-[100%] min-h-[100%]" src={productData.image[0]} alt="" />
                         </div>
                         <div>
-                            <h3 className="text-md font-semibold mb-3 text-gray-600">
+                            <h3 className="text-md mb-1 text-gray-600">
                                 {productData.name}
                             </h3>
                             <div className="flex gap-3 items-center">
@@ -31,6 +36,20 @@ export default function OrderItem({ productData, orderData}) {
                                     Size: {orderData.size}
                                 </div>
                             </div>
+                            <div className="min-w-[auto] max-h-[auto] mt-1
+                                flex items-center text-sm font-semibold text-gray-600">
+                                    Date:<span className="min-w-[auto] max-h-[auto] px-2
+                                            flex items-center text-sm font-semibold text-gray-400">
+                                            {orderDate}
+                                        </span>
+                            </div>
+                            {paymentMethod === "Cash On Delivery" ? (<div className="min-w-[auto] max-h-[auto] mt-1
+                                flex items-center text-sm font-semibold text-gray-600">
+                                    Method of Payment:<span className="min-w-[auto] max-h-[auto] px-2
+                                            flex items-center text-sm font-semibold text-gray-400">
+                                            {paymentMethod}
+                                        </span>
+                            </div>) : ""}
                         </div>
                     </div>
                     <div className="pl-40">
@@ -45,8 +64,8 @@ export default function OrderItem({ productData, orderData}) {
                         </div>
                     </div>
                 </div>
-            <Line />
             </section>
+            <Line />
         </>
     )
 }

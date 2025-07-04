@@ -3,7 +3,7 @@ import ProductCard from "../components/ProductCard"
 import SideBar from "../components/SideBar"
 import { products } from "../assets/frontend_assets/assets"
 import { useState, useContext } from "react"
-import { cartContext } from "../contexts/cartContext"
+import { storeContext } from "../contexts/storeContext"
 import searchIcon from "../assets/search-icon.png"
 import closeIcon from "../assets/close-icon.png"
 
@@ -14,7 +14,7 @@ export default function Collection() {
 
     const [sorted, setSorted] = useState("relevant")
 
-    const { setSearch, isSearch, setIsSearch } = useContext(cartContext)
+    const { setSearch, isSearch, setIsSearch, searchResult } = useContext(storeContext)
     
     const allCollections = collection.map((product) => {
             return <ProductCard 
@@ -26,31 +26,31 @@ export default function Collection() {
                     />
         }
     )
-
     
     return (
         <>
-            {isSearch ? 
-            (<div className="bg-gray-50 mb-8">
+            {isSearch &&
+            (<section className="bg-gray-50 mb-8 expand">
                 <Line />
                 <div className="w-[100%] h-[45px] flex justify-center items-center 
                     rounded relative ">   
                     <input onChange={(e) => {setSearch(e.target.value)}}
                         className="w-[50%] h-[40px] border-[1.5px] border-solid border-gray-400 
-                        rounded-4xl px-4 py-1 outline-none font-semibold text-gray-600
-                        text-sm"
+                        rounded-4xl px-12 py-1 outline-none font-medium text-gray-600
+                        active:scale-99 transition-all duration-200 ease-in-out"
                         placeholder="Search"
-                        
+                        autoFocus
                     />
-                    <img src={searchIcon} alt="search" className="absolute w-[25px] right-[332px] " />
+                    <img src={searchIcon} alt="search" className="absolute w-[25px] left-[332px] " />
                     <img onClick={() => {setIsSearch(false)}}
                         src={closeIcon} alt="close" className="absolute w-[25px] right-[280px]
-                        cursor-pointer " />
+                        cursor-pointer active:scale-85 transition-all duration-200 ease-in-out
+                        hover:scale-105" />
                 </div>
                 <Line /> 
-            </div>) : <Line />}
+            </section>)}
             
-            <section className="flex gap-12 w-full mt-8">
+           <section className="flex gap-12 w-full mt-8">
                 <div className="w-[20%] ">
                     <SideBar 
                         setCollection={setCollection} 
@@ -62,40 +62,39 @@ export default function Collection() {
                         <div className="flex justify-between items-center">
                             <div className="text-2xl flex items-center gap-2
                                     font-medium">
-                                    <span className="text-gray-500">
-                                        ALL
-                                    </span> 
-                                    <p>COLLECTIONS</p>
-                                    <div className="w-12 h-[2.5px] bg-black"></div>
+                                <span className="text-gray-500">
+                                    ALL
+                                </span> 
+                                <p>COLLECTIONS</p>
+                                <div className="w-12 h-[2.5px] bg-black"></div>
                             </div>
                             <div className="w-[180px] h-[45px] border-2 border-gray-300 
                                 border-solid flex items-center justify-center font-medium
-                                text-sm p-2">
-                                    <label htmlFor="sort">Sort by:
-                                        <select onChange={(e) => {setSorted(e.target.value)}} 
-                                            className="outline-none cursor-pointer" 
-                                            name="sort" 
-                                            id="sort" 
-                                            defaultValue={"Relevant"}>
-                                            <option className="font-medium" 
-                                                value="relevant">
-                                                Relevant
-                                            </option>
-                                            <option className="font-medium" 
-                                                value="low-high">
-                                                Low to High
-                                            </option>
-                                            <option className="font-medium" 
-                                                value="high-low">
-                                                High to Low
-                                            </option>
-                                        </select>
-                                    </label>
-                                    
+                                text-sm p-2 rightHeader">
+                                <label htmlFor="sort">Sort by:
+                                    <select onChange={(e) => {setSorted(e.target.value)}} 
+                                        className="outline-none cursor-pointer " 
+                                        name="sort" 
+                                        id="sort" 
+                                        defaultValue={"Relevant"}>
+                                        <option className="font-medium" 
+                                            value="relevant">
+                                            Relevant
+                                        </option>
+                                        <option className="font-medium" 
+                                            value="low-high">
+                                            Low to High
+                                        </option>
+                                        <option className="font-medium" 
+                                            value="high-low">
+                                            High to Low
+                                        </option>
+                                    </select>
+                                </label>
                             </div>
                         </div>
                         <div className="mt-10.5 grid gap-y-10 gap-x-4 grid-cols-4
-                            ">
+                            collections">
                             {allCollections}
                         </div>
                     </div>

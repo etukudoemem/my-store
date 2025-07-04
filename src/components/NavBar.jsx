@@ -1,24 +1,22 @@
 import Logo from "./Logo"
-import { NavLink, Link } from "react-router-dom"
+import { NavLink, Link, useNavigate } from "react-router-dom"
 import searchIcon from "../assets/search-icon.png"
 import profileIcon from "../assets/profile-icon.png"
 import shoppingBagIcon from "../assets/shopping-bag-icon.png"
-import { cartContext } from "../contexts/cartContext"
+import { storeContext } from "../contexts/storeContext"
 import { useContext, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
-
 
 
 export default function NavBar() {
 
     const navigate = useNavigate()
-    
 
-    const { getCartQuantity, isSearch, setIsSearch } = useContext(cartContext)
+    const { getCartQuantity, isSearch, setIsSearch, logOutAttempt, isLogged } = useContext(storeContext)
+
     const cartQuantity = getCartQuantity()
 
     function handleSearch () {
-        navigate("/collection")
+        navigate("collection")
         setIsSearch(!isSearch)
     }
 
@@ -30,62 +28,94 @@ export default function NavBar() {
 
     return (
         <>
-            <div className="flex justify-between items-center h-14 w-full">
-                
+            <section className="flex justify-between items-center h-14 w-full navbar 
+                        shadow-md px-[2rem] ">
+                        
                 <Logo />
                 <nav className="flex items-center" >
-                    <ul className="flex justify-between items-center w-[450px] 
-                        font-medium text-sm text-gray-700">
-                        <li>
-                            <NavLink to="/">HOME</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/collection">COLLECTION</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/about">ABOUT</NavLink>
-                        </li>
-                        <li>
-                            <NavLink to="/contact">CONTACT</NavLink>
-                        </li>
-                        <li className="flex justify-center items-center border-solid rounded-3xl 
-                                border-gray-300 border-1 text-[0.65rem] w-[110px] h-[35px] ">
-                            <Link to="/admin">Admin Panel</Link>
-                        </li>
+                    <ul className="flex justify-between items-center w-[500px] 
+                        text-sm text-gray-700 ">
+                        <NavLink to="/" className="active:scale-85 transition-all
+                            duration-100 ease-in-out con">
+                            <li className="">
+                                HOME
+                            </li>
+                        </NavLink>
+                        <NavLink to="collection" className="active:scale-85 transition-all
+                            duration-100 ease-in-out con">
+                            <li className="">
+                                COLLECTION
+                            </li>
+                        </NavLink>
+                        <NavLink to="about" className="active:scale-85 transition-all
+                            duration-100 ease-in-out con">
+                            <li className="">
+                                ABOUT
+                            </li>
+                        </NavLink>
+                        <NavLink to="contact" className="active:scale-85 transition-all
+                            duration-100 ease-in-out con">
+                            <li className="">
+                                CONTACT
+                            </li>
+                        </NavLink>
+                        <Link to="admin" className="flex justify-center items-center border-solid rounded-3xl 
+                                border-gray-300 border-1 text-[0.65rem] w-[110px] h-[35px]
+                                active:scale-85 transition-all duration-100 ease-in-out">
+                            <li>
+                                Admin Panel
+                            </li>
+                        </Link>
                     </ul>
                 </nav>
-                    
-                 <div className="flex justify-between w-30" >
-                    <div className="w-[30px] cursor-pointer">
-                        <img onClick={() => {handleSearch()}} src={searchIcon} alt="search" />
+
+                <div className="flex justify-between w-30" >
+                    <div onClick={() => {handleSearch()}}
+                        className="w-[30px] cursor-pointer active:scale-85 transition-all
+                        duration-100 ease-in-out">
+                        <img src={searchIcon} alt="search" />
                     </div>
+
                     <div className="w-[30px] relative group">
-                        <Link to={"/profile"}>
-                            <img src={profileIcon} alt="" className="" />
-                            <div className="">
-                                <ul className="font-medium text-gray-700 text-white
-                                    flex flex-col justify-center item-center hidden absolute
-                                    w-[180px] h-[100px] bg-gray-800 border-1 px-4 py-4 border-gray-200 right-1 top-7
-                                    group-hover:block">
-                                    <Link to={"cart/cart/place-order/order"}><li className="w-full h-[50%] hover:text-gray-300">Orders</li></Link>
-                                    <Link to={"profile/login"}><li className="w-full h-[50%] hover:text-gray-300">Logout</li></Link>
-                                </ul>
-                            </div>
+                        <Link to={"login"}><img src={profileIcon} alt="" className="cursor-pointer
+                            active:scale-85 transition-all duration-100 ease-in-out"/>
                         </Link>
+                        <ul className={`font-medium text-gray-100 flex flex-col justify-center rounded-xs
+                            item-center hidden absolute w-[180px] h-[auto] bg-gray-900 border-1 shadow-sm
+                            px-4 py-4 border-gray-400 right-1 top-7 ${isLogged && "group-hover:block expand"}`}>
+                    
+                            {/* <li onClick={() => {navigate("profile")}}
+                                className="w-full h-[auto] hover:text-gray-400 
+                                transition-all duration-300 ease-in-out mb-2 cursor-pointer">
+                                Profile
+                            </li> */}
+                        
+                            <li onClick={() => {navigate("orders")}}
+                                className="w-full h-[auto] hover:text-gray-400 mb-2 
+                                transition-all duration-300 ease-in-out cursor-pointer active:scale-95">
+                                Orders
+                            </li>
+                        
+                            <li onClick={() => {logOutAttempt()}}
+                                className="w-full h-[auto] hover:text-gray-400 
+                                transition-all duration-300 ease-in-out cursor-pointer active:scale-95">
+                                Logout
+                            </li>
+                        </ul>
                     </div>
-                    <div className="w-[30px] relative">
-                        <Link to={"/cart"}>
+                    <Link to="cart" className="active:scale-85 transition-all duration-100 ease-in-out">
+                        <div className="w-[30px] relative cursor-pointer">
                             <img src={shoppingBagIcon} alt="" />
                             <div className="bg-gray-700 absolute bottom-[0] right-[0] 
                                 rounded-full w-4 h-4 flex justify-center items-center text-[8px] 
-                                text-white font-semibold">
+                                text-white font-semibold focus:scale-105 transtion-all duration-200
+                                ease-in-out">
                                     {cartQuantity}
                             </div>
-                        </Link>
-                    </div>
+                        </div>
+                    </Link>
                 </div>
-                
-            </div>
+            </section>
         </>
     )
 }
