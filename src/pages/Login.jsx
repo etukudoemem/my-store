@@ -6,7 +6,6 @@ import { LoginDetailsModal } from "../modals/LoginDetailsModal"
 import { Loader } from "../components/Loader";
 
 
-
 export default function Login() {
 
     const { noLoginInput, getUserInfo, logInUser, userInfo, isLogged, isLoading } = useContext(storeContext)
