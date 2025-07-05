@@ -72,6 +72,8 @@ export default function StoreContextProvider ({ children }) {
 
     const [isSearch, setIsSearch] = useState(false)
 
+    const [isLoading, setIsLoading] = useState(false)
+
     const [modal, setModal] = useState({
         logOut: false,
         noSize: false,
@@ -84,6 +86,7 @@ export default function StoreContextProvider ({ children }) {
         logInToast: false,
         logOutToast: false,
         signUpToast: false,
+        orderToast: false
     })
 
     const navigate = useNavigate()
@@ -180,9 +183,11 @@ export default function StoreContextProvider ({ children }) {
     function getProductToOrder () {
         setOrderedProduct([...cartProduct, ...orderedProduct])
         setOrderDate(new Date().toDateString())
-        if (isLogged) {
-            navigate("orders")
-        }
+        navigate("orders")
+        setModal({...modal, orderToast: true})
+        // if (isLogged) {
+        //     navigate("orders")
+        // }
         setCartProduct([])           
     }
 
@@ -289,6 +294,7 @@ export default function StoreContextProvider ({ children }) {
 
     const logInUser = async(e) => {
         e.preventDefault()
+        setIsLoading(true)
 
         try {
             await signInWithEmailAndPassword(auth, userInfo.email, userInfo.password)
@@ -296,6 +302,7 @@ export default function StoreContextProvider ({ children }) {
             navigate("/")
             setModal({...modal, logInToast: true})
             setUserInfo({email: "", password:""})
+            setIsLoading(false)
             
         } catch (error) {
             if (!userInfo.email) {
@@ -355,23 +362,49 @@ export default function StoreContextProvider ({ children }) {
 
     useEffect(() => {
         setTimeout(()=> {
-            setModal({...modal, logInToast:false, signUpToast:false, logOutToast:false})
-        }, 11000)
+            setModal({...modal, logInToast:false})
+        }, 10000)
         // console.log(modal)
-    }, [modal.logInToast, modal.signUpToast, modal.logOutToast])
+    }, [modal.logInToast])
+
+    useEffect(() => {
+        setTimeout(()=> {
+            setModal({...modal, signUpToast:false})
+        }, 10000)
+        // console.log(modal)
+    }, [modal.signUpToast])
+
+    useEffect(() => {
+        setTimeout(()=> {
+            setModal({...modal, logOutToast:false})
+        }, 10000)
+        // console.log(modal)
+    }, [modal.logOutToast])
+
+    useEffect(() => {
+        setTimeout(()=> {
+            setModal({...modal, orderToast:false})
+        }, 10000)
+        // console.log(modal)
+    }, [modal.orderToast])
+
+    useEffect(() => {
+        console.log(modal)
+    }, [modal])
 
     const logOutAttempt = () => {
         setModal({...modal, logOut:true})
     }
 
     const logOutUser = async() => {
+        setIsLoading(true)
         try {
             await signOut(auth)
-            
             setIsLogged(false)
             setCartProduct([])
             setOrderedProduct([])
             setModal({...modal, logOut:false, logOutToast:true})
+            setIsLoading(false)
 
         } catch (error) {
             console.error(error)    
@@ -420,7 +453,9 @@ export default function StoreContextProvider ({ children }) {
         isLogged,
         logOutAttempt,
         noInput,
-        noLoginInput
+        noLoginInput,
+        isLoading,
+        setIsLoading
     }
 
 

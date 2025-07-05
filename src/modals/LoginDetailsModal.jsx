@@ -40,15 +40,14 @@ export const LoginDetailsModal = () => {
                         </p>
                     </div>
                     
-                    <div className="font-semibold flex justify-center">
-                        <button onClick={() => setModal({...modal, wrongDetails:false})}
-                            className={`w-[50%] h-[42px] text-gray-800 text-sm 
-                                py-2 cursor-pointer rounded-xs bg-gray-200 
-                                hover:bg-gray-800 hover:text-gray-200 border-1 transition-all
-                                border-gray-400 shadow-sm active:scale-90 duration-100
+                    <div className="font-semibold flex justify-end">
+                        <p onClick={() => setModal({...modal, wrongDetails:false})}
+                            className={` text-gray-700 text-xs text-slate-600
+                                py-2 cursor-pointer rounded-xs hover:scale-101 border-0 transition-all
+                                border-gray-400 active:scale-90 duration-100 hover:text-slate-700
                                 ease-in-out`}>
-                            Alright. Got it
-                        </button>
+                            ALRIGHT. GOT IT
+                        </p>
                     </div>
                 </div>
             </main>

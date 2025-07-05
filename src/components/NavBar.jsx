@@ -34,7 +34,7 @@ export default function NavBar() {
                 <Logo />
                 <nav className="flex items-center" >
                     <ul className="flex justify-between items-center w-[500px] 
-                        text-sm text-gray-700 ">
+                        text-sm text-gray-500 font-medium">
                         <NavLink to="/" className="active:scale-85 transition-all
                             duration-100 ease-in-out con">
                             <li className="">
@@ -80,25 +80,21 @@ export default function NavBar() {
                         <Link to={"login"}><img src={profileIcon} alt="" className="cursor-pointer
                             active:scale-85 transition-all duration-100 ease-in-out"/>
                         </Link>
-                        <ul className={`font-medium text-gray-100 flex flex-col justify-center rounded-xs
-                            item-center hidden absolute w-[180px] h-[auto] bg-gray-900 border-1 shadow-sm
-                            px-4 py-4 border-gray-400 right-1 top-7 ${isLogged && "group-hover:block expand"}`}>
+                        <ul className={`font-medium text-gray-800 flex flex-col justify-center rounded-xs
+                            item-center hidden absolute w-[190px] h-[auto] bg-gray-100 border-0 shadow-inset
+                            border-gray-100 right-1 top-7 ${isLogged && "group-hover:block expand"}`}>
                     
-                            {/* <li onClick={() => {navigate("profile")}}
-                                className="w-full h-[auto] hover:text-gray-400 
-                                transition-all duration-300 ease-in-out mb-2 cursor-pointer">
-                                Profile
-                            </li> */}
-                        
                             <li onClick={() => {navigate("orders")}}
-                                className="w-full h-[auto] hover:text-gray-400 mb-2 
-                                transition-all duration-300 ease-in-out cursor-pointer active:scale-95">
+                                className="w-full h-[auto] hover:text-gray-100 mb-0 hover:bg-slate-700
+                                transition-all duration-400 ease-in-out cursor-pointer active:scale-95
+                                px-4 pt-3 pb-2 rounded-t-xs border-b-1 border-gray-200 hover:scale-102">
                                 Orders
                             </li>
                         
                             <li onClick={() => {logOutAttempt()}}
-                                className="w-full h-[auto] hover:text-gray-400 
-                                transition-all duration-300 ease-in-out cursor-pointer active:scale-95">
+                                className="w-full h-[auto] hover:text-gray-100 hover:bg-slate-700
+                                transition-all duration-400 ease-in-out cursor-pointer active:scale-95
+                                px-4 pb-3 pt-2 rounded-b-xs hover:scale-102">
                                 Logout
                             </li>
                         </ul>

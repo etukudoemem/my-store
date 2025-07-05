@@ -6,12 +6,12 @@ import { ToastModal } from "../modals/ToastModal"
 import checkMarkIcon from "../assets/checkmark.png"
 import { useContext } from "react"
 import { storeContext } from "../contexts/storeContext"
+import { Loader } from "../components/Loader"
 
 
 export default function Layout() {
 
-    const { modal } = useContext(storeContext)
-    console.log(modal.logOutToast)
+    const { modal, isLoading } = useContext(storeContext)
 
     return (
         <>
@@ -21,6 +21,7 @@ export default function Layout() {
             </section>
             <section className="px-[8rem] py-[0.5rem]">
                 <LogoutModal />
+                {/* {isLoading && <Loader />} */}
                 {modal.logOutToast && (
                     <ToastModal>
                         <img src={checkMarkIcon} alt="checkmark" width={35}/>

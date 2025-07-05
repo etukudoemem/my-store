@@ -6,8 +6,8 @@ export default function Logo() {
         <>
             <Link to="/">
                 <div className="text-xl font-semibold tracking-[-0.25rem]
-                    text-gray-400 " >
-                    MY STORE
+                    text-gray-400 store" >
+                    mySTORE
                 </div>
             </Link>
         </>

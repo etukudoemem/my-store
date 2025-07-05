@@ -6,9 +6,10 @@ import { LoginDetailsModal } from "../modals/LoginDetailsModal"
 import { Loader } from "../components/Loader";
 
 
+
 export default function Login() {
 
-    const { noLoginInput, getUserInfo, logInUser, userInfo } = useContext(storeContext)
+    const { noLoginInput, getUserInfo, logInUser, userInfo, isLogged, isLoading } = useContext(storeContext)
 
     const navigate = useNavigate()
 
@@ -20,8 +21,8 @@ export default function Login() {
                 and try again.
             </NetworkModal>
             <LoginDetailsModal />
-            <section className="w-[100%] h-[60vh] flex justify-center 
-                items-center bg-gray-100">
+            {<section className="w-[100%] h-[60vh] flex justify-center 
+                items-center">
                 <div className="w-100 m-[auto] flex flex-col h-[70vh]
                     ">
                     <div className="flex justify-center items-center gap-2 mt-20">
@@ -31,14 +32,18 @@ export default function Login() {
                         </div>
                     </div>
                     <form onSubmit={(e) => logInUser(e)}>
-                        <div className="flex flex-col gap-4 justify-center items-center m-4">
+                        <div className="flex flex-col gap-4 justify-center items-center m-4
+                            relative">
+                            <img className="absolute top-3 left-[-8px] "
+                                src="" alt="" width={20}/>
+                            
                             <input onChange={(e) => getUserInfo(e)}
-                                className="w-100 h-11 text-gray-600 placeholder-gray-400
+                                className="w-100 h-11 text-gray-600 placeholder-gray-300
                                 active:scale-98 transition-all duration-200 ease-in-out
-                                outline-none p-3 border-1 border-gray-600 leftHeader"
+                                outline-none p-3 px-4 border-1 border-gray-600 leftHeader"
                                 type="email" 
                                 name="email"
-                                placeholder="Email"
+                                placeholder="johndoe@example.com"
                                 value={userInfo.email}
                             />
                             {noLoginInput.email && 
@@ -46,13 +51,15 @@ export default function Login() {
                                         my-[-10px] self-start expand mx-[-15px]">
                                         <p>Please enter your email address</p>
                                     </div>)}
+                            <img className="absolute top-18 left-[-8px] "
+                                src="" alt="" width={20}/>
                             <input onChange={(e) => getUserInfo(e)}
-                                className="w-100 h-11 text-gray-600 placeholder-gray-400
+                                className="w-100 h-11 text-gray-600 placeholder-gray-300
                                 active:scale-98 transition-all duration-200 ease-in-out
-                                outline-none p-3 border-1 border-gray-600 rightHeader"
+                                outline-none p-3 px-4 border-1 border-gray-600 rightHeader"
                                 type="password" 
                                 name="password"
-                                placeholder="Password"
+                                placeholder="******"
                                 value={userInfo.password}
                             />
                             {noLoginInput.password && 
@@ -74,9 +81,6 @@ export default function Login() {
                             </p>
                         </div>
                         <div className="mt-8 flex justify-center relative">
-                            <div className="absolute top-2 right-[-40px] ">
-                                <Loader />
-                            </div>
                             <button type="submit"
                                 className="w-45 h-11 bg-black text-white text-md p-2
                                 active:scale-95 transition-all duration-100 ease-in-out 
@@ -86,7 +90,7 @@ export default function Login() {
                         </div>
                     </form>   
                 </div>
-            </section>
+            </section>}
         </>
     )
 }

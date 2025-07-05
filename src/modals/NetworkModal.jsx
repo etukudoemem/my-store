@@ -26,15 +26,15 @@ export const NetworkModal = ({ children }) => {
                     <p className="mb-4 mt-2 text-gray-600 ">
                         {children}
                     </p> 
-                    <div className="font-semibold flex justify-center">
-                        <button onClick={() => setModal({...modal, noNetwork:false})}
-                            className={`w-[50%] h-[42px] text-gray-800 text-sm 
-                                py-2 cursor-pointer rounded-xs bg-gray-200 
-                                hover:bg-gray-800 hover:text-gray-200 border-1 transition-all
-                                border-gray-400 shadow-sm active:scale-90 duration-100
+                    <div className="font-semibold flex justify-end">
+                        <p onClick={() => setModal({...modal, noNetwork:false})}
+                            className={` text-slate-600 text-xs 
+                                py-2 cursor-pointer rounded-xs 
+                                hover:text-slate-700 hover:scale-101 border-0 transition-all
+                                border-gray-400 active:scale-90 duration-100
                                 ease-in-out`}>
-                            Alright. Got it
-                        </button>
+                            ALRIGHT. GOT IT
+                        </p>
                     </div>
                 </div>
             </main>

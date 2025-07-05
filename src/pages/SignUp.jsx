@@ -22,8 +22,7 @@ export default function SignUp() {
                 and try again.
             </NetworkModal>
             <PasswordModal />
-            <section className="w-[100%] h-[60vh] flex justify-center 
-                items-center bg-gray-100" >
+            <section className="w-[100%] h-[60vh] flex justify-center items-center " >
                 <div className="w-100 m-auto ">
                     <div className="text-center text-3xl font-semibold mb-4 mt-8
                         flex items-center justify-center gap-2 text-gray-700">
@@ -34,10 +33,11 @@ export default function SignUp() {
                             <input onChange={(e) => getUserInfo(e)}
                                 className="w-100 h-11 text-gray-700
                                 active:scale-98 transition-all duration-200 ease-in-out
-                                outline-none p-3 border-1 border-gray-600 leftHeader"
+                                outline-none p-3 border-1 border-gray-600 leftHeader
+                                placeholder-gray-300"
                                 type="text" 
                                 name="name"
-                                placeholder="Name"
+                                placeholder="john doe"
                                 value={userInfo.name}
                             /> 
                             {noInput.name && 
@@ -48,10 +48,11 @@ export default function SignUp() {
                             <input onChange={(e) => getUserInfo(e)}
                                 className="w-100 h-11 text-gray-600 
                                 active:scale-98 transition-all duration-200 ease-in-out
-                                outline-none p-3 border-1 border-gray-600 rightHeader"
+                                outline-none p-3 border-1 border-gray-600 rightHeader
+                                placeholder-gray-300"
                                 type="email" 
                                 name="email"
-                                placeholder="Email"
+                                placeholder="johndoe@example.com"
                                 value={userInfo.email}
                             /> 
                             {noInput.email && 
@@ -62,10 +63,11 @@ export default function SignUp() {
                             <input onChange={(e) => getUserInfo(e)}
                                 className="w-100 h-11 text-gray-600
                                 active:scale-98 transition-all duration-200 ease-in-out
-                                outline-none p-3 border-1 border-gray-600 collections"
+                                outline-none p-3 border-1 border-gray-600 collections
+                                placeholder-gray-300"
                                 type="password" 
                                 name="password"
-                                placeholder="Password"
+                                placeholder="******"
                                 value={userInfo.password}
                             />
                             {noInput.password && 

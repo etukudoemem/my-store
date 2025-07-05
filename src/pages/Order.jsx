@@ -2,11 +2,13 @@ import OrderItem from "../components/OrderItem"
 import { useContext } from "react"
 import { storeContext } from "../contexts/storeContext"
 import Line from "../components/Line"
+import { ToastModal } from "../modals/ToastModal"
+import checkMarkIcon from "../assets/checkmark.png"
 
 
 export default function Order() {
 
-    const { orderedProduct, products, clearOrder } = useContext(storeContext)
+    const { orderedProduct, products, clearOrder, modal } = useContext(storeContext)
 
     const isOrders = orderedProduct.length > 0
 
@@ -24,6 +26,13 @@ export default function Order() {
 
     return (
         <>
+            {modal.orderToast && 
+                <ToastModal>
+                    <img src={checkMarkIcon} alt="checkmark" width={35}/>
+                    <p className="text-lg text-gray-500 font-medium">
+                        Order Placed Successfully
+                    </p>
+                </ToastModal>}
             {isOrders ? (<main className="mt-16">
                 <h2 className="flex items-center text-2xl font-medium mb-4 mt-8 gap-2">
                     <span className="text-gray-500 text-left">
@@ -38,7 +47,7 @@ export default function Order() {
                 </section>
                 <div className="flex justify-end w-full">
                     <button onClick={() => {clearOrder()}}
-                        className="min-w-50 min-h-11 bg-gray-100 text-gray-600 text-base
+                        className="min-w-50 min-h-11 bg-gray-800 text-white
                             mt-8 mb-8 text-sm font-semibold cursor-pointer self-end 
                             hover:scale-103 border-1 border-gray-400 shadow-md
                             active:scale-98 transition-all duration-200 ease-in-out">

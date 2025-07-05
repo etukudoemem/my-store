@@ -9,6 +9,7 @@
     background-color: rgb(93, 243, 93);
 }
 
+
 .con {
     width: auto;
     height: auto;
@@ -325,7 +326,7 @@
 
 .spin {
     animation-name: spin;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-delay: 0;

@@ -31,7 +31,7 @@ export default function Footer() {
                 </div>
             </section>
             <Line />
-            <footer className="text-center text-xs  text-gray-800">
+            <footer className="text-center text-xs text-gray-800">
                 Copyright 2025@emem.dev - All Rights reserved.
             </footer>
         </>
