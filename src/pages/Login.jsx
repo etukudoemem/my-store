@@ -6,12 +6,11 @@ import { LoginDetailsModal } from "../modals/LoginDetailsModal"
 import { Loader } from "../components/Loader";
 
 
-export default function Login() {
+export const Login = () => {
 
-    const { noLoginInput, getUserInfo, logInUser, userInfo, isLogged, isLoading } = useContext(storeContext)
+    const { noLoginInput, getUserInfo, logInUser, userInfo, isLogged, isLoading } = useContext(storeContext);
 
-    const navigate = useNavigate()
-
+    const navigate = useNavigate();
 
     return (
         <>

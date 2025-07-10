@@ -1,12 +1,12 @@
 import { Link } from "react-router"
 
-export default function Logo() {
+export const Logo = () => {
 
     return (
         <>
             <Link to="/">
-                <div className="text-xl font-semibold tracking-[-0.25rem]
-                    text-gray-400 store" >
+                <div className="lg:text-xl sm:text-3xl font-semibold lg:tracking-[-0.25rem]
+                    text-gray-400 store sm:tracking-[-0.35rem]" >
                     mySTORE
                 </div>
             </Link>

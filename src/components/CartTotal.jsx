@@ -1,6 +1,5 @@
-export default function CartTotal({ children }) {
+export const CartTotal = ({ children }) => {
 
-    
     return (
         <>
             <section className="rightHeader">

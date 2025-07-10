@@ -4,16 +4,11 @@ import { storeContext } from "../contexts/storeContext"
 import { NetworkModal } from "../modals/NetworkModal"
 import { PasswordModal } from "../modals/PasswordModal"
 
+export const SignUp = () => {
 
-export default function SignUp() {
+    const { noInput, getUserInfo, createUser, userInfo } = useContext(storeContext);
 
-    const { noInput, getUserInfo, createUser, userInfo } = useContext(storeContext)
-
-    const navigate = useNavigate()
-
-    // useEffect(()=>{
-    //     console.log(userInfo)
-    // }, [userInfo])
+    const navigate = useNavigate();
 
     return (
         <>

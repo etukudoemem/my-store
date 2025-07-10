@@ -1,4 +1,4 @@
-export default function Admin() {
+export const Admin = () => {
 
     return (
         <>

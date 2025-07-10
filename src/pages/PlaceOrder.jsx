@@ -1,26 +1,21 @@
-import CartTotal from "../components/CartTotal";
-import Line from "../components/Line";
+import { CartTotal } from "../components/CartTotal";
+import { Line } from "../components/Line";
 import { useContext } from "react";
 import { storeContext } from "../contexts/storeContext";
 import { useNavigate } from "react-router-dom";
 
 
-export default function PlaceOrder() {
+export const PlaceOrder = () =>  {
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const { getCartTotal, getProductToOrder, paymentMethod, setPaymentMethod, cartProduct } = useContext(storeContext);
 
-    const shippingCost = 10.00
+    const shippingCost = 10.00;
 
-    const getTotal = getCartTotal()
+    const getTotal = getCartTotal();
 
-    const total = (parseInt(getTotal) + shippingCost)
-
-    // useEffect(() => {
-    //     console.log(orderedProduct)
-    // }, [orderedProduct])
-
+    const total = (parseInt(getTotal) + shippingCost);
 
     return (
         <>
@@ -28,7 +23,7 @@ export default function PlaceOrder() {
                 <div className="w-1/2 flex flex-col gap-4 leftHeader">
                     <h2 className="flex items-center text-2xl font-medium mb-6 mt-8 gap-2">
                             <span className="text-gray-500 text-left">
-                                    DELIVERY
+                                DELIVERY
                             </span> 
                             <p>INFORMATION</p> 
                             <div className="w-12 h-[2.5px] bg-black"></div>
@@ -108,11 +103,11 @@ export default function PlaceOrder() {
                         <section className="w-[95%] flex flex-col ml-6">
                             <div className="min-w-full">
                                 <h2 className="flex items-center text-2xl font-medium mb-10 mt-8 gap-2">
-                                        <span className="text-gray-500 text-left">
-                                            CART
-                                        </span> 
-                                        <p>TOTALS</p> 
-                                        <div className="w-12 h-[2.5px] bg-black"></div>
+                                    <span className="text-gray-500 text-left">
+                                        CART
+                                    </span> 
+                                    <p>TOTALS</p> 
+                                    <div className="w-12 h-[2.5px] bg-black"></div>
                                 </h2>
                                 <div className="text-sm">
                                     <div className="flex justify-between mt-3">
@@ -197,7 +192,7 @@ export default function PlaceOrder() {
             (<div className="flex items-center justify-center collections w-full h-[50vh]">
                 <h2 className="flex items-center justify-center text-3xl font-medium mb-10 mt-8 gap-2">
                     <span className="text-gray-500 text-left">
-                            YOU HAVE NO ITEM(S) IN YOUR CART TO ORDER.
+                        YOU HAVE NO ITEM(S) IN YOUR CART TO ORDER.
                     </span> 
                 </h2>
              </div>)}

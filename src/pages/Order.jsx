@@ -1,16 +1,16 @@
-import OrderItem from "../components/OrderItem"
+import { OrderItem } from "../components/OrderItem"
 import { useContext } from "react"
 import { storeContext } from "../contexts/storeContext"
-import Line from "../components/Line"
+import { Line } from "../components/Line"
 import { ToastModal } from "../modals/ToastModal"
 import checkMarkIcon from "../assets/checkmark.png"
 
 
-export default function Order() {
+export const Order = () => {
 
-    const { orderedProduct, products, clearOrder, modal } = useContext(storeContext)
+    const { orderedProduct, products, clearOrder, modal } = useContext(storeContext);
 
-    const isOrders = orderedProduct.length > 0
+    const isOrders = orderedProduct.length > 0;
 
     const orderedItems = orderedProduct.map((item, id) => {
             for (let index = 0; index < products.length; index++) {
@@ -22,7 +22,7 @@ export default function Order() {
                             />   
                 }   
             }
-        })
+        });
 
     return (
         <>

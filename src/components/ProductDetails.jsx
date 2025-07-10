@@ -6,10 +6,10 @@ import { SizeModal } from "../modals/SizeModal.jsx"
 import { CartModal } from "../modals/CartModal.jsx"
 
 
-export default function ProductDetails({ productInfo, currentImage, setCurrentImage }) {
+export const ProductDetails = ({ productInfo, currentImage, setCurrentImage }) => {
     
-    const [productSize, setProductSize] = useState("")
-    const {getProductToCart} = useContext(storeContext)
+    const [productSize, setProductSize] = useState("");
+    const {getProductToCart} = useContext(storeContext);
     
     return (
         <>
@@ -40,11 +40,11 @@ export default function ProductDetails({ productInfo, currentImage, setCurrentIm
                     </h2>
                     <div className="my-6 flex gap-x-22 items-center">
                         <div className="flex w-[15px] gap-x-1">
-                            <img src={starIcon} alt="" />
-                            <img src={starIcon} alt="" />
-                            <img src={starIcon} alt="" />
-                            <img src={starIcon} alt="" />
-                            <img src={starDullIcon} alt="" />
+                            <img src={starIcon} alt="star" />
+                            <img src={starIcon} alt="star" />
+                            <img src={starIcon} alt="star" />
+                            <img src={starIcon} alt="star" />
+                            <img src={starDullIcon} alt="star" />
                         </div>
                         <p>(122)</p>
                     </div>
@@ -57,13 +57,13 @@ export default function ProductDetails({ productInfo, currentImage, setCurrentIm
                     <p className="font-semibold mb-4">Select Size</p>
                     <div className="flex gap-2 font-semibold min-w-full ">
                         {productInfo.sizes.map((size, index) => 
-                        <button key={index} onClick={() => {setProductSize(size)}} 
-                            className={`min-w-[auto] h-[42px] py-2 px-4 bg-gray-100 
-                            text-gray-600 flex items-center justify-center cursor-pointer
-                            active:scale-95 transition-all duration-100 ease-in-out 
-                            hover:scale-103 border-1 border-gray-400 shadow-md
-                            ${size === productSize ? "bg-green-200" : null}`}>{size}
-                        </button>)
+                            <button key={index} onClick={() => {setProductSize(size)}} 
+                                className={`min-w-[auto] h-[42px] py-2 px-4 bg-gray-100 
+                                text-gray-600 flex items-center justify-center cursor-pointer
+                                active:scale-95 transition-all duration-100 ease-in-out 
+                                hover:scale-103 border-1 border-gray-400 shadow-md
+                                ${size === productSize ? "bg-green-200" : null}`}>{size}
+                            </button>)
                         }
                     </div>
                     <button 

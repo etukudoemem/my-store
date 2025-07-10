@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom"
-import NavBar from "../components/NavBar"
-import Footer from "../components/Footer"
+import { NavBar } from "../components/NavBar"
+import { Footer } from "../components/Footer"
 import { LogoutModal } from "../modals/LogoutModal"
 import { ToastModal } from "../modals/ToastModal"
 import checkMarkIcon from "../assets/checkmark.png"
@@ -9,17 +9,16 @@ import { storeContext } from "../contexts/storeContext"
 import { Loader } from "../components/Loader"
 
 
-export default function Layout() {
+export const Layout = () => {
 
-    const { modal, isLoading } = useContext(storeContext)
+    const { modal, isLoading } = useContext(storeContext);
 
     return (
         <>
-            <section className="px-[0rem] sticky top-0 z-10 bg-white 
-            ">
+            <section className="sticky top-0 z-10 bg-white">
                 <NavBar />
             </section>
-            <section className="px-[8rem] py-[0.5rem]">
+            <section className="lg:px-[8rem] py-[0.5rem] sm:px-[2rem]">
                 <LogoutModal />
                 {/* {isLoading && <Loader />} */}
                 {modal.logOutToast && (

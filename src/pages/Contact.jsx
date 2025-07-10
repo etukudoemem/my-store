@@ -1,7 +1,7 @@
 import contactPhoto from "../assets/contact-photo.jpg"
-import Subscribe from "../components/Subscribe"
+import { Subscribe } from "../components/Subscribe"
 
-export default function Contact() {
+export const Contact = () => {
 
     return (
         <>
@@ -13,13 +13,13 @@ export default function Contact() {
                     <p className=""> US</p>
                     <div className="w-12 h-[2.5px] bg-black"></div>
             </h2>
-            <section className="flex max-w-[70%] min-h-[400px] gap-12 m-auto
-                justify-center items-center">
-                <div className="min-w-1/2 min-h-[inherit] flex justify center leftHeader">
+            <section className="flex lg:max-w-[70%] lg:min-h-[400px] gap-12 m-auto sm:max-w-full
+                justify-center items-center sm:flex-col sm:min-h-[800px] lg:flex-row">
+                <div className="min-w-1/2 min-h-[inherit] flex justify-center leftHeader">
                     <img className="min-w-full min-h-[inherit]" src={contactPhoto} />
                 </div>
-                <div className="min-w-1/2 min-h-[inherit] flex flex-col rightHeader
-                    justify-center">
+                <div className="lg:min-w-1/2 sm:min-w-full min-h-[inherit] flex flex-col rightHeader
+                    lg:justify-center sm:justify-start ">
                     <h3 className="text-xl font-bold text-gray-600 font-semi-bold
                         mb-6">
                         Our Store
@@ -45,13 +45,14 @@ export default function Contact() {
                     </p>
                     <button className="text-sm font-medium max-w-[140px]
                         h-[55px] border-1 border-gray-500 border-solid
-                        cursor-pointer hover:scale-103 active:scale-85
-                        transition-all duration-200 ease-in-out">
+                        cursor-pointer hover:scale-103 active:scale-99
+                        transition-all duration-200 ease-in-out hover:bg-gray-800
+                        hover:text-white">
                         Explore Jobs
                     </button>
                 </div>
             </section>
-            <section className="scroll">
+            <section className="scroll sm:mb-25 sm:mt-[-400px] lg:mb-0 lg:mt-0">
                 <Subscribe />
             </section>
         </>

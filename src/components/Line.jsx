@@ -1,4 +1,4 @@
-export default function Line() {
+export const Line = () => {
 
     return (
         <>

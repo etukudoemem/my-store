@@ -10,6 +10,7 @@
 }
 
 
+
 .con {
     width: auto;
     height: auto;
@@ -118,7 +119,6 @@
     animation-delay: 0;
     animation-iteration-count: 1;
 }
-
 
 @keyframes slide-right {
     0% {

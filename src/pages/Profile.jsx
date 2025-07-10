@@ -1,6 +1,4 @@
-
-
-export default function Profile() {
+export const Profile = () => {
 
     return (
         <>

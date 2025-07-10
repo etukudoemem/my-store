@@ -1,24 +1,24 @@
-import Line from "../components/Line";
-import CartItem from "../components/CartItem";
-import CartTotal from "../components/CartTotal";
+import { Line } from "../components/Line";
+import { CartItem } from "../components/CartItem";
+import { CartTotal } from "../components/CartTotal";
 import { useContext } from "react";
 import { storeContext } from "../contexts/storeContext";
 import { useNavigate, Link } from "react-router-dom";
 
 
-export default function Cart() {
+export const Cart = () => {
 
-    const { cartProduct, products, getCartTotal, setStorage, getStorage } = useContext(storeContext)
+    const { cartProduct, products, getCartTotal, setStorage, getStorage } = useContext(storeContext);
 
-    const shippingCost = 10.00
+    const shippingCost = 10.00;
 
-    const getTotal = getCartTotal()
+    const getTotal = getCartTotal();
 
-    const total = (parseInt(getTotal) + shippingCost)
+    const total = (parseInt(getTotal) + shippingCost);
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
-    const isCartProduct = cartProduct.length > 0
+    const isCartProduct = cartProduct.length > 0;
 
     const cartItems = cartProduct.map((item, id) => {
         for (let index = 0; index < products.length; index++) {
@@ -28,9 +28,9 @@ export default function Cart() {
                             productData={products[index]}
                             cartData={item}
                         />   
-            }   
-        }
-    })
+            };   
+        };
+    });
 
 
     return (
@@ -38,13 +38,12 @@ export default function Cart() {
             {isCartProduct ? (<main className="mt-16">
                 <h2 className="flex items-center text-xl font-medium mb-10 mt-8 gap-2">
                     <span className="text-gray-500 text-left">
-                            YOUR
+                        YOUR
                     </span> 
                     <p>CART</p> 
                     <div className="w-12 h-[2.5px] bg-black"></div>
                 </h2>
-                
-                <section className="">
+                <section>
                     {cartItems}
                 </section> 
                 <Line /> 
@@ -52,11 +51,11 @@ export default function Cart() {
                     <section className="w-full mt-12 flex flex-col">
                         <div className="min-w-[40%] self-end">
                             <h2 className="flex items-center text-2xl font-medium mb-10 mt-8 gap-2">
-                                    <span className="text-gray-500 text-left">
-                                        CART
-                                    </span> 
-                                    <p>TOTALS</p> 
-                                    <div className="w-12 h-[2.5px] bg-black"></div>
+                                <span className="text-gray-500 text-left">
+                                    CART
+                                </span> 
+                                <p>TOTALS</p> 
+                                <div className="w-12 h-[2.5px] bg-black"></div>
                             </h2>
                             <div className="text-sm">
                                 <div className="flex justify-between mt-3">
@@ -82,12 +81,11 @@ export default function Cart() {
                             </div>
                         </div>
                         <Link to={"place-order"} className="self-end">
-                            <button 
-                                className="min-w-58 min-h-11 bg-gray-100 text-gray-600 text-base
+                            <button className="min-w-58 min-h-11 bg-gray-100 text-gray-600 text-base
                                 mt-8 mb-8 text-sm font-semibold cursor-pointer border-1 border-gray-400
                                 active:scale-95 transition-all duration-200 ease-in-out shadow-md
                                 hover:scale-103">
-                            PROCEED TO PLACE ORDER
+                                PROCEED TO PLACE ORDER
                             </button>
                         </Link>
                     </section>
@@ -96,12 +94,10 @@ export default function Cart() {
              (<div className="flex items-center justify-center collections w-full h-[50vh] ">
                 <h2 className="flex items-center justify-center text-3xl font-medium mb-10 mt-8 gap-2">
                     <span className="text-gray-500 text-left">
-                            YOUR CART IS EMPTY
+                        YOUR CART IS EMPTY
                     </span> 
                 </h2>
-             </div>)}
-            
-            
+             </div>)}    
         </>
     )
 }
