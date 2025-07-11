@@ -82,75 +82,75 @@ export const SideBar = ({ setCollection, sorted }) => {
                      ${showFilters ? "sm:visible sm:opacity-100 h-auto lg:visible lg:opacity-100 duration-500" 
                         : "sm:invisible sm:opacity-0 sm:h-0 lg:visible lg:opacity-100 lg:h-auto duration-300"} 
                         transition-all ease-in-out lg:visible`}>
-                    <div className="border-gray-300 border-1 sm:h-[280px] lg:px-4 sm:px-8
-                        lg:h-[145px] lg:max-w-[250px] sm:min-w-[48%] mb-4 lg:py-4 sm:py-8 text-sm">
-                        <h3 className="lg:text-sm sm:text-4xl font-medium mb-3">
+                    <div className="border-gray-300 border-1 sm:h-[340px] lg:px-4 sm:px-8
+                        lg:h-[145px] lg:max-w-[250px] sm:min-w-[48%] mb-4 lg:py-4 sm:py-12 text-sm">
+                        <h3 className="lg:text-sm sm:text-4xl lg:font-medium sm:font-medium lg:mb-3 sm:mb-5">
                             CATEGORIES
                         </h3>
                         <div className="flex gap-2 items-center lg:mb-2 sm:mb-6 text-gray-700">
-                            <input className="cursor-pointer"
+                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200"
                                 onChange={(e) => {handleCategory(e)}} 
                                 type="checkbox" 
                                 id="Men" 
                             />
-                            <label htmlFor="Men" className="lg:text-sm sm:text-3xl">
+                            <label htmlFor="Men" className="lg:text-sm sm:text-4xl">
                                 Men
                             </label>
                         </div>
                         <div className="flex gap-2 items-center lg:mb-2 sm:mb-6 text-gray-700">
-                            <input className="cursor-pointer"
+                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200"
                                 onChange={(e) => {handleCategory(e)}} 
                                 type="checkbox"
                                 id="Women" 
                             />
-                            <label htmlFor="Women" className="lg:text-sm sm:text-3xl">
+                            <label htmlFor="Women" className="lg:text-sm sm:text-4xl">
                                 Women
                             </label>
                         </div>
                         <div className="flex gap-2 items-center text-gray-700">
-                            <input className="cursor-pointer"
+                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200"
                                 onChange={(e) => {handleCategory(e)}} 
                                 type="checkbox" 
                                 id="Kids"
                             />
-                            <label htmlFor="Kids" className="lg:text-sm sm:text-3xl">
+                            <label htmlFor="Kids" className="lg:text-sm sm:text-4xl">
                                 Kids
                             </label>
                         </div>
                     </div>
 
-                    <div className="border-gray-300 border-1 lg:py-4 sm:py-8 lg:px-4 sm:px-8
-                        lg:h-[145px] sm:h-[280px] lg:max-w-[250px] sm:min-w-[48%]">
-                        <h3 className="lg:text-sm sm:text-4xl font-medium mb-3">
+                    <div className="border-gray-300 border-1 lg:py-4 sm:py-12 lg:px-4 sm:px-8
+                        lg:h-[145px] sm:h-[340px] lg:max-w-[250px] sm:min-w-[48%]">
+                        <h3 className="lg:text-sm sm:text-4xl font-medium lg:mb-3 sm:mb-5">
                             TYPE
                         </h3>
                         <div className="flex gap-2 items-center lg:mb-2 sm:mb-6 text-gray-700">
-                            <input className="cursor-pointer"
+                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200"
                                 onChange={(e) => {handleType(e)}} 
                                 type="checkbox" 
                                 id="Topwear"
                             />
-                            <label htmlFor="Topwear" className="lg:text-sm sm:text-3xl">
+                            <label htmlFor="Topwear" className="lg:text-sm sm:text-4xl">
                                 Topwear
                             </label>
                         </div>
                         <div className="flex gap-2 items-center lg:mb-2 sm:mb-6 text-gray-700">
-                            <input className="cursor-pointer"
+                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200"
                                 onChange={(e) => {handleType(e)}} 
                                 type="checkbox" 
                                 id="Bottomwear"
                             />
-                            <label htmlFor="Bottomwear" className="lg:text-sm sm:text-3xl">
+                            <label htmlFor="Bottomwear" className="lg:text-sm sm:text-4xl">
                                 Bottomwear
                             </label>
                         </div>
                         <div className="flex gap-2 items-center text-gray-700">
-                            <input className="cursor-pointer"
+                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200"
                                 onChange={(e) => {handleType(e)}} 
                                 type="checkbox" 
                                 id="Winterwear"
                             />
-                            <label htmlFor="Winterwear" className="lg:text-sm sm:text-3xl">
+                            <label htmlFor="Winterwear" className="lg:text-sm sm:text-4xl">
                                 Winterwear
                             </label>
                         </div>   

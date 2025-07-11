@@ -63,7 +63,7 @@ export const Collection = () => {
                                     font-medium">
                                 <span className="text-gray-500">
                                     ALL
-                                </span> 
+                                </span>
                                 <p>COLLECTIONS</p>
                                 <div className="w-12 h-[2.5px] bg-black"></div>
                             </div>
