@@ -12,8 +12,14 @@ export const ProductCard = ({ id, name, price, image }) => {
                         <img className="hover:scale-115 hover:duration-400" 
                             src={image[0]} alt="image" />
                     </div>
-                    <p className="text-gray-700 px-2 my-2 text-[13px] ">{name}</p>
-                    <p className="font-semibold text-gray-600 px-2 mb-2 text-sm">${price}</p>
+                    <p className="text-gray-700 px-2 my-2 lg:text-[13px] sm:text-3xl
+                        sm:w-70 lg:w-full ">
+                        {name}
+                    </p>
+                    <p className="font-semibold text-gray-600 px-2 mb-2 lg:text-sm sm:text-3xl
+                        ">
+                        ${price}
+                    </p>
                 </div>
             </Link>
         </>
