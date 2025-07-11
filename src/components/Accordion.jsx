@@ -12,10 +12,10 @@ export const Accordion = ({ title, content }) => {
                 <div className="w-[100%] h-[auto] border-b-1 border-gray-200 py-4">
                     <button onClick={() => {handleClick()}}
                         className="flex justify-between items-center w-full h-[auto] cursor-pointer">
-                        <p className="text-lg font-medium text-gray-700"> 
+                        <p className="lg:text-lg sm:text-5xl lg:font-medium text-gray-700"> 
                             {title}
                         </p>
-                        <span className="text-xl cursor-pointer">
+                        <span className="lg:text-xl sm:text-7xl cursor-pointer">
                             {showAccordion ? "-" : "+"}
                         </span>
                     </button>
