@@ -69,39 +69,43 @@ export const SideBar = ({ setCollection, sorted }) => {
         <>
             <section className="mt-8 leftHeader ">
                 <div onClick={() => setShowFilters(!showFilters)}
-                    className="sm:flex sm:items-center sm:gap-x-7 
-                    lg:bg-white sm:w-40 lg:py-0 sm:py-3 sm:justify-center sm:shadow-xs lg:border-0
-                     lg:shadow-[0] cursor-pointer sm:mb-4 lg:mb-0 sm:border-2 sm:border-gray-300">
-                    <h2 className="text-xl font-medium lg:mb-8">
+                    className="sm:flex sm:items-center sm:gap-x-5 sm:border-2 sm:border-gray-300
+                    lg:bg-white sm:w-80 lg:py-0 sm:py-8 sm:justify-center sm:shadow-xs lg:border-0
+                     lg:shadow-[0] cursor-pointer sm:mb-10 lg:mb-0 sm:bg-gray-100">
+                    <h2 className="lg:text-xl sm:text-5xl font-medium lg:mb-8">
                         FILTERS
                     </h2>
                     <img className="lg:hidden"
-                        src={showFilters ? dropDown : rightButton} alt="arrow" width={24}/>
+                        src={showFilters ? dropDown : rightButton} alt="arrow" width={50}/>
                 </div>
                 <div className={`flex sm:justify-between sm:flex-row lg:flex-col
                      ${showFilters ? "sm:visible sm:opacity-100 h-auto lg:visible lg:opacity-100 duration-500" 
                         : "sm:invisible sm:opacity-0 sm:h-0 lg:visible lg:opacity-100 lg:h-auto duration-300"} 
                         transition-all ease-in-out lg:visible`}>
-                    <div className="border-gray-300 border-1 
-                        min-h-[145px] lg:max-w-[250px] sm:min-w-[48%] mb-4 py-4 px-4 text-sm">
-                        <h3 className="text-sm font-medium mb-3">
+                    <div className="border-gray-300 border-1 sm:h-[280px] lg:px-4 sm:px-8
+                        lg:h-[145px] lg:max-w-[250px] sm:min-w-[48%] mb-4 lg:py-4 sm:py-8 text-sm">
+                        <h3 className="lg:text-sm sm:text-4xl font-medium mb-3">
                             CATEGORIES
                         </h3>
-                        <div className="flex gap-2 items-center mb-2 text-gray-700">
+                        <div className="flex gap-2 items-center lg:mb-2 sm:mb-6 text-gray-700">
                             <input className="cursor-pointer"
                                 onChange={(e) => {handleCategory(e)}} 
                                 type="checkbox" 
                                 id="Men" 
                             />
-                            <label htmlFor="Men">Men</label>
+                            <label htmlFor="Men" className="lg:text-sm sm:text-3xl">
+                                Men
+                            </label>
                         </div>
-                        <div className="flex gap-2 items-center mb-2 text-gray-700">
+                        <div className="flex gap-2 items-center lg:mb-2 sm:mb-6 text-gray-700">
                             <input className="cursor-pointer"
                                 onChange={(e) => {handleCategory(e)}} 
                                 type="checkbox"
                                 id="Women" 
                             />
-                            <label htmlFor="Women">Women</label>
+                            <label htmlFor="Women" className="lg:text-sm sm:text-3xl">
+                                Women
+                            </label>
                         </div>
                         <div className="flex gap-2 items-center text-gray-700">
                             <input className="cursor-pointer"
@@ -109,30 +113,36 @@ export const SideBar = ({ setCollection, sorted }) => {
                                 type="checkbox" 
                                 id="Kids"
                             />
-                            <label htmlFor="Kids">Kids</label>
+                            <label htmlFor="Kids" className="lg:text-sm sm:text-3xl">
+                                Kids
+                            </label>
                         </div>
                     </div>
 
-                    <div className="border-solid border-gray-300 border-1
-                        lg:min-h-[145px] sm:max-h-[145px] lg:max-w-[250px] sm:min-w-[48%] py-4 px-4 text-sm">
-                        <h3 className="text-sm font-medium mb-3">
+                    <div className="border-gray-300 border-1 lg:py-4 sm:py-8 lg:px-4 sm:px-8
+                        lg:h-[145px] sm:h-[280px] lg:max-w-[250px] sm:min-w-[48%]">
+                        <h3 className="lg:text-sm sm:text-4xl font-medium mb-3">
                             TYPE
                         </h3>
-                        <div className="flex gap-2 items-center mb-2 text-gray-700">
+                        <div className="flex gap-2 items-center lg:mb-2 sm:mb-6 text-gray-700">
                             <input className="cursor-pointer"
                                 onChange={(e) => {handleType(e)}} 
                                 type="checkbox" 
                                 id="Topwear"
                             />
-                            <label htmlFor="Topwear">Topwear</label>
+                            <label htmlFor="Topwear" className="lg:text-sm sm:text-3xl">
+                                Topwear
+                            </label>
                         </div>
-                        <div className="flex gap-2 items-center mb-2 text-gray-700">
+                        <div className="flex gap-2 items-center lg:mb-2 sm:mb-6 text-gray-700">
                             <input className="cursor-pointer"
                                 onChange={(e) => {handleType(e)}} 
                                 type="checkbox" 
                                 id="Bottomwear"
                             />
-                            <label htmlFor="Bottomwear">Bottomwear</label>
+                            <label htmlFor="Bottomwear" className="lg:text-sm sm:text-3xl">
+                                Bottomwear
+                            </label>
                         </div>
                         <div className="flex gap-2 items-center text-gray-700">
                             <input className="cursor-pointer"
@@ -140,7 +150,9 @@ export const SideBar = ({ setCollection, sorted }) => {
                                 type="checkbox" 
                                 id="Winterwear"
                             />
-                            <label htmlFor="Winterwear">Winterwear</label>
+                            <label htmlFor="Winterwear" className="lg:text-sm sm:text-3xl">
+                                Winterwear
+                            </label>
                         </div>   
                     </div>
                 </div>

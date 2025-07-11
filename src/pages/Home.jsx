@@ -113,7 +113,7 @@ export const Home = () => {
             <section className="scroll sm:mt-[32%] lg:mt-0">
                 <Experience />
             </section>
-            <section className="scroll sm:mt-[12%] lg:mt-0 lg:mb-0 sm:mb-20 ">
+            <section className="scroll sm:mt-[12%] lg:mt-0 lg:mb-0 sm:mb-40 ">
                 <Subscribe />
             </section>
         </>

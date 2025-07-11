@@ -388,9 +388,9 @@ export default function StoreContextProvider ({ children }) {
         // console.log(modal)
     }, [modal.orderToast])
 
-    useEffect(() => {
-        console.log(modal)
-    }, [modal])
+    // useEffect(() => {
+    //     console.log(modal)
+    // }, [modal])
 
     const logOutAttempt = () => {
         setModal({...modal, logOut:true})

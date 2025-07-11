@@ -4,7 +4,7 @@ import { SideBar } from "../components/SideBar"
 import { products } from "../assets/frontend_assets/assets"
 import { useState, useContext } from "react"
 import { storeContext } from "../contexts/storeContext"
-import searchIcon from "../assets/search-icon.png"
+import searchIcon from "../assets/search-icon2.png"
 import closeIcon from "../assets/close-icon.png"
 
 
@@ -32,26 +32,26 @@ export const Collection = () => {
             {isSearch &&
             (<section className="bg-gray-50 mb-8 expand">
                 <Line />
-                <div className="w-[100%] h-[45px] flex justify-center items-center 
-                    rounded relative ">   
+                <div className="w-[100%] lg:h-[45px] flex justify-center items-center 
+                     relative sm:h-[80px] ">   
                     <input onChange={(e) => {setSearch(e.target.value)}}
-                        className="w-[50%] lg:h-[100%] sm:h-[120%] border-[1.5px] border-solid border-gray-400 
-                        rounded-4xl px-12 py-1 outline-none font-medium text-gray-600
-                        active:scale-99 transition-all duration-200 ease-in-out"
+                        className="w-[50%] lg:h-[100%] sm:h-[100%] border-[1.5px] border-solid border-gray-400 
+                        rounded-4xl lg:px-12 sm:px-18 py-1 outline-none font-medium text-gray-600 lg:text-base
+                        active:scale-99 transition-all duration-200 ease-in-out sm:text-3xl"
                         placeholder="Search"
                         autoFocus
                     />
-                    <img src={searchIcon} alt="search" className="absolute w-[25px] sm:left-[27%] 
-                        lg:left-[26.2%] " />
+                    <img src={searchIcon} alt="search" className="absolute lg:w-[25px] sm:left-[27%] 
+                        lg:left-[26.2%] sm:w-[40px]" />
                     <img onClick={() => {setIsSearch(false)}}
-                        src={closeIcon} alt="close" className="absolute w-[25px] sm:right-[21%] lg:right-[22%]
-                        cursor-pointer active:scale-85 transition-all duration-200 ease-in-out
+                        src={closeIcon} alt="close" className="absolute lg:w-[25px] sm:right-[17%] lg:right-[22%]
+                        cursor-pointer active:scale-85 transition-all duration-200 ease-in-out sm:w-[55px]
                         hover:scale-105 " />
                 </div>
                 <Line /> 
             </section>)}
             
-           <section className="flex lg:flex-row sm:flex-col gap-12 w-full mt-8 sm:mb-50
+           <section className="flex lg:flex-row sm:flex-col gap-12 w-full mt-8 sm:mb-110
             lg:mb-0">
                 <div className="lg:w-[20%] sm:w-[100%] ">
                     <SideBar setCollection={setCollection} sorted={sorted} />
@@ -59,7 +59,7 @@ export const Collection = () => {
                 <div className="lg:w-[80%] sm:w-[100%]">
                     <div className="flex flex-col ">
                         <div className="flex justify-between items-center ">
-                            <div className="text-2xl flex items-center gap-2
+                            <div className="lg:text-3xl sm:text-6xl flex items-center gap-2
                                     font-medium">
                                 <span className="text-gray-500">
                                     ALL
@@ -67,10 +67,10 @@ export const Collection = () => {
                                 <p>COLLECTIONS</p>
                                 <div className="w-12 h-[2.5px] bg-black"></div>
                             </div>
-                            <div className="w-[180px] h-[45px] border-2 border-gray-300 
-                            flex items-center justify-center font-medium
-                                text-sm p-2 rightHeader">
-                                <label htmlFor="sort">Sort by:
+                            <div className="lg:w-[180px] lg:h-[45px] border-2 border-gray-300 
+                            flex items-center justify-center font-medium sm:w-[280px] sm:h-[100px]
+                                lg:text-sm p-2 rightHeader">
+                                <label htmlFor="sort" className="lg:text-base sm:text-2xl">Sort by:
                                     <select onChange={(e) => {setSorted(e.target.value)}} 
                                         className="outline-none cursor-pointer " 
                                         name="sort" 
@@ -93,7 +93,7 @@ export const Collection = () => {
                             </div>
                         </div>
                         <div className="mt-10.5 grid lg:gap-y-10 lg:gap-x-4 lg:grid-cols-4
-                            sm:grid-cols-2 sm:gap-x-10 sm:gap-y-55 sm:px-10 lg:px-0
+                            sm:grid-cols-2 sm:gap-x-10 sm:gap-y-74 sm:px-10 lg:px-0
                             collections
                             ">
                             {allCollections}

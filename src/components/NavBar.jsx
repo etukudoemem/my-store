@@ -1,12 +1,12 @@
 import { useState } from "react"
 import { Logo } from "./Logo"
 import { NavLink, Link, useNavigate } from "react-router-dom"
-import searchIcon from "../assets/search-icon.png"
+import searchIcon from "../assets/search-icon2.png"
 import profileIcon from "../assets/profile-icon.png"
 import shoppingBagIcon from "../assets/shopping-bag-icon.png"
 import { storeContext } from "../contexts/storeContext"
 import { useContext, useEffect } from "react"
-import hamburgerMenu from "../assets/hamburger-menu.png"
+import hamburgerMenu from "../assets/hamburger-menu2.png"
 import closeIcon from "../assets/close-icon.png"
 
 
@@ -19,7 +19,12 @@ export const NavBar = () => {
 
     const cartQuantity = getCartQuantity();
 
-    function handleSearch () {
+    const menuLog = () => {
+        isLogged ? logOutAttempt() : navigate("login");
+        setShowMenu(false);
+    };
+
+    const handleSearch = () => {
         navigate("collection")
         setIsSearch(!isSearch)
     };
@@ -70,17 +75,18 @@ export const NavBar = () => {
                     </ul>
                 </nav>
 
-                <div className="flex justify-between w-60% sm:gap-x-2" >
+                <div className="flex justify-between w-60% sm:gap-x-6 lg:gap-x-2" >
                     <div onClick={() => {handleSearch()}}
                         className="cursor-pointer active:scale-85 transition-all
                         duration-100 ease-in-out">
-                        <img className="lg:w-auto sm:w-18"
+                        <img className="lg:w-[30px] sm:w-22"
                             src={searchIcon} alt="search" />
                     </div>
 
                     <div className="w-[30px] relative group sm:hidden lg:block">
-                        <Link to={"login"}><img src={profileIcon} alt="" className="cursor-pointer
-                            active:scale-85 transition-all duration-100 ease-in-out"/>
+                        <Link to={"login"}>
+                            <img src={profileIcon} alt="" className="cursor-pointer
+                                active:scale-85 transition-all duration-100 ease-in-out"/>
                         </Link>
                         <ul className={`font-medium text-gray-800 flex flex-col justify-center rounded-xs
                             item-center hidden absolute w-[190px] h-[auto] bg-gray-100 border-0 shadow-inset
@@ -103,19 +109,19 @@ export const NavBar = () => {
                     </div>
                     <Link to="cart" className="active:scale-85 transition-all duration-100 ease-in-out">
                         <div className="relative cursor-pointer">
-                            <img className="lg:w-auto sm:w-18"
+                            <img className="lg:w-[30px] sm:w-22"
                                 src={shoppingBagIcon} alt="" />
                             <div className="bg-gray-700 absolute bottom-[0] right-[0] 
-                                rounded-full lg:w-4 lg:h-4 sm:w-10 sm:h-10 flex justify-center items-center  
+                                rounded-full lg:w-4 lg:h-4 sm:w-12 sm:h-12 flex justify-center items-center  
                                 text-white font-semibold focus:scale-105 transtion-all duration-200
-                                ease-in-out lg:text-[8px] sm:text-[18px]">
+                                ease-in-out lg:text-[8px] sm:text-[20px]">
                                     {cartQuantity}
                             </div>
                         </div>
                     </Link>
                     <section className="lg:hidden cursor-pointer relative ml-2 flex justify-end">
                         <div onClick={() => setShowMenu(!showMenu)}>
-                            <img className="lg:w-auto sm:w-18"
+                            <img className="lg:w-auto sm:w-22"
                                 src={hamburgerMenu} alt="menu"/>
                         </div>
                         <ul className={`${showMenu ? "block expand": "hidden"} absolute w-full
@@ -128,14 +134,14 @@ export const NavBar = () => {
                                     src={closeIcon} alt="close" width={100}/>
                             </div>
                             <div className="flex gap-x-8 items-center px-4 py-2">
-                                <Link to={"login"}>
-                                    <button onClick={() => setShowMenu(false)}
+                                
+                                    <button onClick={() => menuLog()}
                                         className="bg-gray-900 px-20 py-8 shadow-sm border-1
                                         border-gray-400 active:scale-102 text-gray-100 text-5xl
                                         rounded-sm transition-all duration-200">
                                         {isLogged ? "LOG OUT": "LOG IN"}
                                     </button>
-                                </Link>
+                                
                                 <Link to={"login/signup"}>
                                     <button onClick={() => setShowMenu(false)}
                                         className="bg-gray-100 px-18 py-8 shadow-sm border-2
