@@ -59,9 +59,19 @@ export const Home = () => {
                 <div className="lg:min-w-1/2 lg:min-h-[inherit] flex flex-col leftHeader
                     justify-center items-center gap-y-3 bg-green-200 text-gray-600
                     sm:min-w-full sm:min-h-[500px]">
-                    <p className="font-medium sm:text-7xl lg:text-3xl mb-4">OUR BEST SELLERS</p>
-                    <p className="font-medium sm:text-5xl lg:text-2xl mb-4">Latest Arrivals</p>
-                    <p className="font-medium sm:text-7xl lg:text-3xl">SHOP NOW</p>
+                    <p className="font-medium sm:text-6xl lg:text-3xl">
+                        OUR BEST SELLERS
+                    </p>
+                    <p className="lg:text-3xl sm:text-7xl ">&</p>
+                    <p className="font-medium sm:text-6xl lg:text-3xl sm:mb-6 lg:mb-4">
+                        LATEST ARRIVAL</p>
+                    <div className="flex items-center gap-x-4">
+                        <div className="w-12 h-[2.5px] bg-gray-600"></div>
+                        <p className="font-medium sm:text-5xl lg:text-2xl font">
+                            Shop Now
+                        </p>
+                        <div className="w-12 h-[2.5px] bg-gray-600"></div>
+                    </div>
                 </div>
                 <div className="lg:min-w-1/2 lg:max-h-[inherit] rightHeader z-0 sm:min-w-full
                     ">
@@ -70,7 +80,7 @@ export const Home = () => {
             </section>
 
             <section className="lg:mt-16 sm:mt-[25%]  ">
-                <h2 className="text-center lg:text-3xl sm:text-7xl font-medium mb-4 mt-8
+                <h2 className="text-center lg:text-3xl sm:text-6xl font-medium mb-4 mt-8
                         flex items-center justify-center gap-2 lg:mb-0 sm:mb-[5%]">
                     <span className="text-gray-500">
                         LATEST
@@ -80,8 +90,8 @@ export const Home = () => {
                     </p>
                     <div className="w-12 h-[2.5px] bg-black"></div>
                 </h2>
-                <p className="lg:w-[70%] sm:w-[90%] text-center m-auto text-gray-600 
-                    lg:text-base sm:text-5xl leading-normal lg:mb-0 sm:mb-[10%]">
+                <p className="lg:w-[70%] sm:w-[80%] text-center m-auto text-gray-600 
+                    lg:text-base sm:text-4xl leading-normal lg:mb-0 sm:mb-[10%]">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Exercitationem recusandae molestiae.
                 </p>
@@ -92,7 +102,7 @@ export const Home = () => {
             </section>
 
             <section className="lg:mt-16 sm:mt-[35%]">
-                <h2 className="text-center lg:text-3xl sm:text-7xl font-medium mb-4 mt-8
+                <h2 className="text-center lg:text-3xl sm:text-6xl font-medium mb-4 mt-8
                     flex items-center justify-center gap-2 scroll lg:mb-0 sm:mb-[5%]">
                         <span className="text-gray-500">
                             BEST
@@ -100,8 +110,8 @@ export const Home = () => {
                         <p className="">SELLERS</p>
                         <div className="w-12 h-[2.5px] bg-black"></div>
                 </h2>
-                <p className="lg:w-[70%] sm:w-[90%] text-center m-auto text-gray-600 
-                    scroll lg:text-base sm:text-5xl leading-normal lg:mb-0 sm:mb-[10%]">
+                <p className="lg:w-[70%] sm:w-[80%] text-center m-auto text-gray-600 
+                    scroll lg:text-base sm:text-4xl leading-normal lg:mb-0 sm:mb-[10%]">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Exercitationem recusandae molestiae.
                 </p>
@@ -110,7 +120,7 @@ export const Home = () => {
                     {bestSellers}
                 </div>
             </section>
-            <section className="scroll sm:mt-[32%] lg:mt-0">
+            <section className="scroll sm:mt-[40%] lg:mt-0">
                 <Experience />
             </section>
             <section className="scroll sm:mt-[15%] lg:mt-0 lg:mb-0 sm:mb-50 ">

@@ -6,7 +6,7 @@ export const About = () => {
 
     return (
         <>
-            <h1 className="text-center lg:text-2xl sm:text-7xl font-medium mb-10 mt-8
+            <h1 className="text-center lg:text-2xl sm:text-6xl font-medium mb-10 mt-8
                 flex items-center justify-center gap-2">
                 <span className="text-gray-500">
                     ABOUT
@@ -20,7 +20,7 @@ export const About = () => {
                     <img className="w-[inherit] h-full " src={aboutPhoto} alt="image" />
                 </div>
                 <div className="lg:w-1/2 sm:w-full max-h-[inherit] flex flex-col rightHeader
-                    justify-center text-gray-700 lg:px-10 sm:mt-10 lg:mt-0 lg:text-base sm:text-5xl
+                    justify-center text-gray-700 lg:px-10 sm:mt-10 lg:mt-0 lg:text-base sm:text-4xl
                     leading-normal">
                     <p> 
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
@@ -50,7 +50,7 @@ export const About = () => {
             </section>
             <section className="flex flex-col min-w-full">
                 <h2 className="flex items-center sm:justify-center lg:justify-start lg:text-xl font-medium  
-                    mb-10 mt-8 gap-2 scroll sm:text-7xl">
+                    mb-10 mt-8 gap-2 scroll sm:text-6xl">
                     <span className="text-gray-500">
                         WHY
                     </span> 
@@ -59,39 +59,39 @@ export const About = () => {
                 </h2>  
                 <div className="flex sm:flex-col lg:flex-row scroll sm:items-center lg:items-start">
                     <div className="flex flex-col justify-center lg:border-1 border-gray-300 
-                        max-w-[420px] min-h-[250px] lg:px-16 sm:items-center lg:items-start
-                        lg:mb-0 sm:mb-4">
+                        lg:max-w-[420px] sm:max-w-full min-h-[250px] lg:px-16 sm:items-center lg:items-start
+                        ">
                         <h3 className="font-bold mb-6 scroll lg:text-base sm:text-5xl">
                             Quality Assurance:
                         </h3>
                         <p className="text-gray-700 scroll sm:text-center lg:text-start
-                            lg:text-base sm:text-3xl">
+                            lg:text-base sm:text-4xl">
                             We meticulously select and vet each product to ensure it meets
                             our stringent quality standards.
                         </p>
                     </div>
                     <div className="flex flex-col justify-center sm:items-center lg:items-start 
-                        lg:border-1 border-gray-300 max-w-[420px] min-h-[250px] lg:px-16
-                         lg:mb-0 sm:mb-12">
+                        lg:border-1 border-gray-300 lg:max-w-[420px] min-h-[250px] lg:px-16
+                          sm:max-w-full">
                         <h3 className="font-bold mb-6 scroll lg:text-base sm:text-5xl
                             lg:mt-0 sm:mt-3">
                             Convenience:
                         </h3>
                         <p className="text-gray-700 scroll sm:text-center lg:text-start
-                            lg:text-base sm:text-3xl ">
+                            lg:text-base sm:text-4xl ">
                             With our user-friendly interface and hassle-free ordering process, 
                             shopping has never been easier.
                         </p>
                     </div>
                     <div className="flex flex-col justify-center border-solid sm:items-center 
-                        lg:items-start lg:border-1 sm:border-0 border-gray-300 max-w-[420px] min-h-[250px] 
-                        lg:px-16 ">
+                        lg:items-start lg:border-1 sm:border-0 border-gray-300 lg:max-w-[420px] min-h-[250px] 
+                        lg:px-16 sm:max-w-full">
                         <h3 className="font-bold mb-6 scroll lg:text-base sm:text-5xl sm:text-center
                             lg:text-start">
                             Exceptional Customer Service:
                         </h3>
                         <p className="text-gray-700 scroll sm:text-center lg:text-start
-                            lg:text-base sm:text-3xl">
+                            lg:text-base sm:text-4xl">
                             Our team of dedicated professionals is here to assist you the way, 
                             ensuring your satisfaction is our top priority.
                         </p>

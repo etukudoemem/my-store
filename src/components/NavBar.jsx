@@ -7,7 +7,7 @@ import shoppingBagIcon from "../assets/shopping-bag-icon.png"
 import { storeContext } from "../contexts/storeContext"
 import { useContext, useEffect } from "react"
 import hamburgerMenu from "../assets/hamburger-menu2.png"
-import closeIcon from "../assets/close-icon.png"
+import closeIcon from "../assets/close-icon4.png"
 
 
 export const NavBar = () => {
@@ -125,63 +125,61 @@ export const NavBar = () => {
                                 src={hamburgerMenu} alt="menu"/>
                         </div>
                         <ul className={`${showMenu ? "block expand": "hidden"} absolute w-full
-                            h-auto bg-gray-200 top-0 shadow-inset rounded-xs border-0
-                            text-base font-semibold text-gray-700 flex flex-col border-gray-300 fixed inset-0
-                            backdrop-blur `}>
-                            <div className="flex justify-end px-4 pt-4">
+                            h-auto top-0 bg-slate-100 text-base font-semibold text-slate-800 flex 
+                            flex-col fixed inset-0 backdrop-blur `}>
+                            <div className="flex justify-end px-6 pt-6">
                                 <img onClick={() => setShowMenu(false)}
                                     className="active:scale-95"
-                                    src={closeIcon} alt="close" width={100}/>
+                                    src={closeIcon} alt="close" width={90}
+                                />
                             </div>
-                            <div className="flex gap-x-8 items-center px-4 py-2">
-                                
-                                    <button onClick={() => menuLog()}
-                                        className="bg-gray-900 px-20 py-8 shadow-sm border-1
-                                        border-gray-400 active:scale-102 text-gray-100 text-5xl
-                                        rounded-sm transition-all duration-200">
-                                        {isLogged ? "LOG OUT": "LOG IN"}
-                                    </button>
-                                
+                            <div className="flex gap-x-8 items-center px-8 py-2">
+                                <button onClick={() => menuLog()}
+                                    className="bg-gray-900 px-21 py-11 shadow-sm border-1
+                                    border-gray-400 active:scale-102 text-gray-100 text-4xl
+                                    rounded-full transition-all duration-200">
+                                    {isLogged ? "LOG OUT": "LOG IN"}
+                                </button>
                                 <Link to={"login/signup"}>
                                     <button onClick={() => setShowMenu(false)}
-                                        className="bg-gray-100 px-18 py-8 shadow-sm border-2
-                                        border-gray-700 active:scale-102 text-gray-900 text-5xl
-                                        rounded-sm transition-all duration-200">
+                                        className="bg-gray-100 px-18 py-10 shadow-sm border-3
+                                        border-black active:scale-102 text-gray-900 text-4xl
+                                        rounded-full transition-all duration-200">
                                         SIGN UP
                                     </button>
                                 </Link>
                             </div>
                             <Link to={"/"} onClick={() => setShowMenu(false)}
                                 className=" ">
-                                <li className="border-b-1 border-gray-200 pb-10 px-8 py-10 text-5xl
-                                    active:scale-98 active:bg-gray-800 active:text-gray-100">
+                                <li className="border-b-2 border-gray-300 pb-10 px-8 py-12 text-5xl
+                                    active:scale-98 active:bg-gray-800 active:text-gray-100 font-normal">
                                     Home
                                 </li>
                             </Link>
                             <Link to={"collection"} onClick={() => setShowMenu(false)}
                                 className=" ">
-                                <li className="border-b-1 border-gray-200 pb-10 px-8 py-10 text-5xl
-                                    active:scale-98 active:bg-gray-800 active:text-gray-100">
+                                <li className="border-b-2 border-gray-300 pb-10 px-8 py-12 text-5xl
+                                    active:scale-98 active:bg-gray-800 active:text-gray-100 font-normal">
                                     Collection
                                 </li>
                             </Link>
                             <Link to={"about"} onClick={() => setShowMenu(false)}
                                 className=" ">
-                                <li className="border-b-1 border-gray-200 pb-10 px-8 py-10 text-5xl
-                                    active:scale-98 active:bg-gray-800 active:text-gray-100">
-                                    About
+                                <li className="border-b-2 border-gray-300 pb-10 px-8 py-12 text-5xl
+                                    active:scale-98 active:bg-gray-800 active:text-gray-100 font-normal">
+                                    About Us
                                 </li>
                             </Link>
                             <Link to={"contact"} onClick={() => setShowMenu(false)}
                                 className=" ">
-                                <li className=" border-b-1 border-gray-200 pb-10 px-8 py-10 text-5xl 
-                                    active:scale-98 active:bg-gray-800 active:text-gray-100">
-                                    Contact
+                                <li className=" border-b-2 border-gray-300 pb-10 px-8 py-12 text-5xl 
+                                    active:scale-98 active:bg-gray-800 active:text-gray-100 font-normal">
+                                    Contact Us
                                 </li>
                             </Link>
                             <Link to={"orders"} onClick={() => setShowMenu(false)}
                                 className=" ">
-                                <li className="pb-10 px-8 py-10 text-5xl 
+                                <li className="pb-10 px-8 py-12 text-5xl font-normal
                                     active:scale-98 active:bg-gray-800 active:text-gray-100">
                                     Orders
                                 </li>

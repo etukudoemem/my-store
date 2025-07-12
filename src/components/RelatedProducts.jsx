@@ -26,15 +26,16 @@ export const RelatedProducts = ({ productInfo }) => {
     return (
         <>
             <section>
-                <h2 className="text-center text-xl font-medium mb-12 mt-8
-                    flex items-center justify-center gap-2 scroll">
+                <h2 className="text-center lg:text-xl sm:text-6xl font-medium mb-12 lg:mt-8
+                    flex items-center justify-center gap-2 scroll sm:mt-14 ">
                     <span className="text-gray-500">
                         RELATED
                     </span> 
                     <p>PRODUCTS</p>
                     <div className="w-12 h-[2.5px] bg-black"></div>
                 </h2>
-                <div className="mt-10.5 grid gap-y-10 gap-x-4 grid-cols-5">
+                <div className="lg:mt-10.5 grid lg:gap-y-10 lg:gap-x-4 lg:grid-cols-5 sm:grid-cols-2
+                    sm:gap-y-74 lg:px-0 sm:px-10 sm:gap-x-12 sm:mt-[10%]">
                     {relatedProducts}
                 </div>
             </section>

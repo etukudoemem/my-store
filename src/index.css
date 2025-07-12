@@ -9,6 +9,9 @@
     background-color: rgb(93, 243, 93);
 }
 
+.font {
+    font-family: cursive;
+}
 /* input [type=checkbox] {
     transform: scale(3);
     margin-right: 1rem;

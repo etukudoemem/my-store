@@ -9,10 +9,11 @@ export const Accordion = ({ title, content }) => {
     return (
         <>
             <section className="scroll">
-                <div className="w-[100%] h-[auto] border-b-1 border-gray-200 py-4">
+                <div className="w-[100%] h-[auto] border-b-1 border-gray-200 lg:py-4 sm:py-8
+                    lg:px-0 sm:px-4">
                     <button onClick={() => {handleClick()}}
                         className="flex justify-between items-center w-full h-[auto] cursor-pointer">
-                        <p className="lg:text-lg sm:text-5xl lg:font-medium text-gray-700"> 
+                        <p className="lg:text-lg sm:text-5xl lg:font-medium sm:font-normal text-gray-700"> 
                             {title}
                         </p>
                         <span className="lg:text-xl sm:text-7xl cursor-pointer">
@@ -22,7 +23,8 @@ export const Accordion = ({ title, content }) => {
                     <div className={`transition-all duration-200 linear
                         ${showAccordion ? "h-auto visible py-2 opacity-100 " 
                             : " opacity-0 h-0 invisible"}`}>
-                        <p className="text-gray-700 ">
+                        <p className="text-gray-700 lg:text-base sm:text-4xl sm:leading-normal
+                            lg:leading-tight">
                             {content}
                         </p>
                     </div>

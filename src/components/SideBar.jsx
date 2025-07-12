@@ -1,11 +1,11 @@
 import { useState, useEffect, useContext } from "react"
 import { storeContext } from "../contexts/storeContext"
-import rightButton from "../assets/right-button.png"
-import dropDown from "../assets/drop-down.png"
+import rightButton from "../assets/right-button2.png"
+import dropDown from "../assets/drop-down2.png"
 
 export const SideBar = ({ setCollection, sorted }) => {
 
-    const [showFilters, setShowFilters] = useState(true)
+    const [showFilters, setShowFilters] = useState(false)
 
     const [filters, setFilters] = useState({
         category: [],
@@ -69,9 +69,9 @@ export const SideBar = ({ setCollection, sorted }) => {
         <>
             <section className="mt-8 leftHeader ">
                 <div onClick={() => setShowFilters(!showFilters)}
-                    className="sm:flex sm:items-center sm:gap-x-5 sm:border-2 sm:border-gray-300
-                    lg:bg-white sm:w-80 lg:py-0 sm:py-8 sm:justify-center sm:shadow-xs lg:border-0
-                     lg:shadow-[0] cursor-pointer sm:mb-10 lg:mb-0 sm:bg-gray-100">
+                    className="sm:flex sm:items-center sm:gap-x-5 sm:border-3 sm:border-gray-300
+                    sm:w-110 lg:py-0 sm:py-8 sm:justify-evenly sm:shadow-xs lg:border-0
+                    lg:shadow-[0] cursor-pointer sm:mb-10 lg:mb-0 lg:justify-start">
                     <h2 className="lg:text-xl sm:text-5xl font-medium lg:mb-8">
                         FILTERS
                     </h2>
@@ -82,13 +82,13 @@ export const SideBar = ({ setCollection, sorted }) => {
                      ${showFilters ? "sm:visible sm:opacity-100 h-auto lg:visible lg:opacity-100 duration-500" 
                         : "sm:invisible sm:opacity-0 sm:h-0 lg:visible lg:opacity-100 lg:h-auto duration-300"} 
                         transition-all ease-in-out lg:visible`}>
-                    <div className="border-gray-300 border-1 sm:h-[340px] lg:px-4 sm:px-8
-                        lg:h-[145px] lg:max-w-[250px] sm:min-w-[48%] mb-4 lg:py-4 sm:py-12 text-sm">
+                    <div className="lg:border-gray-300 lg:border-1 sm:h-[340px] lg:px-4 sm:px-8 sm:border-gray-300 
+                        lg:h-[145px] lg:max-w-[250px] sm:min-w-[48%] mb-4 lg:py-4 sm:py-12 text-sm sm:border-2">
                         <h3 className="lg:text-sm sm:text-4xl lg:font-medium sm:font-medium lg:mb-3 sm:mb-5">
                             CATEGORIES
                         </h3>
                         <div className="flex gap-2 items-center lg:mb-2 sm:mb-6 text-gray-700">
-                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200"
+                            <input className="cursor-pointer lg:mr-0 sm:mr-2 sm:scale-200 lg:scale-100"
                                 onChange={(e) => {handleCategory(e)}} 
                                 type="checkbox" 
                                 id="Men" 
@@ -98,7 +98,7 @@ export const SideBar = ({ setCollection, sorted }) => {
                             </label>
                         </div>
                         <div className="flex gap-2 items-center lg:mb-2 sm:mb-6 text-gray-700">
-                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200"
+                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200 lg:scale-100"
                                 onChange={(e) => {handleCategory(e)}} 
                                 type="checkbox"
                                 id="Women" 
@@ -108,7 +108,7 @@ export const SideBar = ({ setCollection, sorted }) => {
                             </label>
                         </div>
                         <div className="flex gap-2 items-center text-gray-700">
-                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200"
+                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200 lg:scale-100"
                                 onChange={(e) => {handleCategory(e)}} 
                                 type="checkbox" 
                                 id="Kids"
@@ -119,13 +119,13 @@ export const SideBar = ({ setCollection, sorted }) => {
                         </div>
                     </div>
 
-                    <div className="border-gray-300 border-1 lg:py-4 sm:py-12 lg:px-4 sm:px-8
-                        lg:h-[145px] sm:h-[340px] lg:max-w-[250px] sm:min-w-[48%]">
+                    <div className="lg:border-gray-300 lg:border-1 lg:py-4 sm:py-12 lg:px-4 sm:px-8
+                        lg:h-[145px] sm:h-[340px] lg:max-w-[250px] sm:min-w-[48%] sm:border-gray-300 sm:border-2">
                         <h3 className="lg:text-sm sm:text-4xl font-medium lg:mb-3 sm:mb-5">
                             TYPE
                         </h3>
                         <div className="flex gap-2 items-center lg:mb-2 sm:mb-6 text-gray-700">
-                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200"
+                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200 lg:scale-100"
                                 onChange={(e) => {handleType(e)}} 
                                 type="checkbox" 
                                 id="Topwear"
@@ -135,7 +135,7 @@ export const SideBar = ({ setCollection, sorted }) => {
                             </label>
                         </div>
                         <div className="flex gap-2 items-center lg:mb-2 sm:mb-6 text-gray-700">
-                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200"
+                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200 lg:scale-100"
                                 onChange={(e) => {handleType(e)}} 
                                 type="checkbox" 
                                 id="Bottomwear"
@@ -145,7 +145,7 @@ export const SideBar = ({ setCollection, sorted }) => {
                             </label>
                         </div>
                         <div className="flex gap-2 items-center text-gray-700">
-                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200"
+                            <input className="cursor-pointer lg:mr-0 sm:mr-2 scale-200 lg:scale-100"
                                 onChange={(e) => {handleType(e)}} 
                                 type="checkbox" 
                                 id="Winterwear"

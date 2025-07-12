@@ -5,7 +5,7 @@ export const Contact = () => {
 
     return (
         <>
-            <h2 className="text-center text-xl font-medium mb-12 mt-8
+            <h2 className="text-center lg:text-xl sm:text-6xl font-medium mb-12 mt-8
                 flex items-center justify-center gap-2">
                     <span className="text-gray-500">
                         CONTACT
@@ -20,39 +20,39 @@ export const Contact = () => {
                 </div>
                 <div className="lg:min-w-1/2 sm:min-w-full min-h-[inherit] flex flex-col rightHeader
                     lg:justify-center sm:justify-start ">
-                    <h3 className="text-xl font-bold text-gray-600 font-semi-bold
-                        mb-6">
+                    <h3 className="lg:text-xl sm:text-5xl font-bold text-gray-600 font-semi-bold
+                        lg:mb-6 sm:mb-10">
                         Our Store
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 lg:text-base sm:text-4xl lg:mb-0 sm:mb-6">
                         54709 Willms Station
                     </p>
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-gray-600 lg:mb-6 sm:mb-10 lg:text-base sm:text-4xl">
                         Suite 350, Washington, USA
                     </p>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 lg:text-base sm:text-4xl lg:mb-0 sm:mb-6">
                         Tel: (415) 555-0132
                     </p>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 lg:text-base sm:text-4xl">
                         Email: contact@mystore.com
                     </p>
-                    <h3 className="text-xl font-bold text-gray-600
-                        mb-6 mt-6">
+                    <h3 className="lg:text-xl sm:text-5xl font-bold text-gray-600
+                        lg:mb-6 lg:mt-6 sm:mb-6 sm:mt-12">
                         Careers at My Store
                     </h3>
-                    <p className="text-gray-600 mb-6">
+                    <p className="text-gray-600 mb-6 lg:text-base sm:text-4xl">
                         Learn more about our teams and job openings.
                     </p>
-                    <button className="text-sm font-medium max-w-[140px]
-                        h-[55px] border-1 border-gray-500 border-solid
-                        cursor-pointer hover:scale-103 active:scale-99
-                        transition-all duration-200 ease-in-out hover:bg-gray-800
-                        hover:text-white">
+                    <button className="text-sm font-medium lg:max-w-[140px] sm:rounded-full
+                        lg:h-[55px] sm:h-[120px] border-1 border-gray-500 sm:max-w-[350px]
+                        cursor-pointer hover:scale-103 active:scale-99 lg:text-base sm:text-3xl
+                        transition-all duration-200 ease-in-out hover:bg-gray-800 lg:rounded-none
+                        hover:text-white lg:bg-white sm:bg-gray-900 lg:text-black sm:text-white">
                         Explore Jobs
                     </button>
                 </div>
             </section>
-            <section className="scroll sm:mb-25 sm:mt-[-400px] lg:mb-0 lg:mt-0">
+            <section className="scroll sm:mb-40 sm:mt-[-10%] lg:mb-0 lg:mt-0">
                 <Subscribe />
             </section>
         </>

@@ -30,7 +30,7 @@ export const Layout = () => {
                     </ToastModal>)}
                 <Outlet />
             </section>
-            <section className="px-[1rem] sm:bg-gray-900 lg:bg-white sm:py-10 lg:py-0">
+            <section className="px-[1rem] sm:bg-black lg:bg-white sm:py-10 lg:py-0">
                 <Footer />
             </section>
         </>

@@ -3,12 +3,12 @@ export const Subscribe = () => {
     return (
         <>
             <section className="flex flex-col items-center lg:mt-20 sm:mt-15" >
-                <div className="text-center">
-                    <h2 className="font-medium lg:text-2xl sm:text-6xl text-gray-700 mb-4 scroll">
+                <div className="text-center flex flex-col items-center">
+                    <h2 className="font-medium lg:text-2xl sm:text-5xl text-gray-700 mb-4 scroll">
                         Subscribe now & get 20% off
                     </h2>
-                    <p className="text-center mb-8 text-gray-500 lg:text-base sm:text-5xl 
-                        leading-normal scroll">
+                    <p className="text-center mb-8 text-gray-500 lg:text-base sm:text-4xl 
+                        leading-normal scroll sm:w-[90%] lg:w-full">
                         Lorem ipsum dolor sit amet consectetur, 
                         adipisicing elit molestiae suscipit veritatis 
                         magni adipisci omnis sunt.
@@ -18,7 +18,7 @@ export const Subscribe = () => {
                 <form>
                     <div className="flex w-full justify-center font-medium scroll
                         ">
-                        <input className="border-solid blg:order-1 sm:border-3 border-gray-200
+                        <input className="border-1 border-gray-200
                             lg:h-12 sm:h-32 lg:min-w-[30%] sm:min-w-[80%] lg:p-4 sm:p-10 outline-none 
                             text-gray-500 lg:text-sm sm:text-4xl"
                             type="email" 
