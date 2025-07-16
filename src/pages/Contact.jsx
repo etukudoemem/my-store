@@ -19,7 +19,7 @@ export const Contact = () => {
                     <img className="min-w-full min-h-[inherit]" src={contactPhoto} />
                 </div>
                 <div className="lg:min-w-1/2 sm:min-w-full min-h-[inherit] flex flex-col rightHeader
-                    lg:justify-center sm:justify-start ">
+                    lg:justify-center sm:justify-start sm:mt-15 lg:mt-0">
                     <h3 className="lg:text-xl sm:text-5xl font-bold text-gray-600 font-semi-bold
                         lg:mb-6 sm:mb-10">
                         Our Store
@@ -37,7 +37,7 @@ export const Contact = () => {
                         Email: contact@mystore.com
                     </p>
                     <h3 className="lg:text-xl sm:text-5xl font-bold text-gray-600
-                        lg:mb-6 lg:mt-6 sm:mb-6 sm:mt-12">
+                        lg:mb-6 lg:mt-6 sm:mb-10 sm:mt-20">
                         Careers at My Store
                     </h3>
                     <p className="text-gray-600 mb-6 lg:text-base sm:text-4xl">
@@ -45,14 +45,15 @@ export const Contact = () => {
                     </p>
                     <button className="text-sm font-medium lg:max-w-[140px] sm:rounded-full
                         lg:h-[55px] sm:h-[120px] border-1 border-gray-500 sm:max-w-[350px]
-                        cursor-pointer hover:scale-103 active:scale-99 lg:text-base sm:text-3xl
+                        cursor-pointer hover:scale-103 active:scale-99 lg:text-base sm:text-4xl
                         transition-all duration-200 ease-in-out hover:bg-gray-800 lg:rounded-none
-                        hover:text-white lg:bg-white sm:bg-gray-900 lg:text-black sm:text-white">
+                        hover:text-white lg:bg-white sm:bg-gray-900 lg:text-black sm:text-white
+                        lg:mt-0 sm:mt-5">
                         Explore Jobs
                     </button>
                 </div>
             </section>
-            <section className="scroll sm:mb-40 sm:mt-[-10%] lg:mb-0 lg:mt-0">
+            <section className="scroll sm:mb-85 sm:mt-[5%] lg:mb-0 lg:mt-0">
                 <Subscribe />
             </section>
         </>

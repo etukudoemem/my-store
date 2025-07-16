@@ -20,7 +20,7 @@ export const PlaceOrder = () =>  {
     return (
         <>
             {cartProduct.length > 0 ? 
-            (<section className="flex lg:justify-between lg:flex-row sm:flex-col mt-10 w-full">
+            (<section className="flex lg:justify-between lg:flex-row sm:flex-col mt-10 lg:mb-0 sm:mb-40 w-full">
                 <div className="lg:w-1/2 sm:w-full flex flex-col lg:gap-4 sm:gap-8 leftHeader">
                     <h2 className="flex items-center lg:text-2xl sm:text-6xl font-medium mb-6 mt-8 gap-2">
                         <span className="text-gray-500 text-left">
@@ -182,8 +182,8 @@ export const PlaceOrder = () =>  {
                                 </div>
                             </div>
                             <button onClick={() => {getProductToOrder()}}
-                                className="lg:min-w-58 sm:min-w-120 lg:min-h-11 sm:min-h-30 bg-gray-100 text-gray-600 text-base
-                                    lg:mt-8 sm:mt-18 lg:text-sm font-semibold cursor-pointer self-end
+                                className="lg:min-w-58 sm:min-w-120 lg:min-h-11 sm:min-h-30 bg-gray-100 text-gray-600 lg:text-base
+                                    lg:mt-8 sm:mt-25 font-semibold cursor-pointer self-end
                                     active:scale-95 transition-all duration-100 ease-in-out sm:text-4xl
                                     hover:scale-103 border-1 border-gray-400 shadow-md">
                                 PLACE ORDER
@@ -194,8 +194,9 @@ export const PlaceOrder = () =>  {
             </section> )
             :
             (<div className="flex items-center justify-center collections w-full h-[50vh]">
-                <h2 className="flex items-center justify-center text-3xl font-medium mb-10 mt-8 gap-2">
-                    <span className="text-gray-500 text-left">
+                <h2 className="flex items-center justify-center lg:text-3xl font-medium mb-10 mt-8 gap-2
+                sm:text-6xl">
+                    <span className="text-gray-500 text-center leading-normal">
                         YOU HAVE NO ITEM(S) IN YOUR CART TO ORDER.
                     </span> 
                 </h2>

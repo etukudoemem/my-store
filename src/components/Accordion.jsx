@@ -13,7 +13,7 @@ export const Accordion = ({ title, content }) => {
                     lg:px-0 sm:px-4">
                     <button onClick={() => {handleClick()}}
                         className="flex justify-between items-center w-full h-[auto] cursor-pointer">
-                        <p className="lg:text-lg sm:text-5xl lg:font-medium sm:font-normal text-gray-700"> 
+                        <p className="lg:text-lg sm:text-4xl lg:font-medium sm:font-semibold text-gray-700"> 
                             {title}
                         </p>
                         <span className="lg:text-xl sm:text-7xl cursor-pointer">

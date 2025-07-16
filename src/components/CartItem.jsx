@@ -19,7 +19,7 @@ export const CartItem = ({ productData, cartData }) => {
                     </div>
                     <div className="">
                         <h3 className="lg:text-base lg:font-semibold sm:font-medium sm:text-3xl mb-3 text-gray-600 
-                            lg:w-auto sm:w-80 leading-normal">
+                            lg:w-auto sm:w-125 leading-normal">
                             {productData.name}
                         </h3>
                         <div className="flex lg:gap-y-2 sm:gap-y-3 lg:gap-x-0 sm:gap-x-4 lg:flex-col sm:flex-row">
@@ -41,7 +41,7 @@ export const CartItem = ({ productData, cartData }) => {
                         className="lg:max-w-[70px] lg:min-h-[38px] border-1 border-gray-300
                             border-solid py-1 lg:px-2 sm:px-8 outline-none font-semibold text-gray-500
                             lg:text-sm sm:text-3xl active:scale-95 transition-all duration-200 ease-in-out
-                            bg-gray-100 sm:max-w-[160px] sm:min-h-[120px]"
+                            bg-gray-100 sm:max-w-[100px] sm:min-h-[80px]"
                         type="number"
                         value={cartData.quantity}
                     />

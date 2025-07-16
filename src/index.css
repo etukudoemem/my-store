@@ -348,13 +348,23 @@
 
 @keyframes slideInOut {
     0%, 15% {
+        transform: translateY(-200%);
+        visibility: visible;
+    }
+    
+    25%,50%,75% {
+        transform: translateY(20%);
+        visibility: visible;
+    }
+    85%, 90%, 100% {
+        transform: translateY(-200%);
+        visibility: visible;
+    }
+    /* 0%, 15% {
         transform: translateX(100rem);
         visibility: visible;
     }
-    /* 25% {
-        transform: translateX(64rem);
-        visibility: visible;
-    } */
+    
     25%,50%,75% {
         transform: translateX(65rem);
         visibility: visible;
@@ -362,7 +372,7 @@
     85%, 90%, 100% {
         transform: translateX(100rem);
         visibility: hidden;
-    }
+    } */
 }
 
 @keyframes slideOut {

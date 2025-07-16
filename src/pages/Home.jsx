@@ -14,7 +14,7 @@ export const Home = () => {
 
     const { modal } = useContext(storeContext);
     
-    const latestCollections = products.slice(0,5).map((product) => (
+    const latestCollections = products.slice(7,12).map((product) => (
         <ProductCard 
             key={product.id}
             id={product.id}
@@ -24,7 +24,7 @@ export const Home = () => {
         />
     ));
 
-    const bestSellers = products.slice(0,5).map((product) => {
+    const bestSellers = products.slice(1,6).map((product) => {
         if (product.bestseller == true) {
             return (
                 <ProductCard 
@@ -42,29 +42,31 @@ export const Home = () => {
         <>
             {modal.logInToast && 
                 (<ToastModal>
-                    <img src={checkMarkIcon} alt="checkmark" width={35}/>
-                    <p className="text-lg text-gray-500 font-medium">
+                    <img className="lg:w-8 sm:w-20"
+                        src={checkMarkIcon} alt="checkmark" />
+                    <p className="lg:text-lg sm:text-5xl text-gray-500 font-medium">
                         Login Successful
                     </p>
                 </ToastModal>)}
             {modal.signUpToast && (
                 <ToastModal>
-                    <img src={checkMarkIcon} alt="checkmark" width={35}/>
-                    <p className="text-lg text-gray-500 font-medium">
+                    <img className="lg:w-8 sm:w-20"
+                        src={checkMarkIcon} alt="checkmark"/>
+                    <p className="lg:text-lg sm:text-5xl text-gray-500 font-medium">
                         Sign Up Successful
                     </p>
                 </ToastModal>)}
             <section className="w-full lg:max-h-[500px] border-solid
                  mt-12 flex sm:flex-col sm:max-h-[1000px] lg:flex-row">
                 <div className="lg:min-w-1/2 lg:min-h-[inherit] flex flex-col leftHeader
-                    justify-center items-center gap-y-3 bg-green-200 text-gray-600
-                    sm:min-w-full sm:min-h-[500px]">
+                    justify-center items-center gap-y-3 bg-slate-100 text-gray-600
+                    sm:min-w-full sm:min-h-[500px] ">
                     <p className="font-medium sm:text-6xl lg:text-3xl">
                         OUR BEST SELLERS
                     </p>
                     <p className="lg:text-3xl sm:text-7xl ">&</p>
                     <p className="font-medium sm:text-6xl lg:text-3xl sm:mb-6 lg:mb-4">
-                        LATEST ARRIVAL</p>
+                        LATEST ARRIVALS</p>
                     <div className="flex items-center gap-x-4">
                         <div className="w-12 h-[2.5px] bg-gray-600"></div>
                         <p className="font-medium sm:text-5xl lg:text-2xl font">
@@ -123,7 +125,7 @@ export const Home = () => {
             <section className="scroll sm:mt-[40%] lg:mt-0">
                 <Experience />
             </section>
-            <section className="scroll sm:mt-[15%] lg:mt-0 lg:mb-0 sm:mb-50 ">
+            <section className="scroll sm:mt-[15%] lg:mt-0 lg:mb-0 sm:mb-90 ">
                 <Subscribe />
             </section>
         </>

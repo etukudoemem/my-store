@@ -35,8 +35,8 @@ export const About = () => {
                         voluptate natus.
                     </p> 
                     <br />
-                    <h3 className="lg:text-lg sm:text-6xl font-bold text-black lg:text-left
-                        sm:text-center">
+                    <h3 className="lg:text-lg sm:text-5xl font-bold text-black lg:text-left
+                        text-gray-700">
                         Our Mission
                     </h3>
                     <br />
@@ -49,8 +49,8 @@ export const About = () => {
                 </div>
             </section>
             <section className="flex flex-col min-w-full">
-                <h2 className="flex items-center sm:justify-center lg:justify-start lg:text-xl font-medium  
-                    mb-10 mt-8 gap-2 scroll sm:text-6xl">
+                <h2 className="flex items-center justify-start lg:text-xl font-medium  
+                    mb-10 mt-8 gap-2 scroll sm:text-5xl">
                     <span className="text-gray-500">
                         WHY
                     </span> 
@@ -59,39 +59,37 @@ export const About = () => {
                 </h2>  
                 <div className="flex sm:flex-col lg:flex-row scroll sm:items-center lg:items-start">
                     <div className="flex flex-col justify-center lg:border-1 border-gray-300 
-                        lg:max-w-[420px] sm:max-w-full min-h-[250px] lg:px-16 sm:items-center lg:items-start
-                        ">
-                        <h3 className="font-bold mb-6 scroll lg:text-base sm:text-5xl">
+                        lg:max-w-[420px] sm:max-w-full min-h-[250px] lg:px-16 items-start
+                        text-gray-700">
+                        <h3 className="font-bold mb-6 scroll lg:text-base sm:text-4xl">
                             Quality Assurance:
                         </h3>
-                        <p className="text-gray-700 scroll sm:text-center lg:text-start
-                            lg:text-base sm:text-4xl">
+                        <p className="scroll text-start
+                            lg:text-base sm:text-4xl lg:leading-none sm:leading-normal">
                             We meticulously select and vet each product to ensure it meets
                             our stringent quality standards.
                         </p>
                     </div>
-                    <div className="flex flex-col justify-center sm:items-center lg:items-start 
+                    <div className="flex flex-col justify-center items-start 
                         lg:border-1 border-gray-300 lg:max-w-[420px] min-h-[250px] lg:px-16
-                          sm:max-w-full">
-                        <h3 className="font-bold mb-6 scroll lg:text-base sm:text-5xl
+                          sm:max-w-full text-gray-700">
+                        <h3 className="font-bold mb-6 scroll lg:text-base sm:text-4xl
                             lg:mt-0 sm:mt-3">
                             Convenience:
                         </h3>
-                        <p className="text-gray-700 scroll sm:text-center lg:text-start
-                            lg:text-base sm:text-4xl ">
+                        <p className=" scroll text-start
+                            lg:text-base sm:text-4xl lg:leading-none sm:leading-normal">
                             With our user-friendly interface and hassle-free ordering process, 
                             shopping has never been easier.
                         </p>
                     </div>
-                    <div className="flex flex-col justify-center border-solid sm:items-center 
-                        lg:items-start lg:border-1 sm:border-0 border-gray-300 lg:max-w-[420px] min-h-[250px] 
-                        lg:px-16 sm:max-w-full">
-                        <h3 className="font-bold mb-6 scroll lg:text-base sm:text-5xl sm:text-center
-                            lg:text-start">
+                    <div className="flex flex-col justify-center border-solid items-start lg:border-1 sm:border-0 border-gray-300 lg:max-w-[420px] min-h-[250px] 
+                        lg:px-16 sm:max-w-full text-gray-700">
+                        <h3 className="font-bold mb-6 scroll text-4xl text-start">
                             Exceptional Customer Service:
                         </h3>
-                        <p className="text-gray-700 scroll sm:text-center lg:text-start
-                            lg:text-base sm:text-4xl">
+                        <p className="text-gray-700 scroll text-start
+                            lg:text-base sm:text-4xl lg:leading-none sm:leading-normal">
                             Our team of dedicated professionals is here to assist you the way, 
                             ensuring your satisfaction is our top priority.
                         </p>
@@ -100,7 +98,7 @@ export const About = () => {
             </section>
             <section className="lg:mt-20 sm:mt-5 w-full flex flex-col sm:mb-25 lg:mb-0">
                 <h2 className="flex items-center lg:text-xl font-medium lg:mb-10 lg:mt-8 gap-2 scroll
-                    sm:justify-center lg:justify-start sm:text-5xl sm:mt-20 sm:mb-14">
+                    justify-start sm:text-5xl sm:mt-20 sm:mb-14">
                     <span className="text-gray-500 block">
                         FREQUENTLY
                     </span> 
@@ -144,7 +142,7 @@ export const About = () => {
                             Tempore accusamus deleniti excepturi voluptatem neque aliquid, nisi natus molestias pariatur nam aut sed! Error voluptatum, impedit necessitatibus itaque quae explicabo, aspernatur, nemo obcaecati sequi quidem eligendi mollitia assumenda. Alias.`} 
                 />    
             </section>
-            <section className="sm:mb-20 lg:mb-0">
+            <section className="sm:mb-85 lg:mb-0">
                 <Subscribe />
             </section>
         </>

@@ -34,7 +34,7 @@ export const Product = () => {
                     setCurrentImage={setCurrentImage}
                 />
             </section>
-            <section className="lg:mb-0 sm:mb-[50%]">
+            <section className="lg:mb-0 sm:mb-[70%]">
                 <RelatedProducts
                     key={productInfo.id}
                     productInfo={productInfo}

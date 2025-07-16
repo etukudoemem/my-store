@@ -35,7 +35,7 @@ export const Cart = () => {
 
     return (
         <>
-            {isCartProduct ? (<main className="mt-16 lg:mb-0 sm:mb-50">
+            {isCartProduct ? (<main className="mt-16 lg:mb-0 sm:mb-90">
                 <h2 className="flex items-center lg:text-xl sm:text-6xl font-medium mb-10 mt-8 gap-2">
                     <span className="text-gray-500 text-left">
                         YOUR
@@ -81,7 +81,7 @@ export const Cart = () => {
                             </div>
                         </div>
                         <Link to={"place-order"} className="self-end">
-                            <button className="lg:min-w-58 sm:min-w-140 lg:min-h-11 sm:min-h-30 bg-gray-100 text-gray-600 
+                            <button className="lg:min-w-58 sm:min-w-150 lg:min-h-11 sm:min-h-30 bg-gray-100 text-gray-600 
                                 lg:mt-8 sm:mt-18 mb-8 lg:text-sm font-semibold cursor-pointer border-1 border-gray-400 
                                 active:scale-95 transition-all duration-200 ease-in-out shadow-md sm:text-4xl
                                 hover:scale-103">
@@ -92,8 +92,9 @@ export const Cart = () => {
                 </CartTotal>
             </main>) : 
              (<div className="flex items-center justify-center collections w-full h-[50vh] ">
-                <h2 className="flex items-center justify-center text-3xl font-medium mb-10 mt-8 gap-2">
-                    <span className="text-gray-500 text-left">
+                <h2 className="flex items-center justify-center lg:text-3xl font-medium mb-10 mt-8 gap-2
+                    sm:text-6xl">
+                    <span className="text-gray-500">
                         YOUR CART IS EMPTY
                     </span> 
                 </h2>

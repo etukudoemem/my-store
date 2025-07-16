@@ -40,7 +40,7 @@ export const NavBar = () => {
                 <Logo />
                 <nav className="flex items-center" >
                     <ul className="lg:flex justify-between items-center w-[500px] 
-                        text-sm text-gray-500 font-medium sm:hidden lg:block">
+                        text-sm text-gray-700 font-medium sm:hidden lg:block">
                         <NavLink to="/" className="active:scale-85 transition-all
                             duration-100 ease-in-out con">
                             <li className="">
@@ -50,7 +50,7 @@ export const NavBar = () => {
                         <NavLink to="collection" className="active:scale-85 transition-all
                             duration-100 ease-in-out con">
                             <li className="">
-                                COLLECTION
+                                COLLECTIONS
                             </li>
                         </NavLink>
                         <NavLink to="about" className="active:scale-85 transition-all
@@ -79,7 +79,7 @@ export const NavBar = () => {
                     <div onClick={() => {handleSearch()}}
                         className="cursor-pointer active:scale-85 transition-all
                         duration-100 ease-in-out">
-                        <img className="lg:w-[30px] sm:w-22"
+                        <img className="lg:w-[30px] sm:w-19.5"
                             src={searchIcon} alt="search" />
                     </div>
 
@@ -89,7 +89,7 @@ export const NavBar = () => {
                                 active:scale-85 transition-all duration-100 ease-in-out"/>
                         </Link>
                         <ul className={`font-medium text-gray-800 flex flex-col justify-center rounded-xs
-                            item-center hidden absolute w-[190px] h-[auto] bg-gray-100 border-0 shadow-inset
+                            item-center hidden absolute w-[190px] h-[auto] bg-slate-200 border-0 shadow-inset
                             border-gray-100 right-1 top-7 ${isLogged && "group-hover:block expand"}`}>
                     
                             <li onClick={() => {navigate("orders")}}
@@ -109,24 +109,24 @@ export const NavBar = () => {
                     </div>
                     <Link to="cart" className="active:scale-85 transition-all duration-100 ease-in-out">
                         <div className="relative cursor-pointer">
-                            <img className="lg:w-[30px] sm:w-22"
+                            <img className="lg:w-[30px] sm:w-20"
                                 src={shoppingBagIcon} alt="" />
                             <div className="bg-gray-700 absolute bottom-[0] right-[0] 
-                                rounded-full lg:w-4 lg:h-4 sm:w-12 sm:h-12 flex justify-center items-center  
+                                rounded-full lg:w-4 lg:h-4 sm:w-11 sm:h-11 flex justify-center items-center  
                                 text-white font-semibold focus:scale-105 transtion-all duration-200
                                 ease-in-out lg:text-[8px] sm:text-[20px]">
                                     {cartQuantity}
                             </div>
                         </div>
                     </Link>
-                    <section className="lg:hidden cursor-pointer relative ml-2 flex justify-end">
+                    <section className="lg:hidden cursor-pointer relative flex justify-end">
                         <div onClick={() => setShowMenu(!showMenu)}>
-                            <img className="lg:w-auto sm:w-22"
+                            <img className="lg:w-auto sm:w-20"
                                 src={hamburgerMenu} alt="menu"/>
                         </div>
                         <ul className={`${showMenu ? "block expand": "hidden"} absolute w-full
-                            h-auto top-0 bg-slate-100 text-base font-semibold text-slate-800 flex 
-                            flex-col fixed inset-0 backdrop-blur `}>
+                            h-auto bg-slate-100 text-base font-semibold text-slate-800 flex 
+                            flex-col fixed right-0 inset-0`}>
                             <div className="flex justify-end px-6 pt-6">
                                 <img onClick={() => setShowMenu(false)}
                                     className="active:scale-95"
@@ -135,16 +135,18 @@ export const NavBar = () => {
                             </div>
                             <div className="flex gap-x-8 items-center px-8 py-2">
                                 <button onClick={() => menuLog()}
-                                    className="bg-gray-900 px-21 py-11 shadow-sm border-1
-                                    border-gray-400 active:scale-102 text-gray-100 text-4xl
-                                    rounded-full transition-all duration-200">
+                                    className="bg-white px-21 py-10 shadow-sm border-3
+                                    border-black active:scale-102 text-gray-900 text-3xl
+                                    rounded-full transition-all duration-200 active:bg-gray-900
+                                    active:text-white">
                                     {isLogged ? "LOG OUT": "LOG IN"}
                                 </button>
                                 <Link to={"login/signup"}>
                                     <button onClick={() => setShowMenu(false)}
-                                        className="bg-gray-100 px-18 py-10 shadow-sm border-3
-                                        border-black active:scale-102 text-gray-900 text-4xl
-                                        rounded-full transition-all duration-200">
+                                        className="bg-gray-900 px-24 py-11 shadow-sm border-1
+                                        border-black active:scale-102 text-gray-100 text-3xl
+                                        rounded-full transition-all duration-200 active:bg-white
+                                        active:text-gray-900">
                                         SIGN UP
                                     </button>
                                 </Link>
@@ -160,7 +162,7 @@ export const NavBar = () => {
                                 className=" ">
                                 <li className="border-b-2 border-gray-300 pb-10 px-8 py-12 text-5xl
                                     active:scale-98 active:bg-gray-800 active:text-gray-100 font-normal">
-                                    Collection
+                                    Collections
                                 </li>
                             </Link>
                             <Link to={"about"} onClick={() => setShowMenu(false)}

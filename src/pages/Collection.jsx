@@ -33,25 +33,25 @@ export const Collection = () => {
             (<section className="bg-gray-50 mb-8 expand">
                 <Line />
                 <div className="w-[100%] lg:h-[45px] flex justify-center items-center 
-                     relative sm:h-[80px] ">   
+                     relative sm:h-[120px]">   
                     <input onChange={(e) => {setSearch(e.target.value)}}
-                        className="w-[50%] lg:h-[100%] sm:h-[100%] border-[1.5px] border-solid border-gray-400 
-                        rounded-4xl lg:px-12 sm:px-18 py-1 outline-none font-medium text-gray-600 lg:text-base
+                        className="lg:w-[50%] sm:w-[70%] lg:h-[100%] sm:h-[90%] border-[1.5px] border-solid border-gray-400 
+                        lg:rounded-4xl sm:rounded-full lg:px-12 sm:px-20 py-1 outline-none font-medium text-gray-600 lg:text-base
                         active:scale-99 transition-all duration-200 ease-in-out sm:text-3xl"
                         placeholder="Search"
                         autoFocus
                     />
-                    <img src={searchIcon} alt="search" className="absolute lg:w-[25px] sm:left-[27%] 
+                    <img src={searchIcon} alt="search" className="absolute lg:w-[25px] sm:left-[18%] 
                         lg:left-[26.2%] sm:w-[40px]" />
                     <img onClick={() => {setIsSearch(false)}}
-                        src={closeIcon} alt="close" className="absolute lg:w-[25px] sm:right-[17%] lg:right-[22%]
+                        src={closeIcon} alt="close" className="absolute lg:w-[25px] sm:right-[7%] lg:right-[22%]
                         cursor-pointer active:scale-85 transition-all duration-200 ease-in-out sm:w-[55px]
                         hover:scale-105 " />
                 </div>
                 <Line /> 
             </section>)}
             
-           <section className="flex lg:flex-row sm:flex-col gap-12 w-full mt-8 sm:mb-110
+           <section className="flex lg:flex-row sm:flex-col gap-12 w-full mt-8 sm:mb-150
             lg:mb-0">
                 <div className="lg:w-[20%] sm:w-[100%] ">
                     <SideBar setCollection={setCollection} sorted={sorted} />

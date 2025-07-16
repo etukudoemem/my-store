@@ -69,14 +69,13 @@ export const SideBar = ({ setCollection, sorted }) => {
         <>
             <section className="mt-8 leftHeader ">
                 <div onClick={() => setShowFilters(!showFilters)}
-                    className="sm:flex sm:items-center sm:gap-x-5 sm:border-3 sm:border-gray-300
-                    sm:w-110 lg:py-0 sm:py-8 sm:justify-evenly sm:shadow-xs lg:border-0
-                    lg:shadow-[0] cursor-pointer sm:mb-10 lg:mb-0 lg:justify-start">
-                    <h2 className="lg:text-xl sm:text-5xl font-medium lg:mb-8">
+                    className="sm:flex sm:items-center sm:w-85 sm:py-4 sm:justify-evenly lg:border-0
+                    lg:shadow-[0] cursor-pointer sm:mb-5 lg:mb-0 lg:justify-start">
+                    <h2 className="lg:text-xl sm:text-5xl font-medium lg:mb-2">
                         FILTERS
                     </h2>
                     <img className="lg:hidden"
-                        src={showFilters ? dropDown : rightButton} alt="arrow" width={50}/>
+                        src={showFilters ? dropDown : rightButton} alt="arrow" width={60}/>
                 </div>
                 <div className={`flex sm:justify-between sm:flex-row lg:flex-col
                      ${showFilters ? "sm:visible sm:opacity-100 h-auto lg:visible lg:opacity-100 duration-500" 

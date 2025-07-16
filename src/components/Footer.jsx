@@ -7,10 +7,10 @@ export const Footer = () => {
         <>
             <section className="lg:flex lg:justify-between lg:mt-36 mb-8 sm:text-gray-200
                     sm:grid sm:grid sm:grid-cols-1 sm:gap-x-80 sm:gap-x-20 sm:px-10
-                    lg:text-gray-700" >
+                    lg:text-gray-700 sm:py-10 lg:py-0" >
                 <div className="sm:mb-15 lg:mb-0">
                     <Logo />
-                    <p className="w-[500px] mt-4 lg:text-base sm:text-4xl
+                    <p className="lg:w-[500px] sm:w-full mt-4 lg:text-base sm:text-4xl
                         sm:leading-normal">
                         Lorem, ipsum dolor sit amet 
                         consectetur adipisicing elit. 

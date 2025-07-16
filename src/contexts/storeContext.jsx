@@ -206,6 +206,8 @@ export default function StoreContextProvider ({ children }) {
         password: "",
     })
 
+    const [showPassword, setShowPassword] = useState(false)
+
     const [isLogged, setIsLogged] = useState(false)
 
     const [noInput, setNoInput] = useState({
@@ -356,16 +358,13 @@ export default function StoreContextProvider ({ children }) {
         observeUser()
     }, [])
 
-    // const removelogInToast = () => {
-    //     setModal({...modal, logInToast:false})
-    // }
 
-    useEffect(() => {
-        setTimeout(()=> {
-            setModal({...modal, logInToast:false})
-        }, 10000)
-        // console.log(modal)
-    }, [modal.logInToast])
+    // useEffect(() => {
+    //     setTimeout(()=> {
+    //         setModal({...modal, logInToast:false})
+    //     }, 10000)
+    //     // console.log(modal)
+    // }, [modal.logInToast])
 
     useEffect(() => {
         setTimeout(()=> {
@@ -455,7 +454,9 @@ export default function StoreContextProvider ({ children }) {
         noInput,
         noLoginInput,
         isLoading,
-        setIsLoading
+        setIsLoading,
+        showPassword,
+        setShowPassword
     }
 
 
