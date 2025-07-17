@@ -28,8 +28,9 @@ export const Order = () => {
         <>
             {modal.orderToast && 
                 <ToastModal>
-                    <img src={checkMarkIcon} alt="checkmark" width={35}/>
-                    <p className="text-lg text-gray-500 font-medium">
+                    <img className="lg:w-8 sm:w-20"
+                        src={checkMarkIcon} alt="checkmark" width={35}/>
+                    <p className="lg:text-lg sm:text-5xl text-gray-500 font-medium">
                         Order Placed Successfully
                     </p>
                 </ToastModal>}
@@ -56,7 +57,7 @@ export const Order = () => {
                 </div>
             </main> )
             : (<div className="flex items-center justify-center collections w-full h-[50vh]">
-                <h2 className="flex items-center justify-center text-3xl font-medium mb-10 mt-8 gap-2">
+                <h2 className="flex items-center justify-center lg:text-3xl sm:text-6xl font-medium mb-10 mt-8 gap-2">
                     <span className="text-gray-500">
                         YOU HAVE NO ORDERS
                     </span> 

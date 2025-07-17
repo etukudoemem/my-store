@@ -32,20 +32,20 @@ export const Collection = () => {
             {isSearch &&
             (<section className="bg-gray-50 mb-8 expand">
                 <Line />
-                <div className="w-[100%] lg:h-[45px] flex justify-center items-center 
-                     relative sm:h-[120px]">   
+                <div className="w-[100%] lg:h-[45px] flex lg:justify-center items-center 
+                     relative sm:h-[120px] lg:px-0 sm:px-6">   
                     <input onChange={(e) => {setSearch(e.target.value)}}
-                        className="lg:w-[50%] sm:w-[70%] lg:h-[100%] sm:h-[90%] border-[1.5px] border-solid border-gray-400 
-                        lg:rounded-4xl sm:rounded-full lg:px-12 sm:px-20 py-1 outline-none font-medium text-gray-600 lg:text-base
-                        active:scale-99 transition-all duration-200 ease-in-out sm:text-3xl"
+                        className="lg:w-[50%] sm:w-[90%] lg:h-[100%] sm:h-[90%] border-[1.5px] border-solid border-gray-400 
+                        lg:rounded-4xl sm:rounded-full lg:px-12 sm:px-24 py-1 lg:outline-none lg:font-medium text-gray-600 lg:text-base
+                        active:scale-99 transition-all duration-200 ease-in-out sm:text-4xl"
                         placeholder="Search"
                         autoFocus
                     />
-                    <img src={searchIcon} alt="search" className="absolute lg:w-[25px] sm:left-[18%] 
-                        lg:left-[26.2%] sm:w-[40px]" />
+                    <img src={searchIcon} alt="search" className="absolute lg:w-[25px] sm:left-[6%] 
+                        lg:left-[26.2%] sm:w-[50px]" />
                     <img onClick={() => {setIsSearch(false)}}
-                        src={closeIcon} alt="close" className="absolute lg:w-[25px] sm:right-[7%] lg:right-[22%]
-                        cursor-pointer active:scale-85 transition-all duration-200 ease-in-out sm:w-[55px]
+                        src={closeIcon} alt="close" className="absolute lg:w-[25px] sm:right-[2%] lg:right-[22%]
+                        cursor-pointer active:scale-85 transition-all duration-200 ease-in-out sm:w-[80px]
                         hover:scale-105 " />
                 </div>
                 <Line /> 

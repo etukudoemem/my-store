@@ -142,7 +142,7 @@ export const About = () => {
                             Tempore accusamus deleniti excepturi voluptatem neque aliquid, nisi natus molestias pariatur nam aut sed! Error voluptatum, impedit necessitatibus itaque quae explicabo, aspernatur, nemo obcaecati sequi quidem eligendi mollitia assumenda. Alias.`} 
                 />    
             </section>
-            <section className="sm:mb-85 lg:mb-0">
+            <section className="sm:mb-85 lg:mb-0 lg:mt-0 sm:mt-45">
                 <Subscribe />
             </section>
         </>

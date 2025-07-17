@@ -39,28 +39,28 @@ export const Login = () => {
                             <input onChange={(e) => getUserInfo(e)}
                                 className={`lg:w-100 sm:w-full lg:h-11 sm:h-30 text-gray-600 placeholder-gray-300
                                 active:scale-98 transition-all duration-200 ease-in-out lg:text-base sm:text-5xl
-                                lg:outline-none p-3 lg:px-4 sm:px-8 border-1 leftHeader
+                                lg:outline-none p-3 lg:px-4 sm:px-8 border-1 leftHeader bg-slate-100
                                 ${noLoginInput.email ? "border-red-600 border-2" : "border-gray-600"}`}
                                 type="email" 
                                 name="email"
                                 placeholder="johndoe@example.com"
                                 value={userInfo.email}
                             />
-                            <div className={`lg:text-xs sm:text-3xl text-red-600 ${noLoginInput.email ? "visible expand" : "hidden"}
+                            <div className={`lg:text-xs sm:text-3xl text-red-600 ${noLoginInput.email ? "visible" : "hidden"}
                                 lg:my-[-10px] lg:mt-[0px] sm:mt-[-15px] self-start expand lg:mx-[-15px] absolute sm:top-34 lg:top-11`}>
                                 <p>Please enter your email</p>
                             </div>
                             <input onChange={(e) => getUserInfo(e)}
                                 className={`lg:w-100 sm:w-full lg:h-11 sm:h-30 text-gray-600 placeholder-gray-300
                                 active:scale-98 transition-all duration-200 ease-in-out lg:text-base sm:text-5xl
-                                lg:outline-none p-3 lg:px-4 sm:px-8 border-1 rightHeader 
+                                lg:outline-none p-3 lg:px-4 sm:px-8 border-1 rightHeader bg-slate-100
                                 ${noLoginInput.password ? "border-red-600 border-2 expand" : "border-gray-600"}`}
                                 type={showPassword ? "text" : "password"} 
                                 name="password"
                                 placeholder="******"
                                 value={userInfo.password}
                             />
-                            <div className={`lg:text-xs sm:text-3xl text-red-600 ${noLoginInput.password ? "visible expand" : "hidden"}
+                            <div className={`lg:text-xs sm:text-3xl text-red-600 ${noLoginInput.password ? "visible" : "hidden"}
                                 lg:my-[-10px] lg:mt-[0px] sm:mt-[-15px] self-start expand lg:mx-[-15px] absolute sm:top-78 lg:top-28`}>
                                 <p>Please enter your password</p>
                             </div>

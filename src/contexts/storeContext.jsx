@@ -359,12 +359,12 @@ export default function StoreContextProvider ({ children }) {
     }, [])
 
 
-    // useEffect(() => {
-    //     setTimeout(()=> {
-    //         setModal({...modal, logInToast:false})
-    //     }, 10000)
-    //     // console.log(modal)
-    // }, [modal.logInToast])
+    useEffect(() => {
+        setTimeout(()=> {
+            setModal({...modal, logInToast:false})
+        }, 10000)
+        // console.log(modal)
+    }, [modal.logInToast])
 
     useEffect(() => {
         setTimeout(()=> {
