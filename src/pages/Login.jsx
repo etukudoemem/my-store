@@ -87,7 +87,7 @@ export const Login = () => {
                                 className="lg:w-45 sm:w-full lg:h-11 sm:h-32 bg-black text-white text-md p-2
                                 active:scale-95 transition-all duration-100 ease-in-out 
                                 hover:scale-103 cursor-pointer">
-                                Log In
+                                Login
                             </button>
                         </div>
                     </form>   
