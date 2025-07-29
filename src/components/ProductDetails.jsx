@@ -20,7 +20,7 @@ export const ProductDetails = ({ productInfo, currentImage, setCurrentImage }) =
                 min-w-full lg:min-h-[600px] sm:min-h-[800px] gap-x-2 sm:mt-20 lg:mt-0">
                 <div className="lg:min-w-1/2 sm:min-w-full min-h-[inherit] flex leftHeader
                      justify-center gap-x-4 lg:flex-row sm:flex-col ">
-                    <div className="lg:w-[100px] sm:w-[208px] h-[auto] lg:overflow-hidden sm:order-1 
+                    <div className="lg:w-[100px] sm:w-[207px] h-[auto] lg:overflow-hidden sm:order-1 
                         lg:order-none flex sm:flex-row sm:gap-x-7 lg:flex-col lg:gap-x-0">
                        {(productInfo.image.map((img, index) => 
                             <img onClick={() => {setCurrentImage(img)}} 
