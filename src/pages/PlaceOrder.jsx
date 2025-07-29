@@ -103,29 +103,29 @@ export const PlaceOrder = () =>  {
                         <section className="lg:w-[95%] flex flex-col lg:ml-6">
                             <div className="min-w-full lg:mb-0 sm:mb-10">
                                 <h2 className="flex items-center lg:text-2xl sm:text-6xl font-medium lg:mb-10 lg:mt-8 
-                                    gap-2 sm:mb-14 sm:mt-24">
+                                    gap-2 sm:mb-20 sm:mt-24">
                                     <span className="text-gray-500 text-left">
                                         CART
                                     </span> 
                                     <p>TOTALS</p> 
                                     <div className="w-12 h-[2.5px] bg-black"></div>
                                 </h2>
-                                <div className="lg:text-sm sm:text-5xl">
-                                    <div className="flex justify-between lg:mt-3 sm:mt-8 lg:mb-0 sm:mb-10">
+                                <div className="lg:text-sm sm:text-[2.7rem]">
+                                    <div className="flex justify-between mt-3 lg:mb-0 sm:mb-5">
                                         <p className="text-gray-700 lg:font-semibold sm:font-light mb-2">
                                             Subtotal
                                         </p>
                                         <p className="lg:font-semibold">$ {getTotal}</p>
                                     </div>
                                     <div className="min-w-full h-[0.5px] bg-gray-200"></div>
-                                    <div className="flex justify-between lg:mt-3 sm:mt-8 lg:mb-0 sm:mb-10">
+                                    <div className="flex justify-between mt-3 lg:mb-0 sm:mb-5">
                                         <p className="text-gray-700 lg:font-semibold sm:font-light mb-2">
                                             Shipping Fee
                                         </p>
                                         <p className="lg:font-semibold">$ {shippingCost.toFixed(2)}</p>
                                     </div>
                                     <div className="min-w-full h-[0.5px] bg-gray-200"></div>
-                                    <div className="flex justify-between lg:mt-3 sm:mt-8 lg:mb-0 sm:mb-10">
+                                    <div className="flex justify-between mt-3 lg:mb-0 sm:mb-5">
                                         <p className="text-gray-700 font-bold mb-2">
                                             Total
                                         </p>
@@ -142,10 +142,10 @@ export const PlaceOrder = () =>  {
                                         <p>METHOD</p> 
                                         <div className="w-13 h-[2.5px] bg-black"></div>
                                 </h2>
-                                <div className="flex lg:gap-5 sm:gap-10 w-full lg:mt-0 sm:mt-15">
-                                    <div className="min-w-auto lg:h-[38px] sm:h-[90px] outline-none border-[1.5px]
+                                <div className="flex lg:gap-5 sm:gap-10 w-full lg:mt-0 sm:mt-20">
+                                    <div className="min-w-60 lg:h-[38px] sm:h-[90px] outline-none border-[1.5px]
                                             border-gray-300 placeholder-gray-200 lg:px-2 sm:px-4 py-4 font-medium
-                                            flex items-center gap-1 bg-gray-100 rounded ">
+                                            flex items-center justify-center gap-1 bg-gray-100 rounded ">
                                         <input onChange={(e) => setPaymentMethod(e.target.name)}
                                             className="sm:scale-200 lg:scale-100 sm:mr-4"
                                             type="radio"
@@ -156,9 +156,9 @@ export const PlaceOrder = () =>  {
                                             PAYSTACK
                                         </p>
                                     </div>
-                                    <div className="min-w-auto lg:h-[38px] sm:h-[90px] outline-none border-[1.5px]
+                                    <div className="min-w-50 lg:h-[38px] sm:h-[90px] outline-none border-[1.5px]
                                             border-gray-300 placeholder-gray-200 lg:px-2 sm:px-4 py-4 font-medium
-                                            flex items-center gap-1 bg-gray-100 rounded">
+                                            flex items-center justify-center gap-1 bg-gray-100 rounded">
                                         <input onChange={(e) => setPaymentMethod(e.target.name)}
                                             className="sm:scale-200 lg:scale-100 sm:mr-4"
                                             type="radio" 
@@ -168,9 +168,9 @@ export const PlaceOrder = () =>  {
                                         <p className="lg:text-base sm:text-3xl lg:px-2">STRIPE</p>
                                             
                                     </div>
-                                    <div className="min-w-auto lg:h-[38px] sm:h-[90px] outline-none border-[1.5px]
+                                    <div className="min-w-90 lg:h-[38px] sm:h-[90px] outline-none border-[1.5px]
                                             border-gray-300 placeholder-gray-200 lg:px-2 sm:px-4 py-4 font-medium
-                                            flex items-center lg:gap-1 bg-gray-100 rounded">
+                                            flex items-center justify-center lg:gap-1 bg-gray-100 rounded">
                                         <input onChange={(e) => setPaymentMethod(e.target.name)}
                                             className="sm:scale-200 lg:scale-100 sm:mr-4"
                                             type="radio"
@@ -183,7 +183,7 @@ export const PlaceOrder = () =>  {
                             </div>
                             <button onClick={() => {getProductToOrder()}}
                                 className="lg:min-w-58 sm:min-w-120 lg:min-h-11 sm:min-h-30 bg-gray-900 text-gray-100 lg:text-base
-                                    lg:mt-8 sm:mt-30 font-semibold cursor-pointer self-end
+                                    lg:mt-8 sm:mt-40 font-semibold cursor-pointer self-end
                                     active:scale-95 transition-all duration-100 ease-in-out sm:text-4xl
                                     hover:scale-103 border-1 border-gray-400 shadow-md">
                                 PLACE ORDER

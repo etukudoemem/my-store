@@ -26,23 +26,23 @@ export const Contact = () => {
                         lg:mb-6 sm:mb-15">
                         Our Store
                     </h3>
-                    <p className="text-gray-600 lg:text-base sm:text-5xl lg:mb-0 sm:mb-10 sm:font-light lg:font-normal">
+                    <p className="text-gray-600 lg:text-base sm:text-[2.5rem] lg:mb-0 sm:mb-10 sm:font-light lg:font-normal">
                         54709 Willms Station
                     </p>
-                    <p className="text-gray-600 lg:mb-6 sm:mb-20 lg:text-base sm:text-5xl sm:font-light lg:font-normal">
+                    <p className="text-gray-600 lg:mb-6 sm:mb-20 lg:text-base sm:text-[2.5rem] sm:font-light lg:font-normal">
                         Suite 350, Washington, USA
                     </p>
-                    <p className="text-gray-600 lg:text-base sm:text-5xl lg:mb-0 sm:mb-10 sm:font-light lg:font-normal">
+                    <p className="text-gray-600 lg:text-base sm:text-[2.5rem] lg:mb-0 sm:mb-10 sm:font-light lg:font-normal">
                         Tel: (415) 555-0132
                     </p>
-                    <p className="text-gray-600 lg:text-base sm:text-5xl sm:font-light lg:font-normal">
+                    <p className="text-gray-600 lg:text-base sm:text-[2.5rem] sm:font-light lg:font-normal">
                         Email: contact@mystore.com
                     </p>
                     <h3 className="lg:text-xl sm:text-6xl font-bold text-gray-600
                         lg:mb-6 lg:mt-6 sm:mb-15 sm:mt-35">
                         Careers at My Store
                     </h3>
-                    <p className="text-gray-600 mb-6 lg:text-base sm:text-5xl sm:leading-normal sm:font-light lg:font-normal">
+                    <p className="text-gray-600 mb-6 lg:text-base sm:text-[2.5rem] sm:leading-normal sm:font-light lg:font-normal">
                         Learn more about our teams and job openings.
                     </p>
                     <button className="text-sm font-medium lg:max-w-[140px] sm:rounded-xl

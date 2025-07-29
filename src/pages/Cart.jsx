@@ -57,22 +57,22 @@ export const Cart = () => {
                                 <p>TOTALS</p> 
                                 <div className="w-12 h-[2.5px] bg-black"></div>
                             </h2>
-                            <div className="lg:text-sm sm:text-5xl">
-                                <div className="flex justify-between lg:mt-3 sm:mt-8 lg:mb-0 sm:mb-10">
+                            <div className="lg:text-sm sm:text-[2.6rem]">
+                                <div className="flex justify-between mt-3 lg:mb-0 sm:mb-5">
                                     <p className="text-gray-700 lg:font-semibold sm:font-light mb-2">
                                         Subtotal
                                     </p>
                                     <p className="lg:font-semibold sm:font-normal">$ {getTotal}</p>
                                 </div>
                                 <div className="min-w-full h-[0.5px] bg-gray-200"></div>
-                                <div className="flex justify-between lg:mt-3 sm:mt-8 lg:mb-0 sm:mb-10">
+                                <div className="flex justify-between mt-3 lg:mb-0 sm:mb-5">
                                     <p className="text-gray-700 lg:font-semibold sm:font-light mb-2 ">
                                         Shipping Fee
                                     </p>
                                     <p className="lg:font-semibold sm:font-normal">$ {shippingCost.toFixed(2)}</p>
                                 </div>
                                 <div className="min-w-full h-[0.5px] bg-gray-200"></div>
-                                <div className="flex justify-between lg:mt-3 sm:mt-8 lg:mb-0 sm:mb-4">
+                                <div className="flex justify-between mt-3 lg:mb-0 sm:mb-4">
                                     <p className="text-gray-700 font-bold mb-2">
                                         Total
                                     </p>

@@ -10,8 +10,8 @@ export const Footer = () => {
                     text-gray-700 py-10 sm:font-light lg:font-normal" >
                 <div className="sm:mb-40 lg:mb-0">
                     <Logo />
-                    <p className="lg:w-[500px] sm:w-full mt-4 lg:text-base sm:text-5xl
-                        sm:leading-normal">
+                    <p className="lg:w-[500px] sm:w-full lg:mt-4 lg:text-base sm:text-[2.5rem]
+                        sm:leading-normal sm:mt-12 ">
                         Lorem, ipsum dolor sit amet 
                         consectetur adipisicing elit. 
                         Animi recusandae, et optio error 
@@ -20,7 +20,7 @@ export const Footer = () => {
                         qui magni at possimus ex unde ad.
                     </p>
                 </div>
-                <div className="sm:mb-40 lg:mb-0 lg:text-base sm:text-5xl">
+                <div className="sm:mb-40 lg:mb-0 lg:text-base sm:text-[2.5rem]">
                     <h2 className="font-semibold sm:mb-10 lg:mb-4 ">
                         COMPANY
                     </h2>
@@ -31,7 +31,7 @@ export const Footer = () => {
                         <p>Privacy Policy</p>
                     </div>
                 </div>
-                <div className="lg:text-base sm:text-5xl">
+                <div className="lg:text-base sm:text-[2.5rem]">
                     <h2 className="font-semibold sm:mb-10 lg:mb-4">
                         GET IN TOUCH
                     </h2>

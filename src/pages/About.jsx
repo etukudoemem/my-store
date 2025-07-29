@@ -22,7 +22,7 @@ export const About = () => {
                     <img className="w-[inherit] h-full " src={aboutPhoto} alt="image" />
                 </div>
                 <div className="lg:w-1/2 sm:w-full max-h-[inherit] flex flex-col rightHeader
-                    justify-center text-gray-700 lg:px-10 sm:mt-20 lg:mt-0 lg:text-base sm:text-5xl
+                    justify-center text-gray-700 lg:px-10 sm:mt-20 lg:mt-0 lg:text-base sm:text-[2.5rem]
                     leading-normal sm:font-light lg:font-normal">
                     <p> 
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
@@ -37,7 +37,7 @@ export const About = () => {
                         voluptate natus.
                     </p> 
                     <br />
-                    <h3 className="lg:text-lg sm:text-5xl font-bold text-black lg:text-left
+                    <h3 className="lg:text-lg sm:text-6xl font-bold text-black lg:text-left
                         text-gray-700 sm:text-center">
                         Our Mission
                     </h3>
@@ -59,10 +59,11 @@ export const About = () => {
                     <p>CHOOSE US</p> 
                     <div className="w-12 h-[2.5px] bg-black"></div>
                 </h2>  
-                <div className="flex sm:flex-col lg:flex-row scroll sm:items-center lg:items-start">
+                <div className="flex sm:flex-col lg:flex-row scroll sm:items-center lg:items-start
+                    sm:font-light lg:font-normal">
                     <div className="flex flex-col justify-center lg:border-1 border-gray-300 
                         lg:max-w-[420px] sm:max-w-full min-h-[250px] lg:px-16 items-center
-                        text-gray-700">
+                        text-gray-700 ">
                         <h3 className="font-bold mb-6 scroll lg:text-base sm:text-5xl lg:text-start">
                             Quality Assurance
                         </h3>

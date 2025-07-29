@@ -59,13 +59,13 @@ export const Home = () => {
             <section className="w-full lg:max-h-[500px] border-solid
                  lg:mt-12 sm:mt-12 flex sm:flex-col sm:max-h-[1000px] lg:flex-row">
                 <div className="lg:min-w-1/2 lg:min-h-[inherit] flex flex-col leftHeader
-                    justify-center items-center gap-y-3 lg:bg-slate-100 text-gray-600
+                    justify-center items-center lg:gap-y-3 sm:gap-y-6 lg:bg-slate-100 text-gray-600
                     sm:min-w-full sm:min-h-[500px] ">
-                    <p className="font-medium sm:text-6xl lg:text-3xl">
+                    <p className="font-medium sm:text-7xl lg:text-3xl">
                         OUR BEST SELLERS
                     </p>
                     <p className="lg:text-3xl sm:text-7xl ">&</p>
-                    <p className="font-medium sm:text-6xl lg:text-3xl sm:mb-6 lg:mb-4">
+                    <p className="font-medium sm:text-7xl lg:text-3xl sm:mb-6 lg:mb-4">
                         LATEST ARRIVALS</p>
                     <div className="flex items-center gap-x-4">
                         <div className="w-12 h-[2.5px] bg-gray-600"></div>
@@ -93,7 +93,7 @@ export const Home = () => {
                     <div className="w-12 h-[2.5px] bg-black"></div>
                 </h2>
                 <p className="lg:w-[70%] sm:w-[95%] text-center m-auto text-gray-600 
-                    lg:text-base sm:text-5xl leading-normal lg:mb-0 sm:mb-[12%] sm:font-light lg:font-normal">
+                    lg:text-base sm:text-[2.5rem] leading-normal lg:mb-0 sm:mb-[12%] sm:font-light lg:font-normal">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Exercitationem recusandae molestiae.
                 </p>
@@ -113,7 +113,7 @@ export const Home = () => {
                         <div className="w-12 h-[2.5px] bg-black"></div>
                 </h2>
                 <p className="lg:w-[70%] sm:w-[95%] text-center m-auto text-gray-600 
-                    scroll lg:text-base sm:text-5xl leading-normal lg:mb-0 sm:mb-[10%] sm:font-light lg:font-normal">
+                    scroll lg:text-base sm:text-[2.5rem] leading-normal lg:mb-0 sm:mb-[10%] sm:font-light lg:font-normal">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Exercitationem recusandae molestiae.
                 </p>

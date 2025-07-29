@@ -55,7 +55,7 @@ export const ProductDetails = ({ productInfo, currentImage, setCurrentImage }) =
                         lg:mt-0 sm:mt-20">
                         ${productInfo.price}
                     </p>
-                    <p className="text-gray-500 mb-8 lg:text-base sm:text-5xl leading-normal sm:font-light lg:font-normal">
+                    <p className="text-gray-500 mb-8 lg:text-base sm:text-[2.7rem] leading-normal sm:font-light lg:font-normal">
                         {productInfo.description}
                     </p>
                     <p className="font-semibold lg:mb-4 sm:mb-15 lg:mt-0 sm:mt-20 lg:text-base sm:text-5xl">
@@ -82,7 +82,7 @@ export const ProductDetails = ({ productInfo, currentImage, setCurrentImage }) =
                     </button>
                     <div className="min-w-full h-[1px] bg-gray-300 lg:mb-6 sm:mb-10 lg:mt-0 sm:mt-10">
                     </div>
-                    <div className="text-gray-500 lg:text-sm sm:text-5xl leading-normal sm:font-light lg:font-normal">
+                    <div className="text-gray-500 lg:text-sm sm:text-[2.5rem] leading-normal sm:font-light lg:font-normal">
                         <p>100% Original product.</p>
                         <p>Cash on delivery is available on this product.</p>
                         <p>Easy return and exchange policy within 7 days.</p>

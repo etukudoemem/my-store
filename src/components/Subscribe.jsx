@@ -7,7 +7,7 @@ export const Subscribe = () => {
                     <h2 className="font-medium lg:text-2xl sm:text-6xl text-gray-700 lg:mb-4 sm:mb-15 scroll">
                         Subscribe now & get 20% off
                     </h2>
-                    <p className="text-center lg:mb-8 sm:mb-20 lg:text-gray-500 sm:text-gray-800 lg:text-base sm:text-5xl 
+                    <p className="text-center lg:mb-8 sm:mb-20 lg:text-gray-500 sm:text-gray-800 lg:text-base sm:text-[2.5rem] 
                         leading-normal scroll sm:w-[95%] lg:w-full sm:font-light lg:font-normal">
                         Lorem ipsum dolor sit amet consectetur, 
                         adipisicing elit molestiae suscipit veritatis 

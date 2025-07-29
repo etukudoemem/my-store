@@ -36,8 +36,8 @@ export const Collection = () => {
                      relative sm:h-[120px] lg:px-0 sm:px-6">   
                     <input onChange={(e) => {setSearch(e.target.value)}}
                         className="lg:w-[50%] sm:w-[90%] lg:h-[100%] sm:h-[90%] border-[1.5px] border-solid border-gray-400 
-                        lg:rounded-4xl sm:rounded-full lg:px-12 sm:px-24 py-1 lg:outline-none lg:font-medium text-gray-600 lg:text-base
-                        active:scale-99 transition-all duration-200 ease-in-out sm:text-4xl"
+                        lg:rounded-4xl sm:rounded-full lg:px-12 sm:px-24 py-1 outline-none lg:font-medium text-gray-600 lg:text-base
+                        active:scale-99 transition-all duration-200 ease-in-out sm:text-[2.7rem]"
                         placeholder="Search"
                         autoFocus
                     />
@@ -99,9 +99,9 @@ export const Collection = () => {
                                 ">
                                 {allCollections}
                             </div>) : 
-                            (<div className="flex items-center justify-center collections w-full h-[50vh]">
+                            (<div className="flex items-center justify-center collections w-full h-[50vh] transition-all duration-500">
                                 <h2 className="flex items-center justify-center lg:text-3xl sm:text-6xl font-medium mb-10 mt-8 gap-2">
-                                    <span className="text-gray-500">
+                                    <span className="text-gray-500 sm:leading-normal text-center">
                                         SORRY. THE PRODUCT IS NOT AVAILABLE.
                                     </span> 
                                 </h2>

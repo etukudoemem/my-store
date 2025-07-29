@@ -23,14 +23,14 @@ export const CartItem = ({ productData, cartData }) => {
                             {productData.name}
                         </h3>
                         <div className="flex lg:gap-y-2 sm:gap-y-3 lg:gap-x-0 sm:gap-x-4 lg:flex-col sm:flex-row">
-                            <div className="lg:max-w-[120px] lg:max-h-[35px] py-2 px-2 bg-gray-100 border-0 
+                            <div className="lg:max-w-[120px] lg:min-h-[40px] sm:min-h-[50px] py-2 px-2 bg-gray-100 border-0 
                                     border-gray-400 flex items-center justify-center cursor-pointer
-                                    lg:text-base sm:text-4xl sm:max-w-[170px] sm:max-h-[55px] ">
+                                    lg:text-base sm:text-4xl sm:max-w-[190px] ">
                                 <span className="text-gray-600 mr-1">Price: </span> ${productData.price}
                             </div>
-                            <div className="lg:max-w-[120px] lg:max-h-[35px] py-2 px-2 bg-gray-100 border-0 
+                            <div className="lg:max-w-[120px] lg:min-h-[40px] sm:min-h-[50px] py-2 px-2 bg-gray-100 border-0 
                                     border-gray-400 flex items-center justify-center cursor-pointer
-                                    sm:max-w-[140px] sm:max-h-[55px] lg:text-base sm:text-4xl">
+                                    sm:max-w-[160px] lg:text-base sm:text-4xl">
                                 <span className="text-gray-600 mr-1">Size: </span> {cartData.size}
                             </div>
                         </div>

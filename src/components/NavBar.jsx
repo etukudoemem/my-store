@@ -125,7 +125,7 @@ export const NavBar = () => {
                                 src={hamburgerMenu} alt="menu"/>
                         </div>
                         <ul className={`${showMenu ? "block menu-in": "menu-out invisible"} absolute w-full
-                            h-auto bg-slate-100 text-base font-semibold text-slate-800 flex
+                            h-auto bg-white text-base font-semibold text-slate-800 flex
                             flex-col fixed inset-0 transition-all`}>
                             <div className="flex justify-end px-6 pt-6">
                                 <img onClick={() => setShowMenu(false)}
@@ -187,7 +187,7 @@ export const NavBar = () => {
                                     Orders
                                 </li>
                                 {orderedProduct.length > 0 && 
-                                    <div className="w-7 h-7 rounded-full bg-red-500 top-14 left-48 absolute"></div>
+                                    <div className="w-5 h-5 rounded-full bg-red-500 top-16 left-47 absolute"></div>
                                 }
                             </Link>
                         </ul>

@@ -13,7 +13,7 @@ export const Accordion = ({ title, content }) => {
                     lg:px-0 sm:px-4">
                     <button onClick={() => {handleClick()}}
                         className="flex justify-between items-center w-full h-[auto] cursor-pointer">
-                        <p className="lg:text-lg sm:text-5xl lg:font-medium sm:font-light text-gray-700"> 
+                        <p className="lg:text-lg sm:text-[2.8rem] lg:font-medium sm:font-light text-gray-700"> 
                             {title}
                         </p>
                         <span className="lg:text-xl sm:text-7xl cursor-pointer">
@@ -23,8 +23,8 @@ export const Accordion = ({ title, content }) => {
                     <div className={`transition-all duration-200 linear
                         ${showAccordion ? "h-auto visible py-5 opacity-100 " 
                             : " opacity-0 h-0 invisible"}`}>
-                        <p className="text-gray-700 lg:text-base sm:text-5xl sm:leading-normal
-                            lg:leading-tight font-light">
+                        <p className="text-gray-700 lg:text-base sm:text-[2.5rem] sm:leading-relaxed
+                            lg:leading-normal font-light">
                             {content}
                         </p>
                     </div>
