@@ -5,12 +5,12 @@ export const Footer = () => {
 
     return (
         <>
-            <section className="lg:flex lg:justify-between lg:mt-36 mb-8 sm:text-gray-200
-                    sm:grid sm:grid sm:grid-cols-1 sm:gap-x-80 sm:gap-x-20 sm:px-10
-                    lg:text-gray-700 sm:py-10 lg:py-0" >
-                <div className="sm:mb-15 lg:mb-0">
+            <section className="lg:flex lg:justify-between lg:mt-36 mb-8
+                    sm:grid sm:grid sm:grid-cols-1 sm:gap-x-80 sm:gap-x-20 px-5
+                    text-gray-700 py-10 sm:font-light lg:font-normal" >
+                <div className="sm:mb-40 lg:mb-0">
                     <Logo />
-                    <p className="lg:w-[500px] sm:w-full mt-4 lg:text-base sm:text-4xl
+                    <p className="lg:w-[500px] sm:w-full mt-4 lg:text-base sm:text-5xl
                         sm:leading-normal">
                         Lorem, ipsum dolor sit amet 
                         consectetur adipisicing elit. 
@@ -20,22 +20,22 @@ export const Footer = () => {
                         qui magni at possimus ex unde ad.
                     </p>
                 </div>
-                <div className="sm:mb-15 lg:mb-0 lg:text-base sm:text-4xl">
+                <div className="sm:mb-40 lg:mb-0 lg:text-base sm:text-5xl">
                     <h2 className="font-semibold sm:mb-10 lg:mb-4 ">
                         COMPANY
                     </h2>
-                    <div className="flex flex-col gap-y-3">
+                    <div className="flex flex-col lg:gap-y-3 sm:gap-y-8">
                         <p>Home</p>
                         <p>About Us</p>
                         <p>Delivery</p>
                         <p>Privacy Policy</p>
                     </div>
                 </div>
-                <div className="lg:text-base sm:text-4xl">
+                <div className="lg:text-base sm:text-5xl">
                     <h2 className="font-semibold sm:mb-10 lg:mb-4">
                         GET IN TOUCH
                     </h2>
-                    <div className="flex flex-col gap-y-3">
+                    <div className="flex flex-col lg:gap-y-3 sm:gap-y-8">
                         <p>+234 700000000</p>
                         <p>emem@gmail.com</p>
                         <p>Instagram</p>
@@ -43,8 +43,8 @@ export const Footer = () => {
                 </div>
             </section>
             <Line />
-            <footer className="text-center lg:text-xs sm:text-2xl sm:text-gray-200 lg:text-gray-700">
-                Copyright 2025@emem.dev - All Rights reserved.
+            <footer className="text-center lg:text-xs sm:text-3xl text-gray-700 sm:mt-7 lg:mt-0 lg:mb-3">
+                Copyright @emem.dev - All Rights reserved.
             </footer>
         </>
     )

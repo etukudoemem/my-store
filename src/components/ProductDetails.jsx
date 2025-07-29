@@ -17,10 +17,11 @@ export const ProductDetails = ({ productInfo, currentImage, setCurrentImage }) =
             <CartModal />
             {productInfo ? 
             (<section className="flex lg:flex-row sm:flex-col justify-center items-center 
-                min-w-full lg:min-h-[600px] sm:min-h-[800px] gap-x-2 ">
+                min-w-full lg:min-h-[600px] sm:min-h-[800px] gap-x-2 sm:mt-20 lg:mt-0">
                 <div className="lg:min-w-1/2 sm:min-w-full min-h-[inherit] flex leftHeader
-                     justify-center gap-x-4 ">
-                    <div className="lg:w-[100px] sm:w-[160px] h-[auto] overflow-hidden">
+                     justify-center gap-x-4 lg:flex-row sm:flex-col ">
+                    <div className="lg:w-[100px] sm:w-[180px] h-[auto] overflow-hidden sm:order-1 
+                        lg:order-none">
                        {(productInfo.image.map((img, index) => 
                             <img onClick={() => {setCurrentImage(img)}} 
                             key={index} className="min-w-[100%] min-h-[inherit] 
@@ -29,18 +30,18 @@ export const ProductDetails = ({ productInfo, currentImage, setCurrentImage }) =
                             src={img} alt="image" />)
                         )}   
                     </div>
-                    <div className="w-[72%] max-h-[550px]">
+                    <div className="lg:w-[72%] sm:w-[100%] lg:max-h-[550px] sm:mb-7 lg:mb-0">
                         <img className="min-w-[100%] h-[inherit]" 
                             src={currentImage} alt="image" />
                     </div>
                 </div>
-                <div className="min-w-1/2 min-h-[inherit] px-10 py-5 rightHeader">
-                    <h2 className="lg:text-2xl sm:text-5xl font-medium mb-3">
+                <div className="min-w-1/2 min-h-[inherit] lg:px-10 sm:px-0 py-5 rightHeader lg:mt-0 sm:mt-15">
+                    <h2 className="lg:text-2xl sm:text-6xl sm:leading-normal font-medium lg:mb-3 sm:mb-10">
                         {productInfo.name}
                     </h2>
-                    <div className="my-6 flex lg:gap-x-22 sm:gap-x-30 items-center">
+                    <div className="my-6 flex lg:gap-x-22 sm:gap-x-35 items-center">
                         <div className="flex lg:w-[15px] sm:w-[38px] gap-x-1">
-                            <img src={starIcon} alt="star"/>
+                            <img src={starIcon} alt="star" />
                             <img src={starIcon} alt="star" />
                             <img src={starIcon} alt="star" />
                             <img src={starIcon} alt="star" />
@@ -50,22 +51,22 @@ export const ProductDetails = ({ productInfo, currentImage, setCurrentImage }) =
                             (122)
                         </p>
                     </div>
-                    <p className="lg:text-3xl sm:text-6xl font-semibold lg:mb-3 sm:mb-6
-                        lg:mt-0 sm:mt-8">
+                    <p className="lg:text-3xl sm:text-7xl font-semibold lg:mb-3 sm:mb-10
+                        lg:mt-0 sm:mt-20">
                         ${productInfo.price}
                     </p>
-                    <p className="text-gray-500 mb-8 lg:text-base sm:text-4xl leading-normal">
+                    <p className="text-gray-500 mb-8 lg:text-base sm:text-5xl leading-normal sm:font-light lg:font-normal">
                         {productInfo.description}
                     </p>
-                    <p className="font-semibold lg:mb-4 sm:mb-8 lg:text-base sm:text-4xl">
+                    <p className="font-semibold lg:mb-4 sm:mb-15 lg:mt-0 sm:mt-20 lg:text-base sm:text-5xl">
                         Select Size
                     </p>
-                    <div className="flex lg:gap-2 sm:gap-6 lg:font-semibold sm:font-medium min-w-full =">
+                    <div className="flex lg:gap-2 sm:gap-6 lg:font-semibold sm:font-normal min-w-full =">
                         {productInfo.sizes.map((size, index) => 
                             <button key={index} onClick={() => {setProductSize(size)}} 
-                                className={`lg:min-w-[auto] sm:min-w-[auto] lg:h-[42px] sm:h-[100px] py-2 lg:px-4 
+                                className={`lg:min-w-[auto] sm:min-w-[auto] lg:h-[42px] sm:h-[105px] py-2 lg:px-4 
                                 text-gray-600 flex items-center justify-center cursor-pointer lg:text-base
-                                active:scale-95 transition-all duration-100 ease-in-out sm:text-4xl bg-gray-100 
+                                active:scale-95 transition-all duration-100 ease-in-out sm:text-5xl bg-gray-100 
                                 hover:scale-103 border-1 border-gray-400 shadow-md sm:px-11
                                 ${size === productSize ? "bg-green-200" : null}`}>{size}
                             </button>)
@@ -73,15 +74,15 @@ export const ProductDetails = ({ productInfo, currentImage, setCurrentImage }) =
                     </div>
                     <button 
                         onClick={() => {getProductToCart(productInfo.id, productSize)}}
-                        className="lg:min-w-40 sm:min-w-102 lg:min-h-11 sm:min-h-30 bg-gray-100 text-gray-600 text-base
-                        lg:mt-8 sm:mt-14 mb-8 lg:text-sm sm:text-4xl font-semibold cursor-pointer active:scale-95 
+                        className="lg:min-w-40 sm:min-w-102 lg:min-h-11 sm:min-h-30 bg-gray-900 text-gray-100 text-base
+                        lg:mt-8 sm:mt-25 mb-8 lg:text-sm sm:text-4xl font-semibold cursor-pointer active:scale-95 
                         transition-all duration-100 ease-in-out hover:scale-103
                         border-1 border-gray-400 shadow-md">
                         ADD TO CART
                     </button>
-                    <div className="min-w-full h-[1px] bg-gray-300 mb-6">
+                    <div className="min-w-full h-[1px] bg-gray-300 lg:mb-6 sm:mb-10 lg:mt-0 sm:mt-10">
                     </div>
-                    <div className="text-gray-500 lg:text-sm sm:text-4xl leading-normal">
+                    <div className="text-gray-500 lg:text-sm sm:text-5xl leading-normal sm:font-light lg:font-normal">
                         <p>100% Original product.</p>
                         <p>Cash on delivery is available on this product.</p>
                         <p>Easy return and exchange policy within 7 days.</p>

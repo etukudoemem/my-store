@@ -67,9 +67,9 @@ export const SideBar = ({ setCollection, sorted }) => {
 
     return (
         <>
-            <section className="mt-8 leftHeader ">
+            <section className="sm:mt-8 lg:mt-4 leftHeader ">
                 <div onClick={() => setShowFilters(!showFilters)}
-                    className="sm:flex sm:items-center sm:w-85 sm:py-4 sm:justify-evenly lg:border-0
+                    className="sm:flex sm:items-center sm:w-60 sm:py-4 sm:justify-evenly lg:border-0
                     lg:shadow-[0] cursor-pointer sm:mb-5 lg:mb-0 lg:justify-start">
                     <h2 className="lg:text-xl sm:text-5xl font-medium lg:mb-2">
                         FILTERS

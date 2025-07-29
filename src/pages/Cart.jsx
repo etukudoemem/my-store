@@ -36,7 +36,7 @@ export const Cart = () => {
     return (
         <>
             {isCartProduct ? (<main className="mt-16 lg:mb-0 sm:mb-90">
-                <h2 className="flex items-center lg:text-xl sm:text-6xl font-medium mb-10 mt-8 gap-2">
+                <h2 className="flex items-center lg:text-xl sm:text-6xl font-medium lg:mb-4 sm:mb-20 mt-8 gap-2">
                     <span className="text-gray-500 text-left">
                         YOUR
                     </span> 
@@ -48,31 +48,31 @@ export const Cart = () => {
                 </section> 
                 <Line /> 
                 <CartTotal>
-                    <section className="w-full mt-12 flex flex-col">
-                        <div className="lg:min-w-[40%] lg:self-end sm:min-w-[100%] sm:self-center lg:mt-0 sm:mt-5">
-                            <h2 className="flex items-center lg:text-2xl sm:text-5xl font-medium mb-10 mt-8 gap-2">
+                    <section className="w-full lg:mt-12 sm:mt-20 flex flex-col">
+                        <div className="lg:min-w-[40%] lg:self-end sm:min-w-[100%] sm:self-center lg:mt-0 sm:mt-15">
+                            <h2 className="flex items-center lg:text-2xl sm:text-6xl font-medium lg:mb-10 sm:mb-20 mt-8 gap-2">
                                 <span className="text-gray-500 text-left">
                                     CART
                                 </span> 
                                 <p>TOTALS</p> 
                                 <div className="w-12 h-[2.5px] bg-black"></div>
                             </h2>
-                            <div className="lg:text-sm sm:text-4xl">
-                                <div className="flex justify-between mt-3 lg:mb-0 sm:mb-4">
-                                    <p className="text-gray-700 lg:font-semibold sm:font-normal mb-2">
+                            <div className="lg:text-sm sm:text-5xl">
+                                <div className="flex justify-between lg:mt-3 sm:mt-8 lg:mb-0 sm:mb-10">
+                                    <p className="text-gray-700 lg:font-semibold sm:font-light mb-2">
                                         Subtotal
                                     </p>
                                     <p className="lg:font-semibold sm:font-normal">$ {getTotal}</p>
                                 </div>
                                 <div className="min-w-full h-[0.5px] bg-gray-200"></div>
-                                <div className="flex justify-between mt-3 lg:mb-0 sm:mb-4">
-                                    <p className="text-gray-700 lg:font-semibold sm:font-normal mb-2">
+                                <div className="flex justify-between lg:mt-3 sm:mt-8 lg:mb-0 sm:mb-10">
+                                    <p className="text-gray-700 lg:font-semibold sm:font-light mb-2 ">
                                         Shipping Fee
                                     </p>
                                     <p className="lg:font-semibold sm:font-normal">$ {shippingCost.toFixed(2)}</p>
                                 </div>
                                 <div className="min-w-full h-[0.5px] bg-gray-200"></div>
-                                <div className="flex justify-between mt-3 lg:mb-0 sm:mb-4">
+                                <div className="flex justify-between lg:mt-3 sm:mt-8 lg:mb-0 sm:mb-4">
                                     <p className="text-gray-700 font-bold mb-2">
                                         Total
                                     </p>
@@ -81,8 +81,8 @@ export const Cart = () => {
                             </div>
                         </div>
                         <Link to={"place-order"} className="self-end">
-                            <button className="lg:min-w-58 sm:min-w-150 lg:min-h-11 sm:min-h-30 bg-gray-100 text-gray-600 
-                                lg:mt-8 sm:mt-18 mb-8 lg:text-sm font-semibold cursor-pointer border-1 border-gray-400 
+                            <button className="lg:min-w-58 sm:min-w-150 lg:min-h-11 sm:min-h-30 bg-gray-900 text-gray-100 
+                                lg:mt-8 sm:mt-30 mb-8 lg:text-sm font-semibold cursor-pointer border-1 border-gray-400 
                                 active:scale-95 transition-all duration-200 ease-in-out shadow-md sm:text-4xl
                                 hover:scale-103">
                                 PROCEED TO PLACE ORDER

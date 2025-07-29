@@ -30,7 +30,7 @@ export const Collection = () => {
     return (
         <>
             {isSearch &&
-            (<section className="bg-gray-50 mb-8 expand">
+            (<section className="bg-gray-50 lg:mb-8 sm:mt-15 lg-mt-0 expand">
                 <Line />
                 <div className="w-[100%] lg:h-[45px] flex lg:justify-center items-center 
                      relative sm:h-[120px] lg:px-0 sm:px-6">   
@@ -58,8 +58,8 @@ export const Collection = () => {
                 </div>
                 <div className="lg:w-[80%] sm:w-[100%]">
                     <div className="flex flex-col ">
-                        <div className="flex justify-between items-center ">
-                            <div className="lg:text-3xl sm:text-6xl flex items-center gap-2
+                        <div className="flex justify-between items-center lg:mb-0 sm:mb-20">
+                            <div className="lg:text-2xl sm:text-6xl flex items-center gap-2
                                     font-medium">
                                 <span className="text-gray-500">
                                     ALL
@@ -92,12 +92,20 @@ export const Collection = () => {
                                 </label>
                             </div>
                         </div>
-                        <div className="mt-10.5 grid lg:gap-y-10 lg:gap-x-4 lg:grid-cols-4
-                            sm:grid-cols-2 sm:gap-x-10 sm:gap-y-74 sm:px-10 lg:px-0
-                            collections
-                            ">
-                            {allCollections}
-                        </div>
+                        {collection.length > 0 ? 
+                            (<div className="mt-10.5 grid lg:gap-y-10 lg:gap-x-4 lg:grid-cols-4
+                                sm:grid-cols-2 sm:gap-x-10 sm:gap-y-95 sm:px-10 lg:px-0
+                                collections
+                                ">
+                                {allCollections}
+                            </div>) : 
+                            (<div className="flex items-center justify-center collections w-full h-[50vh]">
+                                <h2 className="flex items-center justify-center lg:text-3xl sm:text-6xl font-medium mb-10 mt-8 gap-2">
+                                    <span className="text-gray-500">
+                                        SORRY. THE PRODUCT IS NOT AVAILABLE.
+                                    </span> 
+                                </h2>
+                            </div>)}
                     </div>
                 </div>
             </section>

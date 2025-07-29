@@ -15,7 +15,7 @@ export const NavBar = () => {
 
     const navigate = useNavigate();
 
-    const { getCartQuantity, isSearch, setIsSearch, logOutAttempt, isLogged } = useContext(storeContext);
+    const { getCartQuantity, isSearch, setIsSearch, logOutAttempt, isLogged, orderedProduct } = useContext(storeContext);
 
     const cartQuantity = getCartQuantity();
 
@@ -75,7 +75,7 @@ export const NavBar = () => {
                     </ul>
                 </nav>
 
-                <div className="flex justify-between w-60% sm:gap-x-6 lg:gap-x-2" >
+                <div className="flex justify-between w-60% sm:gap-x-12 lg:gap-x-2" >
                     <div onClick={() => {handleSearch()}}
                         className="cursor-pointer active:scale-85 transition-all
                         duration-100 ease-in-out">
@@ -124,9 +124,9 @@ export const NavBar = () => {
                             <img className="lg:w-auto sm:w-20"
                                 src={hamburgerMenu} alt="menu"/>
                         </div>
-                        <ul className={`${showMenu ? "block expand": "hidden"} absolute w-full
-                            h-auto bg-slate-100 text-base font-semibold text-slate-800 flex 
-                            flex-col fixed right-0 inset-0`}>
+                        <ul className={`${showMenu ? "block menu-in": "menu-out invisible"} absolute w-full
+                            h-auto bg-slate-100 text-base font-semibold text-slate-800 flex
+                            flex-col fixed inset-0 transition-all`}>
                             <div className="flex justify-end px-6 pt-6">
                                 <img onClick={() => setShowMenu(false)}
                                     className="active:scale-95"
@@ -137,7 +137,7 @@ export const NavBar = () => {
                                 <button onClick={() => menuLog()}
                                     className="bg-white px-21 py-10 shadow-sm border-3
                                     border-black active:scale-102 text-gray-900 text-3xl
-                                    rounded-full transition-all duration-200 active:bg-gray-900
+                                    rounded-full transition-all duration-100 active:bg-gray-900
                                     active:text-white">
                                     {isLogged ? "LOG OUT": "LOG IN"}
                                 </button>
@@ -145,7 +145,7 @@ export const NavBar = () => {
                                     <button onClick={() => setShowMenu(false)}
                                         className="bg-gray-900 px-24 py-11 shadow-sm border-1
                                         border-black active:scale-102 text-gray-100 text-3xl
-                                        rounded-full transition-all duration-200 active:bg-white
+                                        rounded-full transition-all duration-100 active:bg-white
                                         active:text-gray-900">
                                         SIGN UP
                                     </button>
@@ -153,38 +153,42 @@ export const NavBar = () => {
                             </div>
                             <Link to={"/"} onClick={() => setShowMenu(false)}
                                 className=" ">
-                                <li className="border-b-2 border-gray-300 pb-10 px-8 py-12 text-5xl
+                                <li className="border-b-0 border-gray-300 pb-10 px-8 py-15 text-5xl
                                     active:scale-98 active:bg-gray-800 active:text-gray-100 font-normal">
                                     Home
                                 </li>
                             </Link>
                             <Link to={"collection"} onClick={() => setShowMenu(false)}
                                 className=" ">
-                                <li className="border-b-2 border-gray-300 pb-10 px-8 py-12 text-5xl
+                                <li className="border-b-0 border-gray-300 pb-10 px-8 py-15 text-5xl
                                     active:scale-98 active:bg-gray-800 active:text-gray-100 font-normal">
                                     Collections
                                 </li>
                             </Link>
                             <Link to={"about"} onClick={() => setShowMenu(false)}
                                 className=" ">
-                                <li className="border-b-2 border-gray-300 pb-10 px-8 py-12 text-5xl
+                                <li className="border-b-0 border-gray-300 pb-10 px-8 py-15 text-5xl
                                     active:scale-98 active:bg-gray-800 active:text-gray-100 font-normal">
                                     About Us
                                 </li>
                             </Link>
                             <Link to={"contact"} onClick={() => setShowMenu(false)}
                                 className=" ">
-                                <li className=" border-b-2 border-gray-300 pb-10 px-8 py-12 text-5xl 
+                                <li className=" border-b-0 border-gray-300 pb-10 px-8 py-15 text-5xl 
                                     active:scale-98 active:bg-gray-800 active:text-gray-100 font-normal">
                                     Contact Us
                                 </li>
                             </Link>
                             <Link to={"orders"} onClick={() => setShowMenu(false)}
-                                className=" ">
-                                <li className="pb-10 px-8 py-12 text-5xl font-normal
-                                    active:scale-98 active:bg-gray-800 active:text-gray-100">
+                                className="relative flex justify-between items-center pr-10 active:bg-gray-800
+                                    active:text-gray-100">
+                                <li className="pb-10 px-8 py-15 text-5xl font-normal
+                                    active:scale-98 ">
                                     Orders
                                 </li>
+                                {orderedProduct.length > 0 && 
+                                    <div className="w-7 h-7 rounded-full bg-red-500 top-14 left-48 absolute"></div>
+                                }
                             </Link>
                         </ul>
                     </section>

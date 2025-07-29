@@ -57,9 +57,9 @@ export const Home = () => {
                     </p>
                 </ToastModal>)}
             <section className="w-full lg:max-h-[500px] border-solid
-                 mt-12 flex sm:flex-col sm:max-h-[1000px] lg:flex-row">
+                 lg:mt-12 sm:mt-12 flex sm:flex-col sm:max-h-[1000px] lg:flex-row">
                 <div className="lg:min-w-1/2 lg:min-h-[inherit] flex flex-col leftHeader
-                    justify-center items-center gap-y-3 bg-slate-100 text-gray-600
+                    justify-center items-center gap-y-3 lg:bg-slate-100 text-gray-600
                     sm:min-w-full sm:min-h-[500px] ">
                     <p className="font-medium sm:text-6xl lg:text-3xl">
                         OUR BEST SELLERS
@@ -81,9 +81,9 @@ export const Home = () => {
                 </div>
             </section>
 
-            <section className="lg:mt-16 sm:mt-[25%]  ">
+            <section className="lg:mt-16 sm:mt-[28%]  ">
                 <h2 className="text-center lg:text-3xl sm:text-6xl font-medium mb-4 mt-8
-                        flex items-center justify-center gap-2 lg:mb-0 sm:mb-[5%]">
+                        flex items-center justify-center gap-2 lg:mb-0 sm:mb-[6%]">
                     <span className="text-gray-500">
                         LATEST
                     </span> 
@@ -92,18 +92,18 @@ export const Home = () => {
                     </p>
                     <div className="w-12 h-[2.5px] bg-black"></div>
                 </h2>
-                <p className="lg:w-[70%] sm:w-[80%] text-center m-auto text-gray-600 
-                    lg:text-base sm:text-4xl leading-normal lg:mb-0 sm:mb-[10%]">
+                <p className="lg:w-[70%] sm:w-[95%] text-center m-auto text-gray-600 
+                    lg:text-base sm:text-5xl leading-normal lg:mb-0 sm:mb-[12%] sm:font-light lg:font-normal">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Exercitationem recusandae molestiae.
                 </p>
                 <div className="mt-10.5 grid lg:gap-y-10 lg:gap-x-3 lg:grid-cols-5
-                    sm:grid-cols-2 sm:gap-x-10 sm:gap-y-74 sm:px-10">
+                    sm:grid-cols-2 sm:gap-x-10 sm:gap-y-95 sm:px-10">
                     {latestCollections}
                 </div>
             </section>
 
-            <section className="lg:mt-16 sm:mt-[35%]">
+            <section className="lg:mt-16 sm:mt-[50%]">
                 <h2 className="text-center lg:text-3xl sm:text-6xl font-medium mb-4 mt-8
                     flex items-center justify-center gap-2 scroll lg:mb-0 sm:mb-[5%]">
                         <span className="text-gray-500">
@@ -112,20 +112,20 @@ export const Home = () => {
                         <p className="">SELLERS</p>
                         <div className="w-12 h-[2.5px] bg-black"></div>
                 </h2>
-                <p className="lg:w-[70%] sm:w-[80%] text-center m-auto text-gray-600 
-                    scroll lg:text-base sm:text-4xl leading-normal lg:mb-0 sm:mb-[10%]">
+                <p className="lg:w-[70%] sm:w-[95%] text-center m-auto text-gray-600 
+                    scroll lg:text-base sm:text-5xl leading-normal lg:mb-0 sm:mb-[10%] sm:font-light lg:font-normal">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Exercitationem recusandae molestiae.
                 </p>
                 <div className="mt-10.5 grid lg:gap-y-10 lg:gap-x-3 lg:grid-cols-5
-                    sm:grid-cols-2 sm:gap-x-10 sm:gap-y-74 sm:px-10">
+                    sm:grid-cols-2 sm:gap-x-10 sm:gap-y-95 sm:px-10">
                     {bestSellers}
                 </div>
             </section>
-            <section className="scroll sm:mt-[40%] lg:mt-0">
+            <section className="scroll sm:mt-[50%] lg:mt-0">
                 <Experience />
             </section>
-            <section className="scroll sm:mt-[15%] lg:mt-0 lg:mb-0 sm:mb-90 ">
+            <section className="scroll sm:mt-[20%] lg:mt-0 lg:mb-0 sm:mb-90 ">
                 <Subscribe />
             </section>
         </>

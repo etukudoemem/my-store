@@ -33,7 +33,7 @@ function App() {
                     <Route index element={<Cart />}/>
                     <Route path="place-order" element={<PlaceOrder /> }/>
                 </Route>
-                <Route path="login" elementnt={<AuthLayout />}>
+                <Route path="login" element={<AuthLayout />}>
                     <Route index element={<Login />}/>
                     <Route path="signup" element={<SignUp />}/>
                 </Route>

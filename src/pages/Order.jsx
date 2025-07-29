@@ -35,7 +35,7 @@ export const Order = () => {
                     </p>
                 </ToastModal>}
             {isOrders ? (<main className="mt-16">
-                <h2 className="flex items-center lg:text-2xl sm:text-6xl font-medium lg:mb-4 sm:mb-10 mt-8 gap-2">
+                <h2 className="flex items-center lg:text-2xl sm:text-6xl font-medium lg:mb-4 sm:mb-20 mt-8 gap-2">
                     <span className="text-gray-500 text-left">
                         MY
                     </span> 
@@ -49,7 +49,7 @@ export const Order = () => {
                 <div className="flex justify-end w-full">
                     <button onClick={() => {clearOrder()}}
                         className="lg:min-w-58 sm:min-w-120 lg:min-h-11 sm:min-h-30 bg-gray-900 text-white
-                            lg:mt-8 lg:mb-8 sm:mt-20 sm:mb-85 lg:text-sm sm:text-4xl font-semibold cursor-pointer self-end 
+                            lg:mt-8 lg:mb-8 sm:mt-25 sm:mb-85 lg:text-sm sm:text-4xl font-semibold cursor-pointer self-end 
                             hover:scale-103 border-1 border-gray-400 shadow-md
                             active:scale-98 transition-all duration-200 ease-in-out">
                         CLEAR ORDER

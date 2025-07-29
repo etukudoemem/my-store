@@ -29,7 +29,7 @@ export const PlaceOrder = () =>  {
                         <p>INFORMATION</p> 
                         <div className="w-12 h-[2.5px] bg-black "></div>
                     </h2>
-                    <div className="flex gap-3 lg:w-4/5 sm:w-full text-gray-600 ">
+                    <div className="flex gap-3 lg:w-4/5 sm:w-full text-gray-600 lg:mt-0 sm:mt-10">
                         <input className="w-1/2 lg:h-[38px] sm:h-[100px] lg:outline-none border-[1.5px]
                             border-gray-300 rounded placeholder-gray-400 lg:px-3 sm:px-6 lg:text-base sm:text-4xl
                             active:scale-98 transition-all duration-200 ease-in-out"
@@ -98,7 +98,7 @@ export const PlaceOrder = () =>  {
                             placeholder="Phone"
                     />
                 </div>
-                <div className="lg:w-1/2 sm:w-full flex flex-col gap-4 lg:pl-5 lg:mb-0 sm:mb-60">
+                <div className="lg:w-1/2 sm:w-full flex flex-col gap-4 lg:pl-5 lg:mb-0 sm:mb-60 lg:mt-0 sm:mt-20">
                     <CartTotal>
                         <section className="lg:w-[95%] flex flex-col lg:ml-6">
                             <div className="min-w-full lg:mb-0 sm:mb-10">
@@ -110,22 +110,22 @@ export const PlaceOrder = () =>  {
                                     <p>TOTALS</p> 
                                     <div className="w-12 h-[2.5px] bg-black"></div>
                                 </h2>
-                                <div className="lg:text-sm sm:text-4xl">
-                                    <div className="flex justify-between mt-3 lg:mb-0 sm:mb-4">
-                                        <p className="text-gray-700 lg:font-semibold sm:font-normal mb-2">
+                                <div className="lg:text-sm sm:text-5xl">
+                                    <div className="flex justify-between lg:mt-3 sm:mt-8 lg:mb-0 sm:mb-10">
+                                        <p className="text-gray-700 lg:font-semibold sm:font-light mb-2">
                                             Subtotal
                                         </p>
                                         <p className="lg:font-semibold">$ {getTotal}</p>
                                     </div>
                                     <div className="min-w-full h-[0.5px] bg-gray-200"></div>
-                                    <div className="flex justify-between mt-3 lg:mb-0 sm:mb-4">
-                                        <p className="text-gray-700 lg:font-semibold sm:font-normal mb-2">
+                                    <div className="flex justify-between lg:mt-3 sm:mt-8 lg:mb-0 sm:mb-10">
+                                        <p className="text-gray-700 lg:font-semibold sm:font-light mb-2">
                                             Shipping Fee
                                         </p>
                                         <p className="lg:font-semibold">$ {shippingCost.toFixed(2)}</p>
                                     </div>
                                     <div className="min-w-full h-[0.5px] bg-gray-200"></div>
-                                    <div className="flex justify-between mt-3">
+                                    <div className="flex justify-between lg:mt-3 sm:mt-8 lg:mb-0 sm:mb-10">
                                         <p className="text-gray-700 font-bold mb-2">
                                             Total
                                         </p>
@@ -135,17 +135,17 @@ export const PlaceOrder = () =>  {
                             </div>
                             <div className="">
                                 <h2 className="flex items-center lg:text-lg sm:text-6xl font-medium lg:mb-4 gap-2
-                                    sm:mt-8 sm:mb-10">
+                                    sm:mt-30 lg:mt-0 sm:mb-10">
                                         <span className="text-gray-500 text-left">
                                             PAYMENT
                                         </span> 
                                         <p>METHOD</p> 
                                         <div className="w-13 h-[2.5px] bg-black"></div>
                                 </h2>
-                                <div className="flex lg:gap-5 sm:gap-10 w-full">
+                                <div className="flex lg:gap-5 sm:gap-10 w-full lg:mt-0 sm:mt-15">
                                     <div className="min-w-auto lg:h-[38px] sm:h-[90px] outline-none border-[1.5px]
                                             border-gray-300 placeholder-gray-200 lg:px-2 sm:px-4 py-4 font-medium
-                                            flex items-center gap-1 bg-gray-100 rounded">
+                                            flex items-center gap-1 bg-gray-100 rounded ">
                                         <input onChange={(e) => setPaymentMethod(e.target.name)}
                                             className="sm:scale-200 lg:scale-100 sm:mr-4"
                                             type="radio"
@@ -182,8 +182,8 @@ export const PlaceOrder = () =>  {
                                 </div>
                             </div>
                             <button onClick={() => {getProductToOrder()}}
-                                className="lg:min-w-58 sm:min-w-120 lg:min-h-11 sm:min-h-30 bg-gray-100 text-gray-600 lg:text-base
-                                    lg:mt-8 sm:mt-25 font-semibold cursor-pointer self-end
+                                className="lg:min-w-58 sm:min-w-120 lg:min-h-11 sm:min-h-30 bg-gray-900 text-gray-100 lg:text-base
+                                    lg:mt-8 sm:mt-30 font-semibold cursor-pointer self-end
                                     active:scale-95 transition-all duration-100 ease-in-out sm:text-4xl
                                     hover:scale-103 border-1 border-gray-400 shadow-md">
                                 PLACE ORDER

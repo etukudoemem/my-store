@@ -347,9 +347,9 @@ export default function StoreContextProvider ({ children }) {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setIsLogged(true)
-                console.log(user.email + "\n" +user.uid)
+                // console.log(user.email + "\n" +user.uid)
             } else {
-                console.log("no user logged in")
+                // console.log("no user logged in")
             }
         })
     }

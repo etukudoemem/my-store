@@ -10,35 +10,35 @@ export const OrderItem = ({ productData, orderData}) => {
     return (
         <>
             <section className="collections">
-                <div className="flex items-center justify-between mb-2">
-                    <div className="flex gap-x-7">
+                <div className="flex items-center justify-between mb-2 sm:h-60 lg:h-auto">
+                    <div className="flex gap-x-7 justify-center items-center">
                         <div className="lg:max-w-[95px] sm:max-w-[150px] min-h-[auto] bg-gray-200">
                             <img className="justify-self-start min-w-[100%] min-h-[100%]" src={productData.image[0]} alt="" />
                         </div>
                         <div>
-                            <h3 className="lg:text-base sm:text-3xl lg:mb-1 sm:mb-3 text-gray-600 sm:font-medium 
+                            <h3 className="lg:text-base sm:text-4xl lg:mb-1 sm:mb-7 text-gray-600 sm:font-medium 
                                 lg:font-normal">
                                 {productData.name}
                             </h3>
-                            <div className="flex lg:gap-3 sm:gap-6 lg:mb-0 sm:mb-3 items-center">
+                            <div className="flex lg:gap-3 sm:gap-6 lg:mb-0 sm:mb-3 items-center lg:mb-0 sm:mb-7">
                                 <div className="min-w-[auto] max-h-[40px] py-2 px-4 bg-gray-100 border-0 
                                     border-gray-300 flex items-center justify-center cursor-pointer
-                                    lg:text-sm sm:text-3xl lg:font-semibold text-gray-600">
+                                    lg:text-sm sm:text-4xl lg:font-semibold text-gray-600">
                                     Price: ${productData.price}
                                 </div>
                                 <div className="min-w-[auto] max-h-[40px] py-2 px-4 bg-gray-100 border-0 
                                     border-gray-300 flex items-center justify-center cursor-pointer
-                                    lg:text-sm sm:text-3xl lg:font-semibold text-gray-600">
+                                    lg:text-sm sm:text-4xl lg:font-semibold text-gray-600">
                                     Quantity: {orderData.quantity}
                                 </div>
                                 <div className="min-w-[auto] max-h-[40px] py-2 px-4 bg-gray-100 border-0 
                                     border-gray-300 flex items-center justify-center cursor-pointer
-                                    lg:text-sm sm:text-3xl lg:font-semibold text-gray-600">
+                                    lg:text-sm sm:text-4xl lg:font-semibold text-gray-600">
                                     Size: {orderData.size}
                                 </div>
                             </div>
                             <div className="min-w-[auto] max-h-[auto] mt-1
-                                flex items-center lg:text-sm sm:text-3xl font-semibold text-gray-600">
+                                flex items-center lg:text-sm sm:text-4xl font-semibold text-gray-600">
                                     Date:<span className="min-w-[auto] max-h-[auto] px-2
                                             flex items-center font-semibold text-gray-400">
                                             {orderDate}
