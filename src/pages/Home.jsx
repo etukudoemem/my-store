@@ -44,7 +44,7 @@ export const Home = () => {
                 (<ToastModal>
                     <img className="lg:w-8 sm:w-20"
                         src={checkMarkIcon} alt="checkmark" />
-                    <p className="lg:text-lg sm:text-5xl text-gray-500 font-medium">
+                    <p className="lg:text-lg sm:text-5xl text-gray-500 lg:font-medium sm:font-light">
                         Login Successful
                     </p>
                 </ToastModal>)}
@@ -52,7 +52,7 @@ export const Home = () => {
                 <ToastModal>
                     <img className="lg:w-8 sm:w-20"
                         src={checkMarkIcon} alt="checkmark"/>
-                    <p className="lg:text-lg sm:text-5xl text-gray-500 font-medium">
+                    <p className="lg:text-lg sm:text-5xl text-gray-500 lg:font-medium sm:font-light">
                         Sign Up Successful
                     </p>
                 </ToastModal>)}
@@ -83,7 +83,7 @@ export const Home = () => {
 
             <section className="lg:mt-16 sm:mt-[28%]  ">
                 <h2 className="text-center lg:text-3xl sm:text-6xl font-medium mb-4 mt-8
-                        flex items-center justify-center gap-2 lg:mb-0 sm:mb-[6%]">
+                        flex items-center justify-center gap-2 lg:mb-3 sm:mb-[6%]">
                     <span className="text-gray-500">
                         LATEST
                     </span> 
@@ -105,7 +105,7 @@ export const Home = () => {
 
             <section className="lg:mt-16 sm:mt-[50%]">
                 <h2 className="text-center lg:text-3xl sm:text-6xl font-medium mb-4 mt-8
-                    flex items-center justify-center gap-2 scroll lg:mb-0 sm:mb-[5%]">
+                    flex items-center justify-center gap-2 scroll lg:mb-3 sm:mb-[5%]">
                         <span className="text-gray-500">
                             BEST
                         </span> 

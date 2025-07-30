@@ -133,7 +133,7 @@ export const PlaceOrder = () =>  {
                                     </div>
                                 </div>
                             </div>
-                            <div className="">
+                            <div className="hidden">
                                 <h2 className="flex items-center lg:text-lg sm:text-6xl font-medium lg:mb-4 gap-2
                                     sm:mt-30 lg:mt-0 sm:mb-10">
                                         <span className="text-gray-500 text-left">
@@ -142,7 +142,7 @@ export const PlaceOrder = () =>  {
                                         <p>METHOD</p> 
                                         <div className="w-13 h-[2.5px] bg-black"></div>
                                 </h2>
-                                <div className="flex lg:gap-5 sm:gap-10 w-full lg:mt-0 sm:mt-20">
+                                <div className="flex lg:gap-5 sm:gap-10 w-full lg:mt-0 sm:mt-20 ">
                                     <div className="min-w-60 lg:h-[38px] sm:h-[90px] outline-none border-[1.5px]
                                             border-gray-300 placeholder-gray-200 lg:px-2 sm:px-4 py-4 font-medium
                                             flex items-center justify-center gap-1 bg-gray-100 rounded ">

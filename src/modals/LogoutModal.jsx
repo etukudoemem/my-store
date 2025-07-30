@@ -8,12 +8,12 @@ export const LogoutModal = () => {
 
     return (
         <>
-            <main className={`fixed w-full h-[100vh] flex justify-center items-center
-                z-10 inset-0 -mt[-60px] ${modal.logOut ? "visible backdrop-blur-xs expand" : "invisible"}`} >
-                <div className="lg:max-w-[400px] sm:max-w-[90%] h-[auto] shadow-xl flex-col flex
+            <main className={`fixed w-full h-[100vh] flex justify-center items-center 
+                z-10 inset-0 -mt[-60px] ${modal.logOut ? "visible backdrop-blur-md expand" : "invisible"}`} >
+                <div className="lg:max-w-[400px] sm:max-w-[90%] h-[auto] shadow-2xl flex-col flex
                     justify-center lg:px-8 sm:px-14 lg:py-7 lg:gap-y-0 sm:gap-y-8 sm:py-14 rounded bg-white 
-                    border-2 border-gray-50 relative bg-gray-50  ">
-                    <img src={closeIcon} alt="" width={20}
+                    border-0 border-gray-500 relative  ">
+                    <img src={closeIcon} alt="close" width={20}
                         className="cursor-pointer absolute right-2 top-2 active:scale-85 
                             hover:scale-105 sm:hidden lg:block"
                         onClick={() => setModal({...modal, logOut:false})}
@@ -29,19 +29,19 @@ export const LogoutModal = () => {
                     <p className="mb-3 text-gray-600 lg:text-base sm:text-4xl leading-normal">
                         You will <span className="text-red-500">not </span> 
                             be able to add items to your cart or view your order(s).
-                            Your cart and order(s) will be also <span className="text-red-500">
+                            Your cart and order(s) will also be <span className="text-red-500">
                                 cleared.
                             </span> 
                     </p> 
-                    <div className="flex font-semibold lg:gap-4 sm:gap-40 justify-end">
+                    <div className="flex font-semibold lg:gap-3 sm:gap-40 justify-end">
                         <button onClick={() => logOutUser()}
                             className={`lg:w-10 lg:h-10 sm:w-10 sm:h-28 text-red-500 active:scale-90
                             py-2 cursor-pointer lg:text-xs sm:text-4xl`}>
                             YES
                         </button>
                         <button onClick={() => setModal({...modal, logOut:false})}
-                            className={`lg:w-10 lg:h-10 sm:w-10 sm:h-28 text-gray-600 py-2 cursor-pointer 
-                            hover:bg-gray-800 hover:text-gray-200 lg:text-xs sm:text-4xl
+                            className={`lg:w-10 lg:h-10 sm:w-25 sm:h-28 text-gray-600 py-2 cursor-pointer 
+                            hover:text-gray-900 lg:text-xs sm:text-4xl
                             active:scale-80 hover:scale-102`}>
                             NO
                         </button>

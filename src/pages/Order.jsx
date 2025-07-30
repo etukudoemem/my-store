@@ -30,7 +30,7 @@ export const Order = () => {
                 <ToastModal>
                     <img className="lg:w-8 sm:w-20"
                         src={checkMarkIcon} alt="checkmark" width={35}/>
-                    <p className="lg:text-lg sm:text-5xl text-gray-500 font-medium">
+                    <p className="lg:text-lg sm:text-5xl text-gray-500 lg:font-medium sm:font-light">
                         Order Placed Successfully
                     </p>
                 </ToastModal>}

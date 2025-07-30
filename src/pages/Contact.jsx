@@ -23,7 +23,7 @@ export const Contact = () => {
                 <div className="lg:min-w-1/2 sm:min-w-full min-h-[inherit] flex flex-col rightHeader
                     lg:justify-center sm:justify-start sm:mt-15 lg:mt-0">
                     <h3 className="lg:text-xl sm:text-6xl font-bold text-gray-600 font-semi-bold
-                        lg:mb-6 sm:mb-15">
+                        lg:mb-2 sm:mb-15">
                         Our Store
                     </h3>
                     <p className="text-gray-600 lg:text-base sm:text-[2.5rem] lg:mb-0 sm:mb-10 sm:font-light lg:font-normal">
@@ -39,7 +39,7 @@ export const Contact = () => {
                         Email: contact@mystore.com
                     </p>
                     <h3 className="lg:text-xl sm:text-6xl font-bold text-gray-600
-                        lg:mb-6 lg:mt-6 sm:mb-15 sm:mt-35">
+                        lg:mb-2 lg:mt-6 sm:mb-15 sm:mt-35">
                         Careers at My Store
                     </h3>
                     <p className="text-gray-600 mb-6 lg:text-base sm:text-[2.5rem] sm:leading-normal sm:font-light lg:font-normal">

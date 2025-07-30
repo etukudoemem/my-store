@@ -3,8 +3,8 @@ import { useContext } from "react"
 import { storeContext } from "../contexts/storeContext"
 import { NetworkModal } from "../modals/NetworkModal"
 import { PasswordModal } from "../modals/PasswordModal"
-import showIcon from "../assets/show2.png"
-import hideIcon from "../assets/hide2.png"
+import hideIcon from "../assets/show2.png"
+import showIcon from "../assets/hide2.png"
 
 export const SignUp = () => {
 
@@ -31,7 +31,7 @@ export const SignUp = () => {
                             <input onChange={(e) => getUserInfo(e)}
                                 className={`lg:w-100 sm:w-full lg:h-11 sm:h-30 text-gray-700 lg:text-sm
                                 active:scale-98 transition-all duration-200 ease-in-out sm:text-5xl
-                                lg:outline-none p-3 border-1 lg:px-4 sm:px-8 leftHeader bg-slate-100
+                                lg:outline-none p-3 border-1 lg:px-4 sm:px-8 leftHeader bg-slate-100 sm:font-light lg:font-normal
                                 placeholder-gray-300 ${noInput.name ? "border-red-600 border-2" : "border-gray-600"}`}
                                 type="text" 
                                 name="name"
@@ -43,7 +43,7 @@ export const SignUp = () => {
                             </div>
                             <input onChange={(e) => getUserInfo(e)}
                                 className={`lg:w-100 sm:w-full lg:h-11 sm:h-30 text-gray-600 placeholder-gray-300
-                                active:scale-98 transition-all duration-200 ease-in-out lg:text-base sm:text-5xl
+                                active:scale-98 transition-all duration-200 ease-in-out lg:text-base sm:text-5xl sm:font-light lg:font-normal
                                 lg:outline-none p-3 lg:px-4 sm:px-8 border-1 border-gray-600 leftHeader bg-slate-100
                                 ${noInput.email ? "border-red-600 border-2" : "border-gray-600"}`}
                                 type="email" 
@@ -57,7 +57,7 @@ export const SignUp = () => {
                             </p>
                             <input onChange={(e) => getUserInfo(e)}
                                 className={`lg:w-100 sm:w-full lg:h-11 sm:h-30 text-gray-600 placeholder-gray-300
-                                active:scale-98 transition-all duration-200 ease-in-out lg:text-base sm:text-5xl
+                                active:scale-98 transition-all duration-200 ease-in-out lg:text-base sm:text-5xl sm:font-light lg:font-normal
                                 lg:outline-none p-3 lg:px-4 sm:px-8 border-1 border-gray-600 rightHeader bg-slate-100
                                 ${noInput.password ? "border-red-600 border-2" : "border-gray-600"}`}
                                 type={showPassword ? "text" : "password"} 

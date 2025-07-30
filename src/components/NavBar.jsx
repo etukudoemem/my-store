@@ -41,26 +41,22 @@ export const NavBar = () => {
                 <nav className="flex items-center" >
                     <ul className="lg:flex justify-between items-center w-[500px] 
                         text-sm text-gray-700 font-medium sm:hidden lg:block">
-                        <NavLink to="/" className="active:scale-85 transition-all
-                            duration-100 ease-in-out con">
+                        <NavLink to="/" className="transition-all duration-100 ease-in-out con">
                             <li className="">
                                 HOME
                             </li>
                         </NavLink>
-                        <NavLink to="collection" className="active:scale-85 transition-all
-                            duration-100 ease-in-out con">
+                        <NavLink to="collection" className="transition-all uration-100 ease-in-out con">
                             <li className="">
                                 COLLECTIONS
                             </li>
                         </NavLink>
-                        <NavLink to="about" className="active:scale-85 transition-all
-                            duration-100 ease-in-out con">
+                        <NavLink to="about" className="transition-all duration-100 ease-in-out con">
                             <li className="">
                                 ABOUT
                             </li>
                         </NavLink>
-                        <NavLink to="contact" className="active:scale-85 transition-all
-                            duration-100 ease-in-out con">
+                        <NavLink to="contact" className="transition-all duration-100 ease-in-out con">
                             <li className="">
                                 CONTACT
                             </li>
@@ -77,16 +73,15 @@ export const NavBar = () => {
 
                 <div className="flex justify-between w-60% sm:gap-x-12 lg:gap-x-2" >
                     <div onClick={() => {handleSearch()}}
-                        className="cursor-pointer active:scale-85 transition-all
-                        duration-100 ease-in-out">
+                        className="cursor-pointer transition-all duration-100 ease-in-out">
                         <img className="lg:w-[30px] sm:w-19.5"
                             src={searchIcon} alt="search" />
                     </div>
 
                     <div className="w-[30px] relative group sm:hidden lg:block">
                         <Link to={"login"}>
-                            <img src={profileIcon} alt="" className="cursor-pointer
-                                active:scale-85 transition-all duration-100 ease-in-out"/>
+                            <img src={profileIcon} alt="" className="cursor-pointer transition-all 
+                                duration-100 ease-in-out"/>
                         </Link>
                         <ul className={`font-medium text-gray-800 flex flex-col justify-center rounded-xs
                             item-center hidden absolute w-[190px] h-[auto] bg-slate-200 border-0 shadow-inset
@@ -107,7 +102,7 @@ export const NavBar = () => {
                             </li>
                         </ul>
                     </div>
-                    <Link to="cart" className="active:scale-85 transition-all duration-100 ease-in-out">
+                    <Link to="cart" className="transition-all duration-100 ease-in-out">
                         <div className="relative cursor-pointer">
                             <img className="lg:w-[30px] sm:w-20"
                                 src={shoppingBagIcon} alt="" />

@@ -23,7 +23,7 @@ export const OrderItem = ({ productData, orderData}) => {
                             <div className="flex lg:gap-3 sm:gap-6 lg:mb-0 sm:mb-3 items-center lg:mb-0 sm:mb-7">
                                 <div className="lg:min-w-[auto] sm:min-w-[190px] lg:min-h-[40px] sm:min-h-[40px] py-2 px-4 bg-gray-100 border-0 
                                     border-gray-300 flex items-center justify-center cursor-pointer
-                                    lg:text sm:text-4xl lg:font-semibold text-gray-600">
+                                    lg:text-sm sm:text-4xl lg:font-semibold text-gray-600">
                                     Price: ${productData.price}
                                 </div>
                                 <div className="lg:min-w-[auto] sm:min-w-[190px] lg:min-h-[40px] sm:min-h-[50px] py-2 px-4 bg-gray-100 border-0 

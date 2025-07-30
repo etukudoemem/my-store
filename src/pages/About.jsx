@@ -51,7 +51,7 @@ export const About = () => {
                 </div>
             </section>
             <section className="flex flex-col min-w-full">
-                <h2 className="flex items-center sm:justify-center lg:justify-sttart lg:text-xl font-medium  
+                <h2 className="flex items-center sm:justify-center lg:justify-start lg:text-xl font-medium  
                     lg:mb-10 sm:mb-15 mt-8 gap-2 scroll sm:text-6xl">
                     <span className="text-gray-500">
                         WHY
@@ -64,7 +64,7 @@ export const About = () => {
                     <div className="flex flex-col justify-center lg:border-1 border-gray-300 
                         lg:max-w-[420px] sm:max-w-full min-h-[250px] lg:px-16 items-center
                         text-gray-700 ">
-                        <h3 className="font-bold mb-6 scroll lg:text-base sm:text-5xl lg:text-start">
+                        <h3 className="font-bold mb-6 scroll lg:text-base sm:text-5xl lg:self-start">
                             Quality Assurance
                         </h3>
                         <p className="scroll lg:text-start lg:text-base sm:text-4xl lg:leading-tight sm:leading-normal sm:w-200 lg:w-auto
@@ -76,7 +76,7 @@ export const About = () => {
                     <div className="flex flex-col justify-center items-center
                         lg:border-1 border-gray-300 lg:max-w-[420px] min-h-[250px] lg:px-16
                           sm:max-w-full text-gray-700">
-                        <h3 className="font-bold mb-6 scroll lg:text-base sm:text-5xl
+                        <h3 className="font-bold mb-6 scroll lg:text-base sm:text-5xl lg:self-start
                             lg:mt-0 sm:mt-3">
                             Convenience
                         </h3>
@@ -88,7 +88,7 @@ export const About = () => {
                     </div>
                     <div className="flex flex-col justify-center border-solid items-center lg:border-1 sm:border-0 border-gray-300 lg:max-w-[420px] min-h-[250px] 
                         lg:px-16 sm:max-w-full text-gray-700 lg:mt-0 sm:mt-10">
-                        <h3 className="font-bold mb-6 scroll lg:text-base sm:text-5xl lg:text-start">
+                        <h3 className="font-bold mb-6 scroll lg:text-base sm:text-5xl lg:self-start">
                             Exceptional Customer Service
                         </h3>
                         <p className="text-gray-700 scroll lg:text-start lg:text-base sm:text-4xl lg:leading-tight sm:leading-normal

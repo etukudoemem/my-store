@@ -8,10 +8,10 @@ export const ToastModal = ({ children }) => {
 
     return (
         <>
-            <section className={`lg:w-90 lg:h-20 sm:w-228 sm:h-45 relative rounded-lg border-0 shadow-inner
-                border-gray-100 flex items-center z-20 bg-white slideInOut ${!modal.toast && "invisible"}`}>
+            <section className={`lg:w-90 lg:h-20 sm:w-full sm:h-45 relative rounded-lg border-0 shadow-inner
+                border-gray-100 flex items-center z-20 bg-white slideInOut sm:inset-0 lg:inset-2 sm:top-0 ${!modal.toast && "invisible"}`}>
                     <div className="flex lg:px-4 sm:px-8">
-                        <div className="flex items-center lg:gap-3 sm:gap-6">
+                        <div className="flex items-center lg:gap-3 sm:gap-6 ">
                             {children}
                         </div>
                     </div>
