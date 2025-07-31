@@ -5,12 +5,12 @@ export const Footer = () => {
 
     return (
         <>
-            <section className="lg:flex lg:justify-between lg:mt-36 mb-8
+            <section className="lg:flex lg:justify-between lg:mt-36 mb-8 w-[100%]
                     sm:grid sm:grid sm:grid-cols-1 sm:gap-x-80 sm:gap-x-20 px-5
                     text-gray-700 py-10 sm:font-light lg:font-normal" >
-                <div className="sm:mb-40 lg:mb-0">
+                <div className="sm:mb-40 lg:mb-0 lg:w-[500px]">
                     <Logo />
-                    <p className="lg:w-[500px] sm:w-full lg:mt-4 lg:text-base sm:text-[2.5rem]
+                    <p className="sm:w-full lg:mt-4 lg:text-base sm:text-[2.5rem]
                         sm:leading-normal sm:mt-12 ">
                         Lorem, ipsum dolor sit amet 
                         consectetur adipisicing elit. 
@@ -20,7 +20,7 @@ export const Footer = () => {
                         qui magni at possimus ex unde ad.
                     </p>
                 </div>
-                <div className="sm:mb-40 lg:mb-0 lg:text-base sm:text-[2.5rem]">
+                <div className="sm:mb-40 lg:mb-0 lg:text-base sm:text-[2.5rem] lg:w-[200px]">
                     <h2 className="font-semibold sm:mb-10 lg:mb-4 ">
                         COMPANY
                     </h2>
@@ -31,7 +31,7 @@ export const Footer = () => {
                         <p>Privacy Policy</p>
                     </div>
                 </div>
-                <div className="lg:text-base sm:text-[2.5rem]">
+                <div className="lg:text-base sm:text-[2.5rem] lg:w-[200px]">
                     <h2 className="font-semibold sm:mb-10 lg:mb-4">
                         GET IN TOUCH
                     </h2>

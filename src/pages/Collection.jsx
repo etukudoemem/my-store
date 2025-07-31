@@ -36,7 +36,7 @@ export const Collection = () => {
                      relative sm:h-[120px] lg:px-0 sm:px-6">   
                     <input onChange={(e) => {setSearch(e.target.value)}}
                         className="lg:w-[50%] sm:w-[90%] lg:h-[100%] sm:h-[90%] border-[1.5px] border-solid border-gray-400 
-                        lg:rounded-4xl sm:rounded-full lg:px-12 sm:px-24 py-1 outline-none lg:font-medium text-gray-600 lg:text-base
+                        lg:rounded-4xl sm:rounded-full lg:px-11 sm:px-24 py-1 outline-none lg:font-medium text-gray-600 lg:text-base
                         active:scale-99 transition-all duration-200 ease-in-out sm:text-[2.7rem]"
                         placeholder="Search"
                         autoFocus
@@ -44,7 +44,7 @@ export const Collection = () => {
                     <img src={searchIcon} alt="search" className="absolute lg:w-[25px] sm:left-[6%] 
                         lg:left-[26.2%] sm:w-[50px]" />
                     <img onClick={() => {setIsSearch(false)}}
-                        src={closeIcon} alt="close" className="absolute lg:w-[25px] sm:right-[2%] lg:right-[22%]
+                        src={closeIcon} alt="close" className="absolute lg:w-[25px] sm:right-[2%] lg:right-[21.1%]
                         cursor-pointer active:scale-85 transition-all duration-200 ease-in-out sm:w-[80px]
                         hover:scale-105 " />
                 </div>
@@ -94,12 +94,10 @@ export const Collection = () => {
                         </div>
                         {collection.length > 0 ? 
                             (<div className="mt-10.5 grid lg:gap-y-10 lg:gap-x-4 lg:grid-cols-4
-                                sm:grid-cols-2 sm:gap-x-10 sm:gap-y-95 sm:px-10 lg:px-0
-                                collections
-                                ">
+                                sm:grid-cols-2 sm:gap-x-10 sm:gap-y-25 collections">
                                 {allCollections}
                             </div>) : 
-                            (<div className="flex items-center justify-center collections w-full h-[50vh] transition-all duration-500">
+                            (<div className="flex items-center justify-center collections w-full lg:h-[50vh] sm:h-[35vh] transition-all duration-500">
                                 <h2 className="flex items-center justify-center lg:text-3xl sm:text-6xl font-medium mb-10 mt-8 gap-2">
                                     <span className="text-gray-500 sm:leading-normal text-center">
                                         SORRY. THE PRODUCT IS NOT AVAILABLE.

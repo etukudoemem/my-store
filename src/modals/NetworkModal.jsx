@@ -9,9 +9,9 @@ export const NetworkModal = ({ children }) => {
     return (
         <>
             <main className={`fixed w-full h-[100vh] flex justify-center items-center
-                z-10 inset-0 ${modal.noNetwork ? "visible backdrop-blur-xs expand" : "invisible"}`} >
-                <div className="lg:max-w-[400px] sm:max-w-[90%] h-[auto] shadow-lg flex flex-col
-                    justify-center px-8 py-7 rounded bg-white border-2 border-gray-50 lg:px-8 sm:px-14 lg:py-7 sm:py-14
+                z-10 inset-0 ${modal.noNetwork ? "visible backdrop-blur-sm expand" : "invisible"}`} >
+                <div className="lg:max-w-[400px] sm:max-w-[90%] h-[auto] shadow-xl flex flex-col
+                    justify-center px-8 py-7 rounded bg-white border-2 border-gray-200 lg:px-8 sm:px-14 lg:py-7 sm:py-14
                     opacity-100 relative bg-gray-50 -mt-[60px] lg:gap-y-0 sm:gap-y-8">
                     <img src={closeIcon} alt="" width={20}
                         className="cursor-pointer absolute right-4 top-4 active:scale-85

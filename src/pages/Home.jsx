@@ -98,12 +98,12 @@ export const Home = () => {
                     Exercitationem recusandae molestiae.
                 </p>
                 <div className="mt-10.5 grid lg:gap-y-10 lg:gap-x-3 lg:grid-cols-5
-                    sm:grid-cols-2 sm:gap-x-10 sm:gap-y-95 sm:px-10">
+                    sm:grid-cols-2 sm:gap-x-8 sm:gap-y-25">
                     {latestCollections}
                 </div>
             </section>
 
-            <section className="lg:mt-16 sm:mt-[50%]">
+            <section className="lg:mt-16 sm:mt-[25%]">
                 <h2 className="text-center lg:text-3xl sm:text-6xl font-medium mb-4 mt-8
                     flex items-center justify-center gap-2 scroll lg:mb-3 sm:mb-[5%]">
                         <span className="text-gray-500">
@@ -118,14 +118,14 @@ export const Home = () => {
                     Exercitationem recusandae molestiae.
                 </p>
                 <div className="mt-10.5 grid lg:gap-y-10 lg:gap-x-3 lg:grid-cols-5
-                    sm:grid-cols-2 sm:gap-x-10 sm:gap-y-95 sm:px-10">
+                    sm:grid-cols-2 sm:gap-x-10 sm:gap-y-25">
                     {bestSellers}
                 </div>
             </section>
-            <section className="scroll sm:mt-[50%] lg:mt-0">
+            <section className="scroll sm:mt-[35%] lg:mt-0">
                 <Experience />
             </section>
-            <section className="scroll sm:mt-[20%] lg:mt-0 lg:mb-0 sm:mb-90 ">
+            <section className="scroll sm:mt-[25%] lg:mt-0 lg:mb-0 sm:mb-90 ">
                 <Subscribe />
             </section>
         </>

@@ -9,8 +9,8 @@ export const LogoutModal = () => {
     return (
         <>
             <main className={`fixed w-full h-[100vh] flex justify-center items-center 
-                z-10 inset-0 -mt[-60px] ${modal.logOut ? "visible backdrop-blur-md expand" : "invisible"}`} >
-                <div className="lg:max-w-[400px] sm:max-w-[90%] h-[auto] shadow-2xl flex-col flex
+                z-10 inset-0 -mt[-60px] ${modal.logOut ? "visible backdrop-blur-sm expand" : "invisible"}`} >
+                <div className="lg:max-w-[400px] sm:max-w-[90%] h-[auto] shadow-xl flex-col flex
                     justify-center lg:px-8 sm:px-14 lg:py-7 lg:gap-y-0 sm:gap-y-8 sm:py-14 rounded bg-white 
                     border-0 border-gray-500 relative  ">
                     <img src={closeIcon} alt="close" width={20}

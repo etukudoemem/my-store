@@ -12,7 +12,7 @@ export const SideBar = ({ setCollection, sorted }) => {
         type: []
     });
 
-    const { products, search } = useContext(storeContext);
+    const { products, search, isSearch, setSearch } = useContext(storeContext);
     
     const handleCategory = (e) => {
         const { id } = e.target
@@ -55,6 +55,10 @@ export const SideBar = ({ setCollection, sorted }) => {
 
         if (search) {
             filteredProducts = filteredProducts.filter((item) => item.name.toLowerCase().includes(search.toLowerCase()))
+        } 
+
+        if (search === "") {
+            filteredProducts = filteredProducts
         }
         
         setCollection(filteredProducts)
@@ -62,7 +66,14 @@ export const SideBar = ({ setCollection, sorted }) => {
 
     useEffect(() => {
         showFilteredProducts()
-    }, [filters, sorted, search]);
+    }, [filters, sorted, search, isSearch]);
+
+    useEffect(() => {
+        if (!isSearch) {
+           setCollection(products) 
+           setSearch("")
+        }
+    }, [isSearch]);
 
 
     return (

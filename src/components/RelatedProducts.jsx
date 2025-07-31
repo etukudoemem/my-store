@@ -35,7 +35,7 @@ export const RelatedProducts = ({ productInfo }) => {
                     <div className="w-12 h-[2.5px] bg-black"></div>
                 </h2>
                 <div className="lg:mt-10.5 grid lg:gap-y-10 lg:gap-x-4 lg:grid-cols-5 sm:grid-cols-2
-                    sm:gap-y-95 lg:px-0 sm:px-10 sm:gap-x-12 sm:mt-[10%]">
+                    sm:gap-y-25 sm:gap-x-10 sm:mt-[10%]">
                     {relatedProducts}
                 </div>
             </section>
