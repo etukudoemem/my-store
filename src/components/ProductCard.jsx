@@ -16,7 +16,7 @@ export const ProductCard = ({ id, name, price, image }) => {
                         sm:w-100 lg:w-full lg:mb-1 sm:mb-3 leading-tight sm:font-light ">
                         {name}
                     </p>
-                    <p className="font-semibold text-gray-700 lg:px-2 mb-2 lg:text-sm sm:text-[2rem]
+                    <p className="font-semibold text-gray-700 lg:px-2 mb-2 lg:text-sm sm:text-[2.5rem]
                         ">
                         ${price}
                     </p>

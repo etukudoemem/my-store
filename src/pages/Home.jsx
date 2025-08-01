@@ -103,7 +103,7 @@ export const Home = () => {
                 </div>
             </section>
 
-            <section className="lg:mt-16 sm:mt-[25%]">
+            <section className="lg:mt-16 sm:mt-[18%]">
                 <h2 className="text-center lg:text-3xl sm:text-6xl font-medium mb-4 mt-8
                     flex items-center justify-center gap-2 scroll lg:mb-3 sm:mb-[5%]">
                         <span className="text-gray-500">
@@ -122,7 +122,7 @@ export const Home = () => {
                     {bestSellers}
                 </div>
             </section>
-            <section className="scroll sm:mt-[35%] lg:mt-0">
+            <section className="scroll sm:mt-[25%] lg:mt-0">
                 <Experience />
             </section>
             <section className="scroll sm:mt-[25%] lg:mt-0 lg:mb-0 sm:mb-90 ">
