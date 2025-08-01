@@ -98,7 +98,7 @@ export const Home = () => {
                     Exercitationem recusandae molestiae.
                 </p>
                 <div className="mt-10.5 grid lg:gap-y-10 lg:gap-x-3 lg:grid-cols-5
-                    sm:grid-cols-2 sm:gap-x-8 sm:gap-y-25">
+                    sm:grid-cols-2 sm:gap-x-8 sm:gap-y-15">
                     {latestCollections}
                 </div>
             </section>
@@ -118,7 +118,7 @@ export const Home = () => {
                     Exercitationem recusandae molestiae.
                 </p>
                 <div className="mt-10.5 grid lg:gap-y-10 lg:gap-x-3 lg:grid-cols-5
-                    sm:grid-cols-2 sm:gap-x-10 sm:gap-y-25">
+                    sm:grid-cols-2 sm:gap-x-10 sm:gap-y-15">
                     {bestSellers}
                 </div>
             </section>

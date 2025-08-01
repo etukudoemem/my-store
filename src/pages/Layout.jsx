@@ -18,7 +18,7 @@ export const Layout = () => {
             <section className="sticky top-0 z-10 bg-slate-100">
                 <NavBar />
             </section>
-            <section className="lg:px-[8rem] py-[0.5rem] sm:px-[2rem]">
+            <section className="lg:px-[8rem] py-[0.5rem] sm:px-[3rem]">
                 <LogoutModal />
                 {/* {isLoading && <Loader />} */}
                 {modal.logOutToast && (

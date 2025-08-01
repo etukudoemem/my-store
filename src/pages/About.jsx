@@ -16,7 +16,7 @@ export const About = () => {
                 <div className="w-12 h-[2.5px] bg-black"></div>
                 </h1> 
             </div>
-            <section className="flex min-w-full lg:min-h-[450px] sm:min-h-[900px] mb-16 gap-0 
+            <section className="flex min-w-full lg:min-h-[450px] sm:min-h-[900px] lg:mb-16 sm:mb-35 gap-0 
                 justify-center lg:flex-row sm:flex-col">
                 <div className="lg:w-[500px] sm:w-full max-h-[inherit] leftHeader">
                     <img className="w-[inherit] h-full " src={aboutPhoto} alt="image" />
@@ -99,7 +99,7 @@ export const About = () => {
                     </div>
                 </div>  
             </section>
-            <section className="lg:mt-20 sm:mt-5 w-full flex flex-col sm:mb-25 lg:mb-0">
+            <section className="lg:mt-20 sm:mt-10 w-full flex flex-col sm:mb-25 lg:mb-0">
                 <h2 className="flex items-center lg:text-xl font-medium lg:mb-10 lg:mt-8 gap-2 scroll
                     lg:justify-start sm:justify-center sm:text-5xl sm:mt-35 sm:mb-20 ">
                     <span className="text-gray-500 block">

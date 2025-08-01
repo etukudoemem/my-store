@@ -51,7 +51,7 @@ export const Collection = () => {
                 <Line /> 
             </section>)}
             
-           <section className="flex lg:flex-row sm:flex-col gap-12 w-full mt-8 sm:mb-150
+           <section className="flex lg:flex-row sm:flex-col gap-12 w-full mt-8 sm:mb-80
             lg:mb-0">
                 <div className="lg:w-[20%] sm:w-[100%] ">
                     <SideBar setCollection={setCollection} sorted={sorted} />
@@ -94,7 +94,7 @@ export const Collection = () => {
                         </div>
                         {collection.length > 0 ? 
                             (<div className="mt-10.5 grid lg:gap-y-10 lg:gap-x-4 lg:grid-cols-4
-                                sm:grid-cols-2 sm:gap-x-10 sm:gap-y-25 collections">
+                                sm:grid-cols-2 sm:gap-x-10 sm:gap-y-15 collections">
                                 {allCollections}
                             </div>) : 
                             (<div className="flex items-center justify-center collections w-full lg:h-[50vh] sm:h-[35vh] transition-all duration-500">
